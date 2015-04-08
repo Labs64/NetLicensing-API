@@ -6,14 +6,6 @@
         "description": "This is a Labs64 NetLicensing RESTful API. Demo account - username: demo; password: demo",
         "termsOfService": "https://www.labs64.com/legal/terms-of-service/netlicensing"
     },
-    "externalDocs": {
-        "description": "You can find out more about Labs64 NetLicensing at http://www.labs64.com/netlicensing",
-    },
-    "securityDefinitions": {
-        "netlicensing_auth": {
-            "type": "basic"
-        }
-    },
     "host": "netlicensing.labs64.com",
     "basePath": "/core/v2/rest",
     "produces": [
@@ -122,5 +114,13 @@
                 }
             }
         }
+    },
+    "securityDefinitions": {
+        "netlicensing_auth": {
+            "type": "basic"
+        }
+    },
+    "externalDocs": {
+        "description": "You can find out more about Labs64 NetLicensing at http://www.labs64.com/netlicensing"
     }
 }
