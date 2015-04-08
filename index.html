@@ -48,7 +48,7 @@
                 var username = $('#input_username')[0].value;
                 var password = $('#input_password')[0].value;
                 if (username && username.trim() != "" && password && password.trim() != "") {
-                    window.authorizations.add("entity", new PasswordAuthorization("Authorization", username, password));
+                    window.authorizations.add("entity", new SwaggerClient.PasswordAuthorization('basic', username, password));
                 }
             }
 

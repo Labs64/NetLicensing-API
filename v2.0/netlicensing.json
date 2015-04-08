@@ -38,7 +38,7 @@
                 "summary": "Licensees list",
                 "description": "Return a list of all licensees for the current vendor",
                 "operationId": "listLicensees",
-                "consumes": ["application/xml", "application/json", "application/x-www-form-urlencoded"],
+                "consumes": ["application/xml", "application/json"],
                 "produces": ["application/xml", "application/json"],
                 "parameters": [],
                 "responses": {
