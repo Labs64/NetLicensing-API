@@ -4,10 +4,14 @@
         "version": "2.2.0",
         "title": "Labs64 NetLicensing RESTful API",
         "description": "This is a Labs64 NetLicensing RESTful API. Demo account - username: demo; password: demo",
-        "termsOfService": "https://www.labs64.com/legal/terms-of-service/netlicensing",
-        "contact": {
-            "name": "NetLicensing Team",
-            "email": "netlicensing@labs64.com"
+        "termsOfService": "https://www.labs64.com/legal/terms-of-service/netlicensing"
+    },
+    "externalDocs": {
+        "description": "You can find out more about Labs64 NetLicensing at http://www.labs64.com/netlicensing",
+    },
+    "securityDefinitions": {
+        "netlicensing_auth": {
+            "type": "basic"
         }
     },
     "host": "netlicensing.labs64.com",
@@ -42,23 +46,9 @@
                 "summary": "Licensees list",
                 "description": "Return a list of all licensees for the current vendor",
                 "operationId": "listLicensees",
-                "consumes": [],
+                "consumes": ["application/xml"],
                 "produces": ["application/xml", "application/json"],
-                "parameters": [
-                    {
-                        "name": "status",
-                        "in": "query",
-                        "description": "Status values that need to be considered for filter",
-                        "required": false,
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "collectionFormat": "multi",
-                        "default": "available",
-                        "enum": ["available", "pending", "sold"]
-                    }
-                ],
+                "parameters": [],
                 "responses": {
                     "200": {
                         "description": "Successful request"
@@ -132,14 +122,5 @@
                 }
             }
         }
-    },
-    "securityDefinitions": {
-        "netlicensing_auth": {
-            "type": "basic"
-        }
-    },
-    "externalDocs": {
-        "description": "You can find out more about Labs64 NetLicensing at",
-        "url": "http://www.labs64.com/netlicensing"
     }
 }
