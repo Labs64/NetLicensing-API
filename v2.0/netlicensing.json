@@ -1,20 +1,21 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "This is a Labs64 NetLicensing RESTful API.  You can find out more about Labs64 NetLicensing at <a href=\"http://www.labs64.com/netlicensing\">http://www.labs64.com/netlicensing</a>",
         "version": "2.2.0",
         "title": "Labs64 NetLicensing RESTful API",
+        "description": "This is a Labs64 NetLicensing RESTful API. Demo account - username: demo; password: demo",
         "termsOfService": "https://www.labs64.com/legal/terms-of-service/netlicensing",
         "contact": {
+            "name": "NetLicensing Team",
             "email": "netlicensing@labs64.com"
-        },
-        "license": {
-            "name": "Commercial",
-            "url": "http://www.labs64.com/netlicensing/pricing/"
         }
     },
     "host": "netlicensing.labs64.com",
     "basePath": "/core/v2/rest",
+    "produces": [
+        "application/json",
+        "application/xml"
+    ],
     "tags": [
         {
             "name": "Licensee",
@@ -36,34 +37,45 @@
     "schemes": ["https"],
     "paths": {
         "/licensee": {
-            "post": {
+            "get": {
                 "tags": ["Licensee"],
-                "summary": "Add a new pet to the store",
-                "description": "",
-                "operationId": "addPet",
-                "consumes": ["application/json", "application/xml"],
+                "summary": "Licensees list",
+                "description": "Return a list of all licensees for the current vendor",
+                "operationId": "listLicensees",
+                "consumes": [],
                 "produces": ["application/xml", "application/json"],
                 "parameters": [
                     {
-                        "in": "body",
-                        "name": "body",
-                        "description": "Pet object that needs to be added to the store",
+                        "name": "status",
+                        "in": "query",
+                        "description": "Status values that need to be considered for filter",
                         "required": false,
-                        "schema": {
-                            "$ref": "#/definitions/Pet"
-                        }
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "collectionFormat": "multi",
+                        "default": "available",
+                        "enum": ["available", "pending", "sold"]
                     }
                 ],
                 "responses": {
-                    "405": {
-                        "description": "Invalid input"
+                    "200": {
+                        "description": "Successful request"
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
                     }
-                },
-                "security": [
-                    {
-                        "netlicensing_auth": ["demo:demo"]
-                    }
-                ]
+                }
             }
         },
         "/utility/licensingModels": {
@@ -75,8 +87,47 @@
                 "produces": ["application/xml", "application/json"],
                 "parameters": [],
                 "responses": {
-                    "default": {
-                        "description": "successful operation"
+                    "200": {
+                        "description": "Successful request"
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                }
+            }
+        },
+        "/utility/licenseTypes": {
+            "get": {
+                "tags": ["Utility"],
+                "summary": "License Types list",
+                "description": "Return a list of all license types supported by the service",
+                "operationId": "licenseTypes",
+                "produces": ["application/xml", "application/json"],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful request"
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
                     }
                 }
             }
@@ -88,7 +139,7 @@
         }
     },
     "externalDocs": {
-        "description": "Find out more about Labs64 NetLicensing",
-        "url": "https://www.labs64.de/confluence/x/pgCo"
+        "description": "You can find out more about Labs64 NetLicensing at",
+        "url": "http://www.labs64.com/netlicensing"
     }
 }
