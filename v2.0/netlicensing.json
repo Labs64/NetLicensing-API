@@ -13,7 +13,7 @@
             "url": "http://www.labs64.com/netlicensing/pricing/"
         }
     },
-    "host": "https://netlicensing.labs64.com",
+    "host": "netlicensing.labs64.com",
     "basePath": "/core/v2/rest",
     "tags": [
         {
@@ -33,7 +33,7 @@
             }
         }
     ],
-    "schemes": ["http"],
+    "schemes": ["https"],
     "paths": {
         "/licensee": {
             "post": {
