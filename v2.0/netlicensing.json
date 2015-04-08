@@ -3,7 +3,7 @@
     "info": {
         "version": "2.2.0",
         "title": "Labs64 NetLicensing RESTful API",
-        "description": "This is a Labs64 NetLicensing RESTful API. Please use demo account: <i>demo:demo</i><br/>You can find out more about Labs64 NetLicensing at <a href=\"http://www.labs64.com/netlicensing\">http://www.labs64.com/netlicensing</a>",
+        "description": "This is a Labs64 NetLicensing RESTful API. Please use demo account - <i>demo:demo</i><br/><br/>You can find out more about Labs64 NetLicensing at <a href='http://www.labs64.com/netlicensing' target='_blank'>http://www.labs64.com/netlicensing</a>",
         "termsOfService": "https://www.labs64.com/legal/terms-of-service/netlicensing"
     },
     "host": "netlicensing.labs64.com",
