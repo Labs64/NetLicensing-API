@@ -38,7 +38,7 @@
                 "summary": "Licensees list",
                 "description": "Return a list of all licensees for the current vendor",
                 "operationId": "listLicensees",
-                "consumes": ["application/xml"],
+                "consumes": ["application/xml", "application/json", "application/x-www-form-urlencoded"],
                 "produces": ["application/xml", "application/json"],
                 "parameters": [],
                 "responses": {
@@ -57,7 +57,12 @@
                     "500": {
                         "description": "Internal service error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "netlicensing_auth": ["demo:demo"]
+                    }
+                ]
             }
         },
         "/utility/licensingModels": {
@@ -121,6 +126,7 @@
         }
     },
     "externalDocs": {
-        "description": "You can find out more about Labs64 NetLicensing at <a href=\"http://www.labs64.com/netlicensing\">http://www.labs64.com/netlicensing</a>"
+        "description": "You can find out more about Labs64 NetLicensing at",
+        "url": "http://www.labs64.com/netlicensing"
     }
 }
