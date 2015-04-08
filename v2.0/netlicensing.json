@@ -1,0 +1,94 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a Labs64 NetLicensing RESTful API.  You can find out more about Labs64 NetLicensing at <a href=\"http://www.labs64.com/netlicensing\">http://www.labs64.com/netlicensing</a>",
+        "version": "2.2.0",
+        "title": "Labs64 NetLicensing RESTful API",
+        "termsOfService": "https://www.labs64.com/legal/terms-of-service/netlicensing",
+        "contact": {
+            "email": "netlicensing@labs64.com"
+        },
+        "license": {
+            "name": "Commercial",
+            "url": "http://www.labs64.com/netlicensing/pricing/"
+        }
+    },
+    "host": "https://netlicensing.labs64.com",
+    "basePath": "/core/v2/rest",
+    "tags": [
+        {
+            "name": "Licensee",
+            "description": "Licensee operations",
+            "externalDocs": {
+                "description": "Licensee Services",
+                "url": "https://www.labs64.de/confluence/x/qQCo"
+            }
+        },
+        {
+            "name": "Utility",
+            "description": "Utility operations",
+            "externalDocs": {
+                "description": "Utility Services",
+                "url": "https://www.labs64.de/confluence/x/rgCo"
+            }
+        }
+    ],
+    "schemes": ["http"],
+    "paths": {
+        "/licensee": {
+            "post": {
+                "tags": ["Licensee"],
+                "summary": "Add a new pet to the store",
+                "description": "",
+                "operationId": "addPet",
+                "consumes": ["application/json", "application/xml"],
+                "produces": ["application/xml", "application/json"],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Pet object that needs to be added to the store",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Pet"
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "netlicensing_auth": ["demo:demo"]
+                    }
+                ]
+            }
+        },
+        "/utility/licensingModels": {
+            "get": {
+                "tags": ["Utility"],
+                "summary": "Licensing Models list",
+                "description": "Return a list of all licensing models supported by the service",
+                "operationId": "licensingModels",
+                "produces": ["application/xml", "application/json"],
+                "parameters": [],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "securityDefinitions": {
+        "netlicensing_auth": {
+            "type": "basic"
+        }
+    },
+    "externalDocs": {
+        "description": "Find out more about Labs64 NetLicensing",
+        "url": "https://www.labs64.de/confluence/x/pgCo"
+    }
+}
