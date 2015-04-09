@@ -851,7 +851,7 @@
   color: #ffd20f;
 }
 .swagger-section .swagger-ui-wrap ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.head div.content div.sandbox_header a {
-  color: #6fc992;
+  color: #F08B53;
 }
 .swagger-section .swagger-ui-wrap ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.delete div.heading {
   background-color: #f5e8e8;
@@ -902,7 +902,7 @@
   color: #F2951C;
 }
 .swagger-section .swagger-ui-wrap ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.post div.content div.sandbox_header a {
-  color: #6fc992;
+  color: #F08B53;
 }
 .swagger-section .swagger-ui-wrap ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.patch div.heading {
   background-color: #FCE9E3;
