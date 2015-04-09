@@ -3,7 +3,7 @@
     "info": {
         "version": "2.2.0",
         "title": "Labs64 NetLicensing RESTful API",
-        "description": "This is a Labs64 NetLicensing RESTful API. Please use demo account - <i>demo:demo</i><br/><br/>You can find out more about Labs64 NetLicensing at <a href='http://www.labs64.com/netlicensing' target='_blank'>http://www.labs64.com/netlicensing</a>",
+        "description": "This is a Labs64 NetLicensing RESTful API. Please use demo account - <code>demo:demo</code><br/><br/>You can find out more about Labs64 NetLicensing at <a href='http://www.labs64.com/netlicensing' target='_blank'>http://www.labs64.com/netlicensing</a>",
         "termsOfService": "https://www.labs64.com/legal/terms-of-service/netlicensing"
     },
     "host": "netlicensing.labs64.com",
@@ -14,11 +14,67 @@
     ],
     "tags": [
         {
+            "name": "Product",
+            "description": "Product operations",
+            "externalDocs": {
+                "description": "Product Services",
+                "url": "https://www.labs64.de/confluence/x/qACo"
+            }
+        },
+        {
+            "name": "Product Module",
+            "description": "Product Module operations",
+            "externalDocs": {
+                "description": "Product Module Services",
+                "url": "https://www.labs64.de/confluence/x/qwCo"
+            }
+        },
+        {
+            "name": "License Template",
+            "description": "License Template operations",
+            "externalDocs": {
+                "description": "License Template Services",
+                "url": "https://www.labs64.de/confluence/x/rQCo"
+            }
+        },
+        {
             "name": "Licensee",
             "description": "Licensee operations",
             "externalDocs": {
                 "description": "Licensee Services",
                 "url": "https://www.labs64.de/confluence/x/qQCo"
+            }
+        },
+        {
+            "name": "License",
+            "description": "License operations",
+            "externalDocs": {
+                "description": "License Services",
+                "url": "https://www.labs64.de/confluence/x/rACo"
+            }
+        },
+        {
+            "name": "Transaction",
+            "description": "Transaction operations",
+            "externalDocs": {
+                "description": "Transaction Services",
+                "url": "https://www.labs64.de/confluence/x/qgCo"
+            }
+        },
+        {
+            "name": "Token",
+            "description": "Token operations",
+            "externalDocs": {
+                "description": "Token Services",
+                "url": "https://www.labs64.de/confluence/x/rwCo"
+            }
+        },
+        {
+            "name": "Payment Method",
+            "description": "Payment Method operations",
+            "externalDocs": {
+                "description": "Payment Method Services",
+                "url": "https://www.labs64.de/confluence/x/sACo"
             }
         },
         {
