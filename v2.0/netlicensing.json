@@ -128,7 +128,6 @@
                 "summary": "Licensing Models list",
                 "description": "Return a list of all licensing models supported by the service",
                 "operationId": "licensingModels",
-                "produces": ["application/xml", "application/json"],
                 "parameters": [],
                 "responses": {
                     "200": {
@@ -158,7 +157,6 @@
                 "summary": "License Types list",
                 "description": "Return a list of all license types supported by the service",
                 "operationId": "licenseTypes",
-                "produces": ["application/xml", "application/json"],
                 "parameters": [],
                 "responses": {
                     "200": {
