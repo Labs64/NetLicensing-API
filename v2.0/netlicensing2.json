@@ -10,8 +10,24 @@
     "basePath": "/v2",
     "tags": [
         {
+            "name": "pet",
+            "description": "Everything about your Pets",
+            "externalDocs": {
+                "description": "Find out more",
+                "url": "http://swagger.io"
+            }
+        },
+        {
             "name": "store",
             "description": "Operations about user"
+        },
+        {
+            "name": "user",
+            "description": "Access to Petstore orders",
+            "externalDocs": {
+                "description": "Find out more about our store",
+                "url": "http://swagger.io"
+            }
         },
         {
             "name": "Product",
@@ -160,5 +176,9 @@
             "name": "api_key",
             "in": "header"
         }
+    },
+    "externalDocs": {
+        "description": "Find out more about Swagger",
+        "url": "http://swagger.io"
     }
 }
