@@ -94,8 +94,6 @@
                 "summary": "Licensees list",
                 "description": "Return a list of all licensees for the current vendor",
                 "operationId": "listLicensees",
-                "consumes": ["application/xml", "application/json"],
-                "produces": ["application/xml", "application/json"],
                 "parameters": [],
                 "responses": {
                     "200": {
@@ -205,34 +203,12 @@
             }
         },
         "infos": {
-            "properties": {
-                "id": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "shipDate": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "status": {
-                    "type": "string",
-                    "description": "Order Status",
-                    "enum": ["placed", "approved", "delivered"]
-                },
-                "complete": {
-                    "type": "boolean"
-                }
-            },
             "xml": {
                 "name": "infos"
             }
         },
         "items": {
             "properties": {
-                "id": {
-                    "type": "integer",
-                    "format": "int64"
-                }
             },
             "xml": {
                 "name": "items"
