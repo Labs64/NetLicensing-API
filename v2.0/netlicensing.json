@@ -101,7 +101,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema": {
-                            "$ref": "#/definitions/NetLicensing"
+                            "$ref": "#/definitions/netlicensing"
                         }
                     },
                     "400": {
@@ -136,7 +136,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema": {
-                            "$ref": "#/definitions/NetLicensing"
+                            "$ref": "#/definitions/netlicensing"
                         }
                     },
                     "400": {
@@ -166,7 +166,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema": {
-                            "$ref": "#/definitions/NetLicensing"
+                            "$ref": "#/definitions/netlicensing"
                         }
                     },
                     "400": {
@@ -191,19 +191,17 @@
         }
     },
     "definitions": {
-        "NetLicensing": {
+        "netlicensing": {
             "properties": {
+                "infos": {
+                    "$ref": "#/definitions/infos"
+                },
+                "items": {
+                    "$ref": "#/definitions/items"
+                },
                 "id": {
                     "type": "integer",
                     "format": "int64"
-                },
-                "petId": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "quantity": {
-                    "type": "integer",
-                    "format": "int32"
                 },
                 "shipDate": {
                     "type": "string",
@@ -219,7 +217,29 @@
                 }
             },
             "xml": {
-                "name": "Order"
+                "name": "netlicensing"
+            }
+        },
+        "infos": {
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            },
+            "xml": {
+                "name": "infos"
+            }
+        },
+        "items": {
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            },
+            "xml": {
+                "name": "items"
             }
         }
     }
