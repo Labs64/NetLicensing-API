@@ -8,10 +8,6 @@
     },
     "host": "netlicensing.labs64.com",
     "basePath": "/core/v2/rest",
-    "produces": [
-        "application/json",
-        "application/xml"
-    ],
     "tags": [
         {
             "name": "Product",
@@ -94,6 +90,7 @@
                 "summary": "Licensees list",
                 "description": "Return a list of all licensees for the current vendor",
                 "operationId": "listLicensees",
+                "produces": ["application/xml", "application/json"],
                 "parameters": [],
                 "responses": {
                     "200": {
@@ -128,6 +125,7 @@
                 "summary": "Licensing Models list",
                 "description": "Return a list of all licensing models supported by the service",
                 "operationId": "licensingModels",
+                "produces": ["application/xml", "application/json"],
                 "parameters": [],
                 "responses": {
                     "200": {
@@ -157,6 +155,7 @@
                 "summary": "License Types list",
                 "description": "Return a list of all license types supported by the service",
                 "operationId": "licenseTypes",
+                "produces": ["application/xml", "application/json"],
                 "parameters": [],
                 "responses": {
                     "200": {
