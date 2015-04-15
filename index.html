@@ -45,10 +45,11 @@
             });
 
             function addAuthorization() {
-                var username = $('#input_username')[0].value;
-                var password = $('#input_password')[0].value;
+                var username = $('#input_username').val();
+                var password = $('#input_password').val();
                 if (username && username.trim() != "" && password && password.trim() != "") {
-                    swaggerUi.api.clientAuthorizations.add("basicAuth", new SwaggerClient.PasswordAuthorization("basicAuth", username, password));
+                    var basicAuth = new SwaggerClient.PasswordAuthorization('basic', username, password);
+                    swaggerUi.api.clientAuthorizations.add("basicAuth", basicAuth);
                 }
             }
 
