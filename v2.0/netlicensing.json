@@ -114,7 +114,7 @@
                 },
                 "security": [
                     {
-                        "netlicensing_auth": ["demo:demo"]
+                        "basicAuth": []
                     }
                 ]
             }
@@ -146,7 +146,12 @@
                     "500": {
                         "description": "Internal service error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
             }
         },
         "/utility/licenseTypes": {
@@ -176,13 +181,19 @@
                     "500": {
                         "description": "Internal service error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
             }
         }
     },
     "securityDefinitions": {
-        "netlicensing_auth": {
-            "type": "basic"
+        "basicAuth": {
+            "type": "basic",
+            "description": "HTTP Basic Authentication. Works over `HTTP` and `HTTPS`"
         }
     },
     "definitions": {
