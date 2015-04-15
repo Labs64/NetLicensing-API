@@ -44,16 +44,16 @@
                 sorter: "alpha"
             });
 
-            function addApiKeyAuthorization() {
+            function addAuthorization() {
                 var username = $('#input_username')[0].value;
                 var password = $('#input_password')[0].value;
                 if (username && username.trim() != "" && password && password.trim() != "") {
-                    SwaggerUi.api.clientAuthorizations.add("basicAuth", new SwaggerClient.PasswordAuthorization("basicAuth", username, password));
+                    swaggerUi.api.clientAuthorizations.add("basicAuth", new SwaggerClient.PasswordAuthorization("basicAuth", username, password));
                 }
             }
 
             $('#explore').click(function () {
-                addApiKeyAuthorization();
+                addAuthorization();
             });
 
             window.swaggerUi.load();
