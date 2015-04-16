@@ -91,7 +91,6 @@
                 "description": "Return a list of all licensees for the current vendor",
                 "operationId": "listLicensees",
                 "produces": ["application/xml", "application/json"],
-                "parameters": [],
                 "responses": {
                     "200": {
                         "description": "Successful request",
@@ -126,7 +125,6 @@
                 "description": "Return a list of all licensing models supported by the service",
                 "operationId": "licensingModels",
                 "produces": ["application/xml", "application/json"],
-                "parameters": [],
                 "responses": {
                     "200": {
                         "description": "Successful request",
@@ -161,7 +159,6 @@
                 "description": "Return a list of all license types supported by the service",
                 "operationId": "licenseTypes",
                 "produces": ["application/xml", "application/json"],
-                "parameters": [],
                 "responses": {
                     "200": {
                         "description": "Successful request",
