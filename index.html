@@ -33,12 +33,9 @@
                 dom_id: "swagger-ui-container",
                 supportedSubmitMethods: ['get', 'post', 'put', 'delete'],
                 onComplete: function (swaggerApi, swaggerUi) {
-
                     $('pre code').each(function (i, e) {
                         hljs.highlightBlock(e)
                     });
-
-                    addAuthorization();
                 },
                 onFailure: function (data) {
                     log("Unable to Load SwaggerUI");
@@ -53,10 +50,10 @@
                 if (username && username.trim() != "" && password && password.trim() != "") {
                     var basicAuth = new SwaggerClient.PasswordAuthorization('basic', username, password);
                     window.swaggerUi.api.clientAuthorizations.add("basicAuth", basicAuth);
-                    log("authorization added: username = " + username + ", password = " + password);
                 }
             }
 
+<<<<<<< HEAD
             $('#input_username').change(addAuthorization);
             $('#input_password').change(addAuthorization);
 
@@ -65,6 +62,11 @@
             $('#input_username').val("demo");
             $('#input_password').val("demo");
             addAuthorization();
+=======
+            $('#explore').click(function () {
+                addAuthorization();
+            });
+>>>>>>> parent of 06d716f... - test swagger 'develop_20'
 
             window.swaggerUi.load();
 
@@ -75,7 +77,6 @@
             }
         });
     </script>
-
 </head>
 
 <body class="swagger-section">
