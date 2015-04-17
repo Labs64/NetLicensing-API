@@ -33,12 +33,9 @@
                 dom_id: "swagger-ui-container",
                 supportedSubmitMethods: ['get', 'post', 'put', 'delete'],
                 onComplete: function (swaggerApi, swaggerUi) {
-
                     $('pre code').each(function (i, e) {
                         hljs.highlightBlock(e)
                     });
-
-                    addAuthorization();
                 },
                 onFailure: function (data) {
                     log("Unable to Load SwaggerUI");
@@ -57,14 +54,9 @@
                 }
             }
 
-            $('#input_username').change(addAuthorization);
-            $('#input_password').change(addAuthorization);
-
-            // pre-populate on the page for demonstration purposes
-            $('#input_baseUrl').val(url);
-            $('#input_username').val("demo");
-            $('#input_password').val("demo");
-            addAuthorization();
+            $('#explore').click(function () {
+                addAuthorization();
+            });
 
             window.swaggerUi.load();
 
@@ -75,7 +67,6 @@
             }
         });
     </script>
-
 </head>
 
 <body class="swagger-section">
