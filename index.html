@@ -36,6 +36,8 @@
                     $('pre code').each(function (i, e) {
                         hljs.highlightBlock(e)
                     });
+
+                    addAuthorization();
                 },
                 onFailure: function (data) {
                     log("Unable to Load SwaggerUI");
@@ -49,14 +51,18 @@
                 var password = $('#input_password').val();
                 if (username && username.trim() != "" && password && password.trim() != "") {
                     var basicAuth = new SwaggerClient.PasswordAuthorization('basic', username, password);
-                    window.swaggerUi.api.clientAuthorizations.add("basicAuth", basicAuth);
+                    window.swaggerUi.apis.clientAuthorizations.add("basicAuth", basicAuth);
                     log("authorization added: username = " + username + ", password = " + password);
                 }
             }
 
-            $('#explore').click(function () {
-                addAuthorization();
-            });
+            $('#input_username').change(addAuthorization);
+            $('#input_password').change(addAuthorization);
+
+            // pre-populate on the page using demo account
+            $('#input_username').val("demo");
+            $('#input_password').val("demo");
+            addAuthorization();
 
             window.swaggerUi.load();
 
