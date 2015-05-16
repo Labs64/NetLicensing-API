@@ -7,7 +7,7 @@
         "termsOfService": "https://www.labs64.com/legal/terms-of-service/netlicensing"
     },
     "host": "netlicensing.labs64.com",
-    "basePath": "/core/v2/rest",
+    "basePath": "https://netlicensing.labs64.com/core/v2/rest",
     "tags": [
         {
             "name": "Product",
