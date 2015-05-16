@@ -84,12 +84,250 @@
     ],
     "schemes": ["https"],
     "paths": {
+        "/product": {
+            "get": {
+                "tags": ["Product"],
+                "summary": "Products list",
+                "description": "Return a list of all configured products for the current vendor",
+                "operationId": "listProducts",
+                "produces": ["application/xml", "application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/productmodule": {
+            "get": {
+                "tags": ["Product Module"],
+                "summary": "Product Modules list",
+                "description": "Return a list of all product modules for the current vendor",
+                "operationId": "listProductModules",
+                "produces": ["application/xml", "application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/licensetemplate": {
+            "get": {
+                "tags": ["License Template"],
+                "summary": "License Templates list",
+                "description": "Return a list of all license templates for the current vendor",
+                "operationId": "listLicenseTemplates",
+                "produces": ["application/xml", "application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
         "/licensee": {
             "get": {
                 "tags": ["Licensee"],
                 "summary": "Licensees list",
                 "description": "Return a list of all licensees for the current vendor",
                 "operationId": "listLicensees",
+                "produces": ["application/xml", "application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/license": {
+            "get": {
+                "tags": ["License"],
+                "summary": "Licenses list",
+                "description": "Return a list of all licenses for the current vendor",
+                "operationId": "listLicenses",
+                "produces": ["application/xml", "application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/transaction": {
+            "get": {
+                "tags": ["Transaction"],
+                "summary": "Transactions list",
+                "description": "Return a list of all transactions for the current vendor",
+                "operationId": "listTransactions",
+                "produces": ["application/xml", "application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/token": {
+            "get": {
+                "tags": ["Token"],
+                "summary": "Tokens list",
+                "description": "Return a list of all tokens for the current vendor",
+                "operationId": "listTokens",
+                "produces": ["application/xml", "application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/paymentmethod": {
+            "get": {
+                "tags": ["Payment Method"],
+                "summary": "Payment Methods list",
+                "description": "Return a list of all payment methods for the current vendor",
+                "operationId": "listPaymentMethods",
                 "produces": ["application/xml", "application/json"],
                 "responses": {
                     "200": {
