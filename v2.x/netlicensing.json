@@ -126,7 +126,7 @@
       },
       "post": {
         "tags": [
-          "Products"
+          "Product"
         ],
         "summary": "Create product",
         "description": "Creates a new product",
@@ -225,7 +225,7 @@
       },
       "post": {
         "tags": [
-          "Products"
+          "Product"
         ],
         "summary": "Update product",
         "description": "Sets the provided properties to a product. Return an updated product",
@@ -283,7 +283,7 @@
       },
       "delete": {
         "tags": [
-          "Products"
+          "Product"
         ],
         "summary": "Delete product",
         "description": "Delete a product by number",
@@ -2174,6 +2174,7 @@
     "PaymentMethod": {
       "type":"object",
       "properties":{
+        "":{}
         
       },
       "xml": {
