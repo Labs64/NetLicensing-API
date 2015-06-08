@@ -1,2185 +1,2185 @@
 {
-  "swagger": "2.0",
-  "info": {
-    "version": "2.2.0",
-    "title": "Labs64 NetLicensing RESTful API",
-    "description": "This is a Labs64 NetLicensing RESTful API. Please use demo account - <code>demo:demo</code><br/><br/>You can find out more about Labs64 NetLicensing at <a href='http://www.labs64.com/netlicensing' target='_blank'>http://www.labs64.com/netlicensing</a>",
-    "termsOfService": "https://www.labs64.com/legal/terms-of-service/netlicensing"
-  },
-  "host": "netlicensing.labs64.com",
-  "basePath": "/core/v2/rest",
-  "tags": [
-    {
-      "name": "Product",
-      "description": "Product operations",
-      "externalDocs": {
-        "description": "Product Services",
-        "url": "https://www.labs64.de/confluence/x/qACo"
-      }
+    "swagger": "2.0",
+    "info": {
+        "version": "2.2.0",
+        "title": "Labs64 NetLicensing RESTful API",
+        "description": "This is a Labs64 NetLicensing RESTful API. Please use demo account - <code>demo:demo</code><br/><br/>You can find out more about Labs64 NetLicensing at <a href='http://www.labs64.com/netlicensing' target='_blank'>http://www.labs64.com/netlicensing</a>",
+        "termsOfService": "https://www.labs64.com/legal/terms-of-service/netlicensing"
     },
-    {
-      "name": "Product Module",
-      "description": "Product Module operations",
-      "externalDocs": {
-        "description": "Product Module Services",
-        "url": "https://www.labs64.de/confluence/x/qwCo"
-      }
+    "host": "netlicensing.labs64.com",
+    "basePath": "/core/v2/rest",
+    "tags": [
+        {
+            "name": "Product",
+            "description": "Product operations",
+            "externalDocs": {
+                "description": "Product Services",
+                "url": "https://www.labs64.de/confluence/x/qACo"
+            }
+        },
+        {
+            "name": "Product Module",
+            "description": "Product Module operations",
+            "externalDocs": {
+                "description": "Product Module Services",
+                "url": "https://www.labs64.de/confluence/x/qwCo"
+            }
+        },
+        {
+            "name": "License Template",
+            "description": "License Template operations",
+            "externalDocs": {
+                "description": "License Template Services",
+                "url": "https://www.labs64.de/confluence/x/rQCo"
+            }
+        },
+        {
+            "name": "Licensee",
+            "description": "Licensee operations",
+            "externalDocs": {
+                "description": "Licensee Services",
+                "url": "https://www.labs64.de/confluence/x/qQCo"
+            }
+        },
+        {
+            "name": "License",
+            "description": "License operations",
+            "externalDocs": {
+                "description": "License Services",
+                "url": "https://www.labs64.de/confluence/x/rACo"
+            }
+        },
+        {
+            "name": "Transaction",
+            "description": "Transaction operations",
+            "externalDocs": {
+                "description": "Transaction Services",
+                "url": "https://www.labs64.de/confluence/x/qgCo"
+            }
+        },
+        {
+            "name": "Token",
+            "description": "Token operations",
+            "externalDocs": {
+                "description": "Token Services",
+                "url": "https://www.labs64.de/confluence/x/rwCo"
+            }
+        },
+        {
+            "name": "Payment Method",
+            "description": "Payment Method operations",
+            "externalDocs": {
+                "description": "Payment Method Services",
+                "url": "https://www.labs64.de/confluence/x/sACo"
+            }
+        },
+        {
+            "name": "Utility",
+            "description": "Utility operations",
+            "externalDocs": {
+                "description": "Utility Services",
+                "url": "https://www.labs64.de/confluence/x/rgCo"
+            }
+        }
+    ],
+    "schemes": [
+        "https"
+    ],
+    "paths": {
+        "/product": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Products list",
+                "description": "Return a list of all configured products for the current vendor",
+                "operationId": "listProducts",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Product"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Create product",
+                "description": "Creates a new product",
+                "operationId": "createProduct",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "procedures": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Created product object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Product"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Product"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/product/{productNumber}": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Get product",
+                "description": "Return a product by productNumber",
+                "operarionId": "productNumber",
+                "procedures": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "productNumber",
+                        "in": "path",
+                        "description": "Number of product",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Product"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Update product",
+                "description": "Sets the provided properties to a product. Return an updated product",
+                "operationId": "updateProduct",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "procedures": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "productNumber",
+                        "in": "path",
+                        "description": "Number of product to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Updated product object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Product"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Product"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Delete product",
+                "description": "Delete a product by number",
+                "operationId": "deleteProduct",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "procedures": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "productNumber",
+                        "in": "path",
+                        "description": "Number of product",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "forceCascade",
+                        "in": "path",
+                        "description": "Force object deletion and all descendants",
+                        "requied": true,
+                        "type": "boolean"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Product"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/productmodule": {
+            "get": {
+                "tags": [
+                    "Product Module"
+                ],
+                "summary": "Product Modules list",
+                "description": "Return a list of all product modules for the current vendor",
+                "operationId": "listProductModules",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Product Module"
+                ],
+                "summary": "Create product module",
+                "description": "Creates a new product module",
+                "operationId": "createProductModule",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "procedures": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Created product module object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ProductModule"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/productmodule/{productModuleNumber}": {
+            "get": {
+                "tags": [
+                    "Product Module"
+                ],
+                "summary": "Get product module",
+                "description": "Return a product module by productModuleNumber",
+                "operationId": "getProductModule",
+                "procedures": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "productModuleNumber",
+                        "in": "path",
+                        "description": "Number of product module",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Product Module"
+                ],
+                "summary": "Update product module",
+                "description": "Sets the provided properties to a product module. Return an updated product module",
+                "operationId": "updateProductModule",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "procedures": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "productModuleNumber",
+                        "in": "path",
+                        "description": "Number of product module to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Updated product module object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ProductModule"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Product Module"
+                ],
+                "summary": "Delete product module",
+                "description": "Delete a product module by number",
+                "operationId": "deleteProductModule",
+                "parameters": [
+                    {
+                        "name": "productModuleNumber",
+                        "in": "path",
+                        "description": "Number of product module",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "procedures": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/licensetemplate": {
+            "get": {
+                "tags": [
+                    "License Template"
+                ],
+                "summary": "License Templates list",
+                "description": "Return a list of all license templates for the current vendor",
+                "operationId": "listLicenseTemplates",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "License Template"
+                ],
+                "summary": "Create license template",
+                "description": "Creates a new license template",
+                "operationId": "createLicenseTemplate",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Created license template object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/LicenseTemplate"
+                        }
+                    }
+                ],
+                "procedures": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/licensetemplate/{licenseTemplateNumber}": {
+            "get": {
+                "tags": [
+                    "License Template"
+                ],
+                "summary": "Get license template",
+                "description": "Return a license template by licenseTemplateNumber",
+                "operationId": "getLicenseTemplate",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "licenseTemplateNumber",
+                        "in": "path",
+                        "description": "Number of license template",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "License Template"
+                ],
+                "summary": "Update license template",
+                "description": "Sets the provided properties to a license template. Return an updated license template",
+                "operationId": "updateLicenseTemplate",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "parameters": [
+                    {
+                        "name": "licesnseTemplateNumber",
+                        "in": "path",
+                        "description": "Number of license template to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Updated license template object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/LicenseTemplate"
+                        }
+                    }
+                ],
+                "procedures": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "License Template"
+                ],
+                "summary": "Delete license template",
+                "description": "Delete a license template by number.",
+                "operationId": "deleteLicenseTemplate",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "parameters": [
+                    {
+                        "name": "licenseTemplateNumber",
+                        "in": "path",
+                        "description": "Number of license template",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "procedures": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/licensee": {
+            "get": {
+                "tags": [
+                    "Licensee"
+                ],
+                "summary": "Licensees list",
+                "description": "Return a list of all licensees for the current vendor",
+                "operationId": "listLicensees",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Licensee"
+                ],
+                "summary": "Create licensee",
+                "description": "Creates a new licensee",
+                "operationId": "createLicensee",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Created licensee object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Licensee"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/licensee/{licenseeNumber}": {
+            "get": {
+                "tags": [
+                    "Licensee"
+                ],
+                "summary": "Get licensee",
+                "description": "Get a licensee by licenseeNumber",
+                "operationId": "getLicensee",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "licenseeNumber",
+                        "in": "path",
+                        "description": "Number of licensee",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Licensee"
+                ],
+                "summary": "Update licensee",
+                "description": "Sets the provided properties to a licensee. Return an updated licensee",
+                "operationId": "updateLicensee",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "licenseeNumber",
+                        "in": "path",
+                        "description": "Number of licensee to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Updated licensee object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Licensee"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Licensee"
+                ],
+                "summary": "Delete licensee",
+                "description": "Delete a lecensee by number",
+                "operationId": "deleteLicensee",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "licenseeNumber",
+                        "in": "path",
+                        "description": "Number of licensee",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/license": {
+            "get": {
+                "tags": [
+                    "License"
+                ],
+                "summary": "Licenses list",
+                "description": "Return a list of all licenses for the current vendor",
+                "operationId": "listLicenses",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "License"
+                ],
+                "summary": "Create license",
+                "description": "Creates a new license",
+                "operationId": "createLicense",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Created license object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/License"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/license/{licenseNumber}": {
+            "get": {
+                "tags": [
+                    "License"
+                ],
+                "summary": "Get license",
+                "description": "Get license by a licenseNumber",
+                "operationId": "getLicense",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "licenseModuleNumber",
+                        "in": "path",
+                        "description": "Number of license",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "License"
+                ],
+                "summary": "Update license",
+                "description": "Update license by a licenseNumber",
+                "operationId": "updateLicense",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "licenseNumber",
+                        "in": "path",
+                        "description": "Number of license to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Updated license object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/License"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "License"
+                ],
+                "summary": "Delete license",
+                "description": "Delete license by a licenseNumber",
+                "operationId": "deleteLicense",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "licenseNumber",
+                        "in": "path",
+                        "description": "Number of license",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/transaction": {
+            "get": {
+                "tags": [
+                    "Transaction"
+                ],
+                "summary": "Transactions list",
+                "description": "Return a list of all transactions for the current vendor",
+                "operationId": "listTransactions",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Transaction"
+                ],
+                "summary": "Create transaction",
+                "description": "Creates a new transaction",
+                "operationId": "createTransaction",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Created transaction object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Transaction"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/transaction/transactionNumber": {
+            "get": {
+                "tags": [
+                    "Transaction"
+                ],
+                "summary": "Get transaction ",
+                "description": "Return a transaction by transactionNumber",
+                "operationId": "getTransaction",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "transactionNumber",
+                        "in": "path",
+                        "description": "Number of transaction",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Transaction"
+                ],
+                "summary": "Update transaction",
+                "description": "Sets the provided properties to a transaction. Return an updated transaction",
+                "operationId": "updateTransaction",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "transactionNumber",
+                        "in": "path",
+                        "description": "Number of transaction to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Updated transaction object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Transaction"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/token": {
+            "get": {
+                "tags": [
+                    "Token"
+                ],
+                "summary": "Tokens list",
+                "description": "Return a list of all tokens for the current vendor",
+                "operationId": "listTokens",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Token"
+                ],
+                "summary": "Create token",
+                "description": "Create token by tokenType and additional token parameters",
+                "operationId": "createToken",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/token/{tokenNumber}": {
+            "get": {
+                "tags": [
+                    "Token"
+                ],
+                "summary": "Get token",
+                "description": "Return a token by tokenNumber",
+                "operationId": "getToken",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "tokenNumber",
+                        "in": "path",
+                        "description": "Number of token",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Token"
+                ],
+                "summary": "Delete token",
+                "description": "Delete a token by number",
+                "operationId": "deleteToken",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "tokenNumber",
+                        "in": "path",
+                        "description": "Number of token",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/paymentmethod": {
+            "get": {
+                "tags": [
+                    "Payment Method"
+                ],
+                "summary": "Payment Methods list",
+                "description": "Return a list of all payment methods for the current vendor",
+                "operationId": "listPaymentMethods",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/peymentmethod/{paymentMethodNumber}": {
+            "get": {
+                "tags": [
+                    "Payment Method"
+                ],
+                "summary": "Get payment method",
+                "description": "Return a payment method info by paymentMethodNumber",
+                "operationId": "getPaymentMethod",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "paymentMethodNumber",
+                        "in": "path",
+                        "description": "Number of peyment method",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Payment Method"
+                ],
+                "summary": "Update payment method",
+                "description": "Sets the provided properties to a payment method. Return an updated payment method",
+                "operationId": "updatePaymentMethod",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "paymentMethodNumber",
+                        "in": "path",
+                        "description": "Number of payment method to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Updated product module object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ProductModule"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/utility/licensingModels": {
+            "get": {
+                "tags": [
+                    "Utility"
+                ],
+                "summary": "Licensing Models list",
+                "description": "Return a list of all licensing models supported by the service",
+                "operationId": "licensingModels",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/utility/licenseTypes": {
+            "get": {
+                "tags": [
+                    "Utility"
+                ],
+                "summary": "License Types list",
+                "description": "Return a list of all license types supported by the service",
+                "operationId": "licenseTypes",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        }
     },
-    {
-      "name": "License Template",
-      "description": "License Template operations",
-      "externalDocs": {
-        "description": "License Template Services",
-        "url": "https://www.labs64.de/confluence/x/rQCo"
-      }
+    "securityDefinitions": {
+        "basicAuth": {
+            "type": "basic",
+            "description": "HTTP Basic Authentication. Works over `HTTP` and `HTTPS`"
+        },
+        "api_key": {
+            "type": "apiKey",
+            "name": "api_key",
+            "in": "header"
+        }
     },
-    {
-      "name": "Licensee",
-      "description": "Licensee operations",
-      "externalDocs": {
-        "description": "Licensee Services",
-        "url": "https://www.labs64.de/confluence/x/qQCo"
-      }
-    },
-    {
-      "name": "License",
-      "description": "License operations",
-      "externalDocs": {
-        "description": "License Services",
-        "url": "https://www.labs64.de/confluence/x/rACo"
-      }
-    },
-    {
-      "name": "Transaction",
-      "description": "Transaction operations",
-      "externalDocs": {
-        "description": "Transaction Services",
-        "url": "https://www.labs64.de/confluence/x/qgCo"
-      }
-    },
-    {
-      "name": "Token",
-      "description": "Token operations",
-      "externalDocs": {
-        "description": "Token Services",
-        "url": "https://www.labs64.de/confluence/x/rwCo"
-      }
-    },
-    {
-      "name": "Payment Method",
-      "description": "Payment Method operations",
-      "externalDocs": {
-        "description": "Payment Method Services",
-        "url": "https://www.labs64.de/confluence/x/sACo"
-      }
-    },
-    {
-      "name": "Utility",
-      "description": "Utility operations",
-      "externalDocs": {
-        "description": "Utility Services",
-        "url": "https://www.labs64.de/confluence/x/rgCo"
-      }
-    }
-  ],
-  "schemes": [
-    "https"
-  ],
-  "paths": {
-    "/product": {
-      "get": {
-        "tags": [
-          "Product"
-        ],
-        "summary": "Products list",
-        "description": "Return a list of all configured products for the current vendor",
-        "operationId": "listProducts",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/Product"
+    "definitions": {
+        "netlicensing": {
+            "properties": {
+                "infos": {
+                    "$ref": "#/definitions/infos"
+                },
+                "items": {
+                    "$ref": "#/definitions/items"
+                }
+            },
+            "xml": {
+                "name": "netlicensing"
             }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
         },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "Product"
-        ],
-        "summary": "Create product",
-        "description": "Creates a new product",
-        "operationId": "createProduct",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "procedures": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Created product object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Product"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/Product"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/product/{productNumber}": {
-      "get": {
-        "tags": [
-          "Product"
-        ],
-        "summary": "Get product",
-        "description": "Return a product by productNumber",
-        "operarionId": "productNumber",
-        "procedures": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "productNumber",
-            "in": "path",
-            "description": "Number of product",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/Product"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "Product"
-        ],
-        "summary": "Update product",
-        "description": "Sets the provided properties to a product. Return an updated product",
-        "operationId": "updateProduct",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "procedures": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "productNumber",
-            "in": "path",
-            "description": "Number of product to update",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Updated product object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Product"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/Product"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "delete": {
-        "tags": [
-          "Product"
-        ],
-        "summary": "Delete product",
-        "description": "Delete a product by number",
-        "operationId": "deleteProduct",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "procedures": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "productNumber",
-            "in": "path",
-            "description": "Number of product",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "forceCascade",
-            "in": "path",
-            "description": "Force object deletion and all descendants",
-            "requied": true,
-            "type": "boolean"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/Product"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/productmodule": {
-      "get": {
-        "tags": [
-          "Product Module"
-        ],
-        "summary": "Product Modules list",
-        "description": "Return a list of all product modules for the current vendor",
-        "operationId": "listProductModules",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "Product Module"
-        ],
-        "summary": "Create product module",
-        "description": "Creates a new product module",
-        "operationId": "createProductModule",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "procedures": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Created product module object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/ProductModule"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/productmodule/{productModuleNumber}": {
-      "get": {
-        "tags": [
-          "Product Module"
-        ],
-        "summary": "Get product module",
-        "description": "Return a product module by productModuleNumber",
-        "operationId": "getProductModule",
-        "procedures": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "productModuleNumber",
-            "in": "path",
-            "description": "Number of product module",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "Product Module"
-        ],
-        "summary": "Update product module",
-        "description": "Sets the provided properties to a product module. Return an updated product module",
-        "operationId": "updateProductModule",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "procedures": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "productModuleNumber",
-            "in": "path",
-            "description": "Number of product module to update",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Updated product module object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/ProductModule"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "delete": {
-        "tags": [
-          "Product Module"
-        ],
-        "summary": "Delete product module",
-        "description": "Delete a product module by number",
-        "operationId": "deleteProductModule",
-        "parameters": [
-          {
-            "name": "productModuleNumber",
-            "in": "path",
-            "description": "Number of product module",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "procedures": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/licensetemplate": {
-      "get": {
-        "tags": [
-          "License Template"
-        ],
-        "summary": "License Templates list",
-        "description": "Return a list of all license templates for the current vendor",
-        "operationId": "listLicenseTemplates",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "License Template"
-        ],
-        "summary": "Create license template",
-        "description": "Creates a new license template",
-        "operationId": "createLicenseTemplate",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Created license template object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/LicenseTemplate"
-            }
-          }
-        ],
-        "procedures": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/licensetemplate/{licenseTemplateNumber}": {
-      "get": {
-        "tags": [
-          "License Template"
-        ],
-        "summary": "Get license template",
-        "description": "Return a license template by licenseTemplateNumber",
-        "operationId": "getLicenseTemplate",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "licenseTemplateNumber",
-            "in": "path",
-            "description": "Number of license template",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "License Template"
-        ],
-        "summary": "Update license template",
-        "description": "Sets the provided properties to a license template. Return an updated license template",
-        "operationId": "updateLicenseTemplate",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "parameters": [
-          {
-            "name": "licesnseTemplateNumber",
-            "in": "path",
-            "description": "Number of license template to update",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Updated license template object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/LicenseTemplate"
-            }
-          }
-        ],
-        "procedures": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "delete": {
-        "tags": [
-          "License Template"
-        ],
-        "summary": "Delete license template",
-        "description": "Delete a license template by number.",
-        "operationId": "deleteLicenseTemplate",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "parameters": [
-          {
-            "name": "licenseTemplateNumber",
-            "in": "path",
-            "description": "Number of license template",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "procedures": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/licensee": {
-      "get": {
-        "tags": [
-          "Licensee"
-        ],
-        "summary": "Licensees list",
-        "description": "Return a list of all licensees for the current vendor",
-        "operationId": "listLicensees",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "Licensee"
-        ],
-        "summary": "Create licensee",
-        "description": "Creates a new licensee",
-        "operationId": "createLicensee",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Created licensee object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Licensee"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "licensee/{licenseeNumber}": {
-      "get": {
-        "tags": [
-          "Licensee"
-        ],
-        "summary": "Get licensee",
-        "description": "Get a licensee by licenseeNumber",
-        "operationId": "getLicensee",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "licenseeNumber",
-            "in": "path",
-            "description": "Number of licensee",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "Licensee"
-        ],
-        "summary": "Update licensee",
-        "description": "Sets the provided properties to a licensee. Return an updated licensee",
-        "operationId": "updateLicensee",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "licenseeNumber",
-            "in": "path",
-            "description": "Number of licensee to update",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Updated licensee object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Licensee"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "delete": {
-        "tags": [
-          "Licensee"
-        ],
-        "summary": "Delete licensee",
-        "description": "Delete a lecensee by number",
-        "operationId": "deleteLicensee",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "licenseeNumber",
-            "in": "path",
-            "description": "Number of licensee",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/license": {
-      "get": {
-        "tags": [
-          "License"
-        ],
-        "summary": "Licenses list",
-        "description": "Return a list of all licenses for the current vendor",
-        "operationId": "listLicenses",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "License"
-        ],
-        "summary": "Create license",
-        "description": "Creates a new license",
-        "operationId": "createLicense",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Created license object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/License"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/license/{licenseNumber}": {
-      "get": {
-        "tags": [
-          "License"
-        ],
-        "summary": "Get license",
-        "description": "Get license by a licenseNumber",
-        "operationId": "getLicense",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "licenseModuleNumber",
-            "in": "path",
-            "description": "Number of license",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "License"
-        ],
-        "summary": "Update license",
-        "description": "Update license by a licenseNumber",
-        "operationId": "updateLicense",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "licenseNumber",
-            "in": "path",
-            "description": "Number of license to update",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Updated license object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/License"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "delete": {
-        "tags": [
-          "License"
-        ],
-        "summary": "Delete license",
-        "description": "Delete license by a licenseNumber",
-        "operationId": "deleteLicense",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "licenseNumber",
-            "in": "path",
-            "description": "Number of license",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/transaction": {
-      "get": {
-        "tags": [
-          "Transaction"
-        ],
-        "summary": "Transactions list",
-        "description": "Return a list of all transactions for the current vendor",
-        "operationId": "listTransactions",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "Transaction"
-        ],
-        "summary": "Create transaction",
-        "description": "Creates a new transaction",
-        "operationId": "createTransaction",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Created transaction object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Transaction"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/transaction/transactionNumber": {
-      "get": {
-        "tags": [
-          "Transaction"
-        ],
-        "summary": "Get transaction ",
-        "description": "Return a transaction by transactionNumber",
-        "operationId": "getTransaction",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "transactionNumber",
-            "in": "path",
-            "description": "Number of transaction",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "Transaction"
-        ],
-        "summary": "Update transaction",
-        "description": "Sets the provided properties to a transaction. Return an updated transaction",
-        "operationId": "updateTransaction",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "transactionNumber",
-            "in": "path",
-            "description": "Number of transaction to update",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Updated transaction object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Transaction"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/token": {
-      "get": {
-        "tags": [
-          "Token"
-        ],
-        "summary": "Tokens list",
-        "description": "Return a list of all tokens for the current vendor",
-        "operationId": "listTokens",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "Token"
-        ],
-        "summary": "Create token",
-        "description": "Create token by tokenType and additional token parameters",
-        "operationId": "createToken",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/token/{tokenNumber}": {
-      "get": {
-        "tags": [
-          "Token"
-        ],
-        "summary": "Get token",
-        "description": "Return a token by tokenNumber",
-        "operationId": "getToken",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "tokenNumber",
-            "in": "path",
-            "description": "Number of token",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "delete": {
-        "tags": [
-          "Token"
-        ],
-        "summary": "Delete token",
-        "description": "Delete a token by number",
-        "operationId": "deleteToken",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "tokenNumber",
-            "in": "path",
-            "description": "Number of token",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/paymentmethod": {
-      "get": {
-        "tags": [
-          "Payment Method"
-        ],
-        "summary": "Payment Methods list",
-        "description": "Return a list of all payment methods for the current vendor",
-        "operationId": "listPaymentMethods",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/peymentmethod/{paymentMethodNumber}": {
-      "get": {
-        "tags": [
-          "Payment Method"
-        ],
-        "summary": "Get payment method",
-        "description": "Return a payment method info by paymentMethodNumber",
-        "operationId": "getPaymentMethod",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "paymentMethodNumber",
-            "in": "path",
-            "description": "Number of peyment method",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "Payment Method"
-        ],
-        "summary": "Update payment method",
-        "description": "Sets the provided properties to a payment method. Return an updated payment method",
-        "operationId": "updatePaymentMethod",
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "paymentMethodNumber",
-            "in": "path",
-            "description": "Number of payment method to update",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Updated product module object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/ProductModule"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/utility/licensingModels": {
-      "get": {
-        "tags": [
-          "Utility"
-        ],
-        "summary": "Licensing Models list",
-        "description": "Return a list of all licensing models supported by the service",
-        "operationId": "licensingModels",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    },
-    "/utility/licenseTypes": {
-      "get": {
-        "tags": [
-          "Utility"
-        ],
-        "summary": "License Types list",
-        "description": "Return a list of all license types supported by the service",
-        "operationId": "licenseTypes",
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful request",
-            "schema": {
-              "$ref": "#/definitions/netlicensing"
-            }
-          },
-          "400": {
-            "description": "Malformed or illegal request"
-          },
-          "403": {
-            "description": "Access is denied"
-          },
-          "404": {
-            "description": "Resource not found"
-          },
-          "500": {
-            "description": "Internal service error"
-          }
-        },
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ]
-      }
-    }
-  },
-  "securityDefinitions": {
-    "basicAuth": {
-      "type": "basic",
-      "description": "HTTP Basic Authentication. Works over `HTTP` and `HTTPS`"
-    },
-    "api_key": {
-      "type": "apiKey",
-      "name": "api_key",
-      "in": "header"
-    }
-  },
-  "definitions": {
-    "netlicensing": {
-      "properties": {
         "infos": {
-          "$ref": "#/definitions/infos"
+            "xml": {
+                "name": "infos"
+            }
         },
         "items": {
-          "$ref": "#/definitions/items"
+            "properties": {},
+            "xml": {
+                "name": "items"
+            }
+        },
+        "Product": {
+            "type": "object",
+            "properties": {
+                "number": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Unique number that identifies the product. Vendor can assign this number when creating a product or let NetLicensing generate one. Read-only after creation of the first licensee for the product."
+                },
+                "active": {
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses"
+                },
+                "name": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Product name. Together with the version identifies the product for the end customer"
+                },
+                "version": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Product version. Convenience parameter, additional to the product name."
+                },
+                "licenseAutoCreate": {
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If set to 'true', non-existing licensees will be created at first validation attempt."
+                },
+                "description": {
+                    "type": "string",
+                    "required": false,
+                    "description": "Product description. Optional"
+                },
+                "licenseInfo": {
+                    "type": "string",
+                    "required": false,
+                    "description": "Licensing information. Optional."
+                }
+            },
+            "xml": {
+                "name": "product"
+            }
+        },
+        "ProductModule": {
+            "type": "object",
+            "properties": {
+                "number": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Unique number (across all products of a vendor) that identifies the product module. Vendor can assign this number when creating a product module or let NetLicensing generate one. Read-only after creation of the first licensee for the product."
+                },
+                "active": {
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If set to false, the product module is disabled. Licensees can not obtain any new licenses for this product module."
+                },
+                "name": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Product module name that is visible to the end customers in NetLicensing Shop."
+                },
+                "licensingInfo": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation."
+                }
+            },
+            "xml": {
+                "name": "productmodule"
+            }
+        },
+        "LicenseTemplate": {
+            "type": "object",
+            "properties": {
+                "number": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Unique number (across all products of a vendor) that identifies the license template. Vendor can assign this number when creating a license template or let NetLicensing generate one. Read-only after creation of the first license from this license template."
+                },
+                "active": {
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If set to false, the license template is disabled. Licensee can not obtain any new licenses off this license template."
+                },
+                "name": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Name for the licensed item."
+                },
+                "licenseType": {
+                    "type": "",
+                    "required": "",
+                    "description": "type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME"
+                },
+                "price": {
+                    "type": "bigdecimal",
+                    "required": true,
+                    "description": "price for the license. If >0, it must always be accompanied by the currency specification."
+                },
+                "currency": {
+                    "type": "string",
+                    "required": true,
+                    "description": "specifies currency for the license price. Check data types to discover which currencies are supported."
+                },
+                "automatic": {
+                    "type": "boolean",
+                    "required": "true",
+                    "description": "If set to true, every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0."
+                },
+                "hidden": {
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If set to true, this license template is not shown in NetLicensing Shop as offered for purchase."
+                },
+                "hiddenLicenses": {
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If set to true, licenses from this license template are not visible to the end customer, but participate in validation."
+                }
+
+            },
+            "xml": {
+                "name": "licensetemplate"
+            }
+        },
+        "Licensee": {
+            "type": "object",
+            "properties": {
+                "number": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee."
+                },
+                "active": {
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled."
+                }
+            },
+            "xml": {
+                "name": "licensee"
+            }
+        },
+        "License": {
+            "type": "object",
+            "properties": {
+                "number": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Unique number (across all products/licensees of a vendor) that identifies the license. Vendor can assign this number when creating a license or let NetLicensing generate one. Read-only after corresponding creation transaction status is set to closed."
+                },
+                "name": {
+                    "type": "string",
+                    "required": true,
+                    "description": "Name for the licensed item. Set from license template on creation, if not specified explicitly."
+                },
+                "active": {
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If set to false, the license is disabled. License can be re-enabled, but as long as it is disabled, the license is excluded from the validation process."
+                },
+                "price": {
+                    "type": "string",
+                    "required": true,
+                    "description": "price for the license. If >0, it must always be accompanied by the currency specification. Read-only, set from license template on creation."
+                },
+                "currency": {
+                    "type": "string",
+                    "required": true,
+                    "description": "specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation."
+                },
+                "hidden": {
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If set to true, this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly."
+                }
+            },
+            "xml": {
+                "name": "license"
+            }
+        },
+        "Transaction": {
+            "type": "object",
+            "properties": {
+                "number": {
+                    "type": "string",
+                    "": true,
+                    "description": "Unique number (across all products of a vendor) that identifies the transaction. This number is always generated by NetLicensing."
+                },
+                "active": {
+                    "type": "string",
+                    "": true,
+                    "description": "always true for transactions"
+                },
+                "status": {
+                    "type": "string",
+                    "": true,
+                    "description": ""
+                },
+                "source": {
+                    "type": "string",
+                    "": true,
+                    "description": ""
+                },
+                "price": {
+                    "type": "string",
+                    "": true,
+                    "description": "price for the transaction."
+                },
+                "discount": {
+                    "type": "string",
+                    "": true,
+                    "description": "discount for the transaction."
+                },
+                "currency": {
+                    "type": "string",
+                    "": true,
+                    "description": "specifies currency for the transaction price. Check data types to discover which currencies are supported."
+                }
+            },
+            "xml": {
+                "name": "transaction"
+            }
+        },
+        "Token": {
+            "type": "object",
+            "properties": {
+
+            },
+            "xml": {
+                "name": "token"
+            }
+        },
+        "PaymentMethod": {
+            "type": "object",
+            "properties": {
+                "": {}
+
+            },
+            "xml": {
+                "name": "paymentmethod"
+            }
         }
-      },
-      "xml": {
-        "name": "netlicensing"
-      }
-    },
-    "infos": {
-      "xml": {
-        "name": "infos"
-      }
-    },
-    "items": {
-      "properties": {},
-      "xml": {
-        "name": "items"
-      }
-    },
-    "Product": {
-      "type":"object",
-      "properties":{
-        "number":{
-          "type":"string",
-          "required":true,
-          "description":"Unique number that identifies the product. Vendor can assign this number when creating a product or let NetLicensing generate one. Read-only after creation of the first licensee for the product."
-        },
-        "active":{
-          "type":"boolean",
-          "required":true,
-          "description":"If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses"
-        },
-        "name":{
-          "type":"string",
-          "required":true,
-          "description":"Product name. Together with the version identifies the product for the end customer"
-        },
-        "version":{
-          "type":"string",
-          "required":true,
-          "description":"Product version. Convenience parameter, additional to the product name."
-        },
-        "licenseAutoCreate":{
-          "type":"boolean",
-          "required":true,
-          "description":"If set to 'true', non-existing licensees will be created at first validation attempt."
-        },
-        "description":{
-          "type":"string",
-          "required":false,
-          "description":"Product description. Optional"
-        },
-        "licenseInfo":{
-          "type":"string",
-          "required":false,
-          "description":"Licensing information. Optional."
-        }
-      },
-      "xml": {
-        "name": "product"
-      }
-    },
-    "ProductModule": {
-      "type":"object",
-      "properties":{
-        "number":{
-          "type":"string",
-          "required":true,
-          "description":"Unique number (across all products of a vendor) that identifies the product module. Vendor can assign this number when creating a product module or let NetLicensing generate one. Read-only after creation of the first licensee for the product."
-        },
-        "active":{
-          "type":"boolean",
-          "required":true,
-          "description":"If set to false, the product module is disabled. Licensees can not obtain any new licenses for this product module."
-        },
-        "name":{
-          "type":"string",
-          "required":true,
-          "description":"Product module name that is visible to the end customers in NetLicensing Shop."
-        },
-        "licensingInfo":{
-          "type":"string",
-          "required":true,
-          "description":"Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation."
-        }
-      },
-      "xml": {
-        "name": "productmodule"
-      }
-    },
-    "LicenseTemplate": {
-      "type":"object",
-      "properties":{
-        "number":{
-          "type":"string",
-          "required":true,
-          "description":"Unique number (across all products of a vendor) that identifies the license template. Vendor can assign this number when creating a license template or let NetLicensing generate one. Read-only after creation of the first license from this license template."
-        },
-        "active":{
-          "type":"boolean",
-          "required":true,
-          "description":"If set to false, the license template is disabled. Licensee can not obtain any new licenses off this license template."
-        },
-        "name":{
-          "type":"string",
-          "required":true,
-          "description":"Name for the licensed item."
-        },
-        "licenseType":{
-          "type":"",
-          "required":"",
-          "description":"type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME"
-        },
-        "price":{
-          "type":"bigdecimal",
-          "required":true,
-          "description":"price for the license. If >0, it must always be accompanied by the currency specification."
-        },
-        "currency":{
-          "type":"string",
-          "required":true,
-          "description":"specifies currency for the license price. Check data types to discover which currencies are supported."
-        },
-        "automatic":{
-          "type":"boolean",
-          "required":"true",
-          "description":"If set to true, every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0."
-        },
-        "hidden":{
-          "type":"boolean",
-          "required":true,
-          "description":"If set to true, this license template is not shown in NetLicensing Shop as offered for purchase."
-        },
-        "hiddenLicenses":{
-          "type":"boolean",
-          "required":true,
-          "description":"If set to true, licenses from this license template are not visible to the end customer, but participate in validation."
-        }
-        
-      },
-      "xml": {
-        "name": "licensetemplate"
-      }
-    },
-    "Licensee": {
-      "type":"object",
-      "properties":{
-        "number":{
-          "type":"string",
-          "required":true,
-          "description":"Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee."
-        },
-        "active":{
-          "type":"boolean",
-          "required":true,
-          "description":"If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled."
-        }
-      },
-      "xml": {
-        "name": "licensee"
-      }
-    },
-    "License": {
-      "type":"object",
-      "properties":{
-        "number":{
-          "type":"string",
-          "required":true,
-          "description":"Unique number (across all products/licensees of a vendor) that identifies the license. Vendor can assign this number when creating a license or let NetLicensing generate one. Read-only after corresponding creation transaction status is set to closed."
-        },
-        "name":{
-          "type":"string",
-          "required":true,
-          "description":"Name for the licensed item. Set from license template on creation, if not specified explicitly."
-        },
-        "active":{
-          "type":"boolean",
-          "required":true,
-          "description":"If set to false, the license is disabled. License can be re-enabled, but as long as it is disabled, the license is excluded from the validation process."
-        },
-        "price":{
-          "type":"string",
-          "required":true,
-          "description":"price for the license. If >0, it must always be accompanied by the currency specification. Read-only, set from license template on creation."
-        },
-        "currency":{
-          "type":"string",
-          "required":true,
-          "description":"specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation."
-        },
-        "hidden":{
-          "type":"boolean",
-          "required":true,
-          "description":"If set to true, this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly."
-        }
-      },
-      "xml": {
-        "name": "license"
-      }
-    },
-    "Transaction": {
-      "type":"object",
-      "properties":{
-        "number":{
-          "type":"string",
-          "":true,
-          "description":"Unique number (across all products of a vendor) that identifies the transaction. This number is always generated by NetLicensing."
-        },
-        "active":{
-          "type":"string",
-          "":true,
-          "description":"always true for transactions"
-        },
-        "status":{
-          "type":"string",
-          "":true,
-          "description":""
-        },
-        "source":{
-          "type":"string",
-          "":true,
-          "description":""
-        },
-        "price":{
-          "type":"string",
-          "":true,
-          "description":"price for the transaction."
-        },
-        "discount":{
-          "type":"string",
-          "":true,
-          "description":"discount for the transaction."
-        },
-        "currency":{
-          "type":"string",
-          "":true,
-          "description":"specifies currency for the transaction price. Check data types to discover which currencies are supported."
-        }
-      },
-      "xml": {
-        "name": "transaction"
-      }
-    },
-    "Token": {
-      "type":"object",
-      "properties":{
-        
-      },
-      "xml": {
-        "name": "token"
-      }
-    },
-    "PaymentMethod": {
-      "type":"object",
-      "properties":{
-        "":{}
-        
-      },
-      "xml": {
-        "name": "paymentmethod"
-      }
     }
-  }
 }
