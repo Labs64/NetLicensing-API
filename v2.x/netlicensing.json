@@ -100,7 +100,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema":{
+                          "$ref":"/definitions/Product"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -148,7 +151,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema":{
+                          "$ref":"/definitions/Product"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -193,7 +199,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema":{
+                          "$ref":"/definitions/Product"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -248,7 +257,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema":{
+                          "$ref":"/definitions/Product"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -301,7 +313,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema":{
+                          "$ref":"/definitions/Product"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
