@@ -102,7 +102,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema":{
-                          "$ref":"/definitions/Product"
+                          "$ref":"#/definitions/Product"
                         }
                     },
                     "400": {
@@ -153,7 +153,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema":{
-                          "$ref":"/definitions/Product"
+                          "$ref":"#/definitions/Product"
                         }
                     },
                     "400": {
@@ -201,7 +201,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema":{
-                          "$ref":"/definitions/Product"
+                          "$ref":"#/definitions/Product"
                         }
                     },
                     "400": {
@@ -259,7 +259,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema":{
-                          "$ref":"/definitions/Product"
+                          "$ref":"#/definitions/Product"
                         }
                     },
                     "400": {
@@ -315,7 +315,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema":{
-                          "$ref":"/definitions/Product"
+                          "$ref":"#/definitions/Product"
                         }
                     },
                     "400": {
@@ -400,7 +400,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/ProductModule"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -445,7 +448,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/ProductModule"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -500,7 +506,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/ProductModule"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -543,7 +552,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/ProductModule"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -579,7 +591,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/LicenseTemplate"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -627,7 +642,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/LicenseTemplate"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -672,7 +690,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/LicenseTemplate"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -727,7 +748,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/LicenseTemplate"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -773,7 +797,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/LicenseTemplate"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -809,7 +836,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Licensee"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -857,7 +887,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Licensee"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -902,7 +935,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Licensee"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -957,7 +993,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Licensee"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1000,7 +1039,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Licensee"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1036,7 +1078,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/License"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1084,7 +1129,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/License"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1129,7 +1177,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/License"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1184,7 +1235,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/License"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1227,7 +1281,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/License"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1263,7 +1320,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Transaction"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1311,7 +1371,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Transaction"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1356,7 +1419,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Transaction"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1411,7 +1477,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Transaction"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1447,7 +1516,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Token"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1484,7 +1556,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Token"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1529,7 +1604,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Token"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1572,7 +1650,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/Token"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1608,7 +1689,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/PaymentMethod"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1653,7 +1737,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/PaymentMethod"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1708,7 +1795,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/PaymentMethod"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1744,7 +1834,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
@@ -1780,7 +1873,10 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful request"
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
                     },
                     "400": {
                         "description": "Malformed or illegal request"
