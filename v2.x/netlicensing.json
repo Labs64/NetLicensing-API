@@ -134,7 +134,7 @@
                 "consumes": [
                     "application/x-www-form-urlencoded"
                 ],
-                "procedures": [
+                "produces": [
                     "application/xml",
                     "application/json"
                 ],
@@ -184,7 +184,7 @@
                 "summary": "Get product",
                 "description": "Return a product by productNumber",
                 "operarionId": "productNumber",
-                "procedures": [
+                "produces": [
                     "application/xml",
                     "application/json"
                 ],
@@ -233,7 +233,7 @@
                 "consumes": [
                     "application/x-www-form-urlencoded"
                 ],
-                "procedures": [
+                "produces": [
                     "application/xml",
                     "application/json"
                 ],
@@ -291,7 +291,7 @@
                 "consumes": [
                     "application/x-www-form-urlencoded"
                 ],
-                "procedures": [
+                "produces": [
                     "application/xml",
                     "application/json"
                 ],
@@ -386,7 +386,7 @@
                 "consumes": [
                     "application/x-www-form-urlencoded"
                 ],
-                "procedures": [
+                "produces": [
                     "application/xml",
                     "application/json"
                 ],
@@ -436,7 +436,7 @@
                 "summary": "Get product module",
                 "description": "Return a product module by productModuleNumber",
                 "operationId": "getProductModule",
-                "procedures": [
+                "produces": [
                     "application/xml",
                     "application/json"
                 ],
@@ -485,7 +485,7 @@
                 "consumes": [
                     "application/x-www-form-urlencoded"
                 ],
-                "procedures": [
+                "produses": [
                     "application/xml",
                     "application/json"
                 ],
@@ -549,7 +549,7 @@
                         "type": "string"
                     }
                 ],
-                "procedures": [
+                "produces": [
                     "application/xml",
                     "application/json"
                 ],
@@ -628,6 +628,10 @@
                 "consumes": [
                     "application/x-www-form-urlencoded"
                 ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
                 "parameters": [
                     {
                         "in": "body",
@@ -638,10 +642,6 @@
                             "$ref": "#/definitions/LicenseTemplate"
                         }
                     }
-                ],
-                "procedures": [
-                    "application/xml",
-                    "application/json"
                 ],
                 "responses": {
                     "200": {
@@ -727,6 +727,10 @@
                 "consumes": [
                     "application/x-www-form-urlencoded"
                 ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
                 "parameters": [
                     {
                         "name": "licesnseTemplateNumber",
@@ -744,10 +748,6 @@
                             "$ref": "#/definitions/LicenseTemplate"
                         }
                     }
-                ],
-                "procedures": [
-                    "application/xml",
-                    "application/json"
                 ],
                 "responses": {
                     "200": {
@@ -785,6 +785,10 @@
                 "consumes": [
                     "application/x-www-form-urlencoded"
                 ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
                 "parameters": [
                     {
                         "name": "licenseTemplateNumber",
@@ -794,16 +798,9 @@
                         "type": "string"
                     }
                 ],
-                "procedures": [
-                    "application/xml",
-                    "application/json"
-                ],
                 "responses": {
                     "200": {
-                        "description": "Successful request",
-                        "schema": {
-                            "$ref": "#/definitions/netlicensing"
-                        }
+                        "description": "Successful request"
                     },
                     "400": {
                         "description": "Malformed or illegal request"
