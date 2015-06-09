@@ -2091,11 +2091,6 @@
                     "required": true,
                     "description": "Name for the licensed item. Set from license template on creation, if not specified explicitly."
                 },
-                "active": {
-                    "type": "boolean",
-                    "required": true,
-                    "description": "If set to false, the license is disabled. License can be re-enabled, but as long as it is disabled, the license is excluded from the validation process."
-                },
                 "price": {
                     "type": "string",
                     "required": true,
