@@ -1220,23 +1220,7 @@
           "application/xml",
           "application/json"
         ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "licenseeNumber",
-            "required": true
-          },
-          {
-            "in": "body",
-            "name": "licenseTemplateNumber",
-            "required": true
-          },
-          {
-            "in": "body",
-            "name": "active",
-            "required": true
-          }
-        ],
+        
         "responses": {
           "200": {
             "description": "Successful request",
