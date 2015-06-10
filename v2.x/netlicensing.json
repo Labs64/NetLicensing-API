@@ -204,7 +204,7 @@
           "200": {
             "description": "Successful request",
             "schema": {
-              "$ref": "#/definitions/netlicensing"
+              "$ref": "#/definitions/Product"
             }
           },
           "400": {
@@ -443,7 +443,7 @@
           "200": {
             "description": "Successful request",
             "schema": {
-              "$ref": "#/definitions/netlicensing"
+              "$ref": "#/definitions/ProductModule"
             }
           },
           "400": {
@@ -679,7 +679,7 @@
           "200": {
             "description": "Successful request",
             "schema": {
-              "$ref": "#/definitions/netlicensing"
+              "$ref": "#/definitions/Licensee"
             }
           },
           "400": {
@@ -1154,7 +1154,7 @@
           "200": {
             "description": "Successful request",
             "schema": {
-              "$ref": "#/definitions/netlicensing"
+              "$ref": "#/definitions/License"
             }
           },
           "400": {
@@ -1399,7 +1399,7 @@
           "200": {
             "description": "Successful request",
             "schema": {
-              "$ref": "#/definitions/netlicensing"
+              "$ref": "#/definitions/Transaction"
             }
           },
           "400": {
@@ -1587,7 +1587,7 @@
           "200": {
             "description": "Successful request",
             "schema": {
-              "$ref": "#/definitions/netlicensing"
+              "$ref": "#/definitions/Token"
             }
           },
           "400": {
@@ -1723,7 +1723,7 @@
           "200": {
             "description": "Successful request",
             "schema": {
-              "$ref": "#/definitions/netlicensing"
+              "$ref": "#/definitions/PaymentMethod"
             }
           },
           "400": {
