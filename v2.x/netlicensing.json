@@ -2062,7 +2062,10 @@
           "description": "Name for the licensed item."
         },
         "licenseType": {
-          "type": "",
+          "type": "string",
+          "enum":[
+             "FEATURE",
+             "TIMEVOLUME"],
           "description": "type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME"
         },
         "price": {
