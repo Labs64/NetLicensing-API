@@ -2224,33 +2224,26 @@
       ],
       "properties": {
         "number": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "active": {
-          "type": "boolean",
-          "description": ""
+          "type": "boolean"
         },
         "expirationTime": {
-          "type": "dateTime",
-          "format": "date-time",
-          "description": ""
+          "type": "string",
+          "format": "date-time"
         },
         "tokenType": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "shopURL": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "licenseNumber": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "vensorNumber": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         }
       },
       "xml": {
