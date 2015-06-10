@@ -1345,21 +1345,8 @@
             "description": "Number of license to update",
             "required": true,
             "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "active",
-            "required": true
-          },
-          {
-            "in": "body",
-            "name": "customPropForLicense",
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "required": false
           }
+          
         ],
         "responses": {
           "200": {
