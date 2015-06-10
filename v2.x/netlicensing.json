@@ -186,7 +186,7 @@
         ],
         "summary": "Get product",
         "description": "Return a product by productNumber",
-        "operarionId": "productNumber",
+        "operationId": "productNumber",
         "produces": [
           "application/xml",
           "application/json"
@@ -546,18 +546,25 @@
         "summary": "Delete product module",
         "description": "Delete a product module by number",
         "operationId": "deleteProductModule",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "productModuleNumber",
             "in": "path",
-            "description": "Number of product module",
+            "description": "Number of product",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "forceCascade",
+            "in": "path",
+            "description": "Force object deletion and all descendants",
+            "requied": true,
+            "type": "boolean"
           }
-        ],
-        "produces": [
-          "application/xml",
-          "application/json"
         ],
         "responses": {
           "200": {
@@ -805,6 +812,13 @@
             "description": "Number of license template",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "forceCascade",
+            "in": "path",
+            "description": "Force object deletion and all descendants",
+            "requied": true,
+            "type": "boolean"
           }
         ],
         "responses": {
@@ -1050,6 +1064,13 @@
             "description": "Number of licensee",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "forceCascade",
+            "in": "path",
+            "description": "Force object deletion and all descendants",
+            "requied": true,
+            "type": "boolean"
           }
         ],
         "responses": {
