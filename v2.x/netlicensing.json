@@ -156,7 +156,7 @@
           "200": {
             "description": "Successful request",
             "schema": {
-              "$ref": "#/definitions/netlicensing"
+              "$ref": "#/definitions/Product"
             }
           },
           "400": {
@@ -262,7 +262,7 @@
           "200": {
             "description": "Successful request",
             "schema": {
-              "$ref": "#/definitions/netlicensing"
+              "$ref": "#/definitions/Product"
             }
           },
           "400": {
@@ -1925,8 +1925,7 @@
         "number",
         "active",
         "name",
-        "version",
-        "licenseAutoCreate"
+        "version"
       ],
       "properties": {
         "number": {
@@ -1956,6 +1955,12 @@
         "licenseInfo": {
           "type": "string",
           "description": "Licensing information. Optional."
+        },
+        "inUse":{
+          "type":"boolean"
+        },
+        "productnumber":{
+          "type":"string"
         }
       },
       "xml": {
