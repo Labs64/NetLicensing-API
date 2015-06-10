@@ -679,7 +679,7 @@
           "200": {
             "description": "Successful request",
             "schema": {
-              "$ref": "#/definitions/Licensee"
+              "$ref": "#/definitions/LicenseTemplate"
             }
           },
           "400": {
