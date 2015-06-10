@@ -2066,7 +2066,7 @@
           "enum":[
              "FEATURE",
              "TIMEVOLUME"],
-          "description": "type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME"
+          "description": "type of licenses created from this license template"
         },
         "price": {
           "type": "number",
