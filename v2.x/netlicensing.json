@@ -550,22 +550,6 @@
           "application/xml",
           "application/json"
         ],
-        "parameters": [
-          {
-            "name": "productModuleNumber",
-            "in": "path",
-            "description": "Number of product",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "forceCascade",
-            "in": "path",
-            "description": "Force object deletion and all descendants",
-            "requied": true,
-            "type": "boolean"
-          }
-        ],
         "responses": {
           "200": {
             "description": "Successful request",
@@ -804,22 +788,6 @@
         "produces": [
           "application/xml",
           "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "licenseTemplateNumber",
-            "in": "path",
-            "description": "Number of license template",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "forceCascade",
-            "in": "path",
-            "description": "Force object deletion and all descendants",
-            "requied": true,
-            "type": "boolean"
-          }
         ],
         "responses": {
           "200": {
