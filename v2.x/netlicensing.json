@@ -1249,26 +1249,7 @@
           "application/xml",
           "application/json"
         ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "licenseeNumber",
-            "type": "string",
-            "required": true
-          },
-          {
-            "in": "body",
-            "name": "licenseTemplateNumber",
-            "type": "string",
-            "required": true
-          },
-          {
-            "in": "body",
-            "name": "active",
-            "type": "boolean",
-            "required": true
-          }
-        ],
+        
         "responses": {
           "200": {
             "description": "Successful request",
