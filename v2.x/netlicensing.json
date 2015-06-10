@@ -145,8 +145,10 @@
           {
             "in": "body",
             "name": "productnumber",
+            "type":"string",
             "description": "Product number to create",
             "required": true
+            
           },
           {
             "in": "body",
@@ -158,12 +160,14 @@
           {
             "in": "body",
             "name": "name",
+            "type":"string",
             "description": "Product name. Together with the version identifies the product for the end customer.",
             "required": true
           },
           {
             "in": "body",
             "name": "version",
+            "type":"string",
             "description": "Product version. Convenience parameter, additional to the product name.",
             "required": true
           }
@@ -267,6 +271,7 @@
           {
             "in": "body",
             "name": "number",
+            "type":"string",
             "description": "Product number to create",
             "required": true
           },
@@ -280,12 +285,14 @@
           {
             "in": "body",
             "name": "name",
+            "type":"string",
             "description": "Product name. Together with the version identifies the product for the end customer.",
             "required": true
           },
           {
             "in": "body",
             "name": "version",
+            "type":"string",
             "description": "Product version. Convenience parameter, additional to the product name.",
             "required": true
           }
@@ -416,16 +423,19 @@
           {
             "in": "body",
             "name": "productNumber",
+            "type":"string",
             "required": true
           },
           {
             "in": "body",
             "name": "number",
+            "type":"string",
             "required": true
           },
           {
             "in": "body",
             "name": "number",
+            "type":"string",
             "description": "Unique number (across all products of a vendor) that identifies the product module. ",
             "required": true
           },
@@ -439,12 +449,14 @@
           {
             "in": "body",
             "name": "name",
+            "type":"string",
             "description": "Product module name that is visible to the end customers in NetLicensing Shop.",
             "required": true
           },
           {
             "in": "body",
             "name": "licensingModel",
+            "type":"string",
             "description": "Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation.",
             "required": true
           }
@@ -548,16 +560,19 @@
           {
             "in": "body",
             "name": "productNumber",
+            "type":"string",
             "required": true
           },
           {
             "in": "body",
             "name": "number",
+            "type":"string",
             "required": true
           },
           {
             "in": "body",
             "name": "number",
+            "type":"string",
             "description": "Unique number (across all products of a vendor) that identifies the product module. ",
             "required": true
           },
@@ -571,12 +586,14 @@
           {
             "in": "body",
             "name": "name",
+            "type":"string",
             "description": "Product module name that is visible to the end customers in NetLicensing Shop.",
             "required": true
           },
           {
             "in": "body",
             "name": "licensingModel",
+            "type":"string",
             "description": "Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation.",
             "required": true
           }
@@ -704,12 +721,14 @@
           {
             "in": "body",
             "name": "productModuleNumber",
+            "type":"string",
             "description": "productModuleNumber to сreate license template object",
             "required": true
           },
           {
             "in": "body",
             "name": "number",
+            "type":"string",
             "required": true
           },
           {
@@ -727,7 +746,8 @@
               "enum": [
                 "FEATURE",
                 "TIMEVOLUME"
-              ]
+              ],
+              "default":"FEATURE"
             },
             "required": true
           }
@@ -831,6 +851,7 @@
           {
             "in": "body",
             "name": "number",
+            "type":"string",
             "required": true
           },
           {
@@ -842,6 +863,7 @@
           {
             "in": "body",
             "name": "licenseType",
+            "type":"string",
             "required": true
           }
         ],
@@ -969,14 +991,16 @@
         ],
         "parameters": [
           {
-            "in": "productNumber",
-            "name": "body",
+            "in": "body",
+            "name": "productNumber",
+            "type":"string",
             "description": "productNumber to create licensee object",
             "required": true
           },
           {
             "in": "body",
             "name": "number",
+            "type":"string",
             "required": true
           },
           {
@@ -1085,6 +1109,7 @@
           {
             "in": "body",
             "name": "number",
+            "type":"string",
             "required": true
           },
           {
@@ -1223,6 +1248,26 @@
         "produces": [
           "application/xml",
           "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "licenseeNumber",
+            "type":"string",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "licenseTemplateNumber",
+            "type":"string",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "active",
+            "type":"boolean",
+            "required": true
+          }
         ],
         "responses": {
           "200": {
@@ -1453,12 +1498,14 @@
           {
             "in": "body",
             "name": "licenseeNumber",
+            "type":"string",
             "description": "licenseeNumber to create transaction object",
             "required": true
           },
           {
             "in": "body",
             "name": "number",
+            "type":"string",
             "required": true
           },
           {
@@ -1477,7 +1524,8 @@
                 "CANCELLED",
                 "CLOSED",
                 "PENDING"
-              ]
+              ],
+              "default":"PENDING"
             },
             "required": true
           },
@@ -1497,7 +1545,8 @@
                 "AUTO_PRODUCT_DELETE",
                 "AUTO_PRODUCTMODULE_DELETE",
                 "SHOP"
-              ]
+              ],
+              "defaut":"AUTO_LICENSE_CREATE"
             },
             "required": true
           }
@@ -1601,6 +1650,7 @@
           {
             "in": "body",
             "name": "number",
+            "type": "string",
             "required": true
           },
           {
@@ -1619,7 +1669,8 @@
                 "CANCELLED",
                 "CLOSED",
                 "PENDING"
-              ]
+              ],
+              "default":"PENDING"
             },
             "required": true
           },
@@ -1639,7 +1690,8 @@
                 "AUTO_PRODUCT_DELETE",
                 "AUTO_PRODUCTMODULE_DELETE",
                 "SHOP"
-              ]
+              ],
+              "default":"AUTO_LICENSE_CREATE"
             },
             "required": true
           }
@@ -1737,7 +1789,8 @@
                 "DEFAULT",
                 "SHOP",
                 "APIKEY"
-              ]
+              ],
+              "default":"DEFAULT"
             },
             "description": "DEFAULT - default one-time token (will be expired after first request).SHOP - shop token is used to redirect customer to the netlicensingShop(licenseeNumber is mandatory).APIKEY - APIKey-token",
             "required": true
