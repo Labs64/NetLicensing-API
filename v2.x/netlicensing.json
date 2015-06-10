@@ -714,13 +714,12 @@
           {
             "in": "body",
             "name": "number",
-            "descrioption": "",
             "required": true
           },
           {
             "in": "body",
             "name": "active",
-                 "type":"boolean",
+            "type":"boolean",
             "required": true
           },
           {
@@ -978,12 +977,12 @@
             "in": "body",
             "name": "number",
       
-            "": true
+            "required": true
           },
           {
             "in": "body",
             "name": "active",
-             "type":"boolean",
+            "type":"boolean",
             "required": true
           }
         ],
@@ -1086,13 +1085,12 @@
           {
             "in": "body",
             "name": "number",
-       
-            "": true
+            "required": true
           },
           {
             "in": "body",
             "name": "active",
-             "type":"boolean",  
+            "type":"boolean",  
             "required": true
           },
           {
@@ -1627,7 +1625,7 @@
               "AUTO_PRODUCTMODULE_DELETE",
               "SHOP"
             ],
-            "": true
+            "required": true
           }
         ],
         "responses": {
