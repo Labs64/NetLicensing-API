@@ -151,7 +151,7 @@
           {
             "in": "body",
             "name": "active",
-            "type":"boolean",
+            "type": "boolean",
             "description": "If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.",
             "required": true
           },
@@ -273,7 +273,7 @@
           {
             "in": "body",
             "name": "active",
-                 "type":"boolean",
+            "type": "boolean",
             "description": "If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.",
             "required": true
           },
@@ -416,13 +416,11 @@
           {
             "in": "body",
             "name": "productNumber",
-         
             "required": true
           },
           {
             "in": "body",
             "name": "number",
-         
             "required": true
           },
           {
@@ -434,7 +432,7 @@
           {
             "in": "body",
             "name": "active",
-                 "type":"boolean",
+            "type": "boolean",
             "description": "If set to false, the product module is disabled. Licensees can not obtain any new licenses for this product module.",
             "required": true
           },
@@ -550,13 +548,11 @@
           {
             "in": "body",
             "name": "productNumber",
-      
             "required": true
           },
           {
             "in": "body",
             "name": "number",
-         
             "required": true
           },
           {
@@ -568,7 +564,7 @@
           {
             "in": "body",
             "name": "active",
-                 "type":"boolean",
+            "type": "boolean",
             "description": "If set to false, the product module is disabled. Licensees can not obtain any new licenses for this product module.",
             "required": true
           },
@@ -719,13 +715,20 @@
           {
             "in": "body",
             "name": "active",
-            "type":"boolean",
+            "type": "boolean",
             "required": true
           },
           {
             "in": "body",
             "name": "licenseType",
-         
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "FEATURE",
+                "TIMEVOLUME"
+              ]
+            },
             "required": true
           }
         ],
@@ -828,19 +831,17 @@
           {
             "in": "body",
             "name": "number",
-          
             "required": true
           },
           {
             "in": "body",
             "name": "active",
-          "type":"boolean",
+            "type": "boolean",
             "required": true
           },
           {
             "in": "body",
             "name": "licenseType",
-        
             "required": true
           }
         ],
@@ -976,13 +977,12 @@
           {
             "in": "body",
             "name": "number",
-      
             "required": true
           },
           {
             "in": "body",
             "name": "active",
-            "type":"boolean",
+            "type": "boolean",
             "required": true
           }
         ],
@@ -1090,15 +1090,17 @@
           {
             "in": "body",
             "name": "active",
-            "type":"boolean",  
+            "type": "boolean",
             "required": true
           },
           {
             "in": "body",
             "name": "customLicenseeProp",
-            "type": "array",
-            "items": {
-              "type": "string"
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "required": false
           }
@@ -1222,7 +1224,6 @@
           "application/xml",
           "application/json"
         ],
-        
         "responses": {
           "200": {
             "description": "Successful request",
@@ -1463,33 +1464,41 @@
           {
             "in": "body",
             "name": "active",
-                 "type":"boolean",
+            "type": "boolean",
             "required": true
           },
           {
             "in": "body",
             "name": "status",
-            "enum": [
-              "CANCELLED",
-              "CLOSED",
-              "PENDING"
-            ],
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "CANCELLED",
+                "CLOSED",
+                "PENDING"
+              ]
+            },
             "required": true
           },
           {
             "in": "body",
             "name": "source",
-            "enum": [
-              "AUTO_LICENSE_CREATE",
-              "AUTO_LICENSE_DELETE",
-              "AUTO_LICENSE_UPDATE",
-              "AUTO_LICENSEE_CREATE",
-              "AUTO_LICENSEE_DELETE",
-              "AUTO_LICENSETEMPLATE_DELETE",
-              "AUTO_PRODUCT_DELETE",
-              "AUTO_PRODUCTMODULE_DELETE",
-              "SHOP"
-            ],
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "AUTO_LICENSE_CREATE",
+                "AUTO_LICENSE_DELETE",
+                "AUTO_LICENSE_UPDATE",
+                "AUTO_LICENSEE_CREATE",
+                "AUTO_LICENSEE_DELETE",
+                "AUTO_LICENSETEMPLATE_DELETE",
+                "AUTO_PRODUCT_DELETE",
+                "AUTO_PRODUCTMODULE_DELETE",
+                "SHOP"
+              ]
+            },
             "required": true
           }
         ],
@@ -1592,39 +1601,46 @@
           {
             "in": "body",
             "name": "number",
-       
             "required": true
           },
           {
             "in": "body",
             "name": "active",
-          "type":"boolean", 
+            "type": "boolean",
             "required": true
           },
           {
             "in": "body",
             "name": "status",
-            "enum": [
-              "CANCELLED",
-              "CLOSED",
-              "PENDING"
-            ],
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "CANCELLED",
+                "CLOSED",
+                "PENDING"
+              ]
+            },
             "required": true
           },
           {
             "in": "body",
             "name": "source",
-            "enum": [
-              "AUTO_LICENSE_CREATE",
-              "AUTO_LICENSE_DELETE",
-              "AUTO_LICENSE_UPDATE",
-              "AUTO_LICENSEE_CREATE",
-              "AUTO_LICENSEE_DELETE",
-              "AUTO_LICENSETEMPLATE_DELETE",
-              "AUTO_PRODUCT_DELETE",
-              "AUTO_PRODUCTMODULE_DELETE",
-              "SHOP"
-            ],
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "AUTO_LICENSE_CREATE",
+                "AUTO_LICENSE_DELETE",
+                "AUTO_LICENSE_UPDATE",
+                "AUTO_LICENSEE_CREATE",
+                "AUTO_LICENSEE_DELETE",
+                "AUTO_LICENSETEMPLATE_DELETE",
+                "AUTO_PRODUCT_DELETE",
+                "AUTO_PRODUCTMODULE_DELETE",
+                "SHOP"
+              ]
+            },
             "required": true
           }
         ],
@@ -1714,11 +1730,15 @@
           {
             "in": "body",
             "name": "tokenType",
-            "enum": [
-              "DEFAULT",
-              "SHOP",
-              "APIKEY"
-            ],
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "DEFAULT",
+                "SHOP",
+                "APIKEY"
+              ]
+            },
             "description": "DEFAULT - default one-time token (will be expired after first request).SHOP - shop token is used to redirect customer to the netlicensingShop(licenseeNumber is mandatory).APIKEY - APIKey-token",
             "required": true
           },
@@ -1751,7 +1771,8 @@
         },
         "security": [
           {
-            "basicAuth": []
+            "basicAuth": [],
+            "api_key": []
           }
         ]
       }
@@ -1964,15 +1985,17 @@
           {
             "in": "body",
             "name": "active",
-                 "type":"boolean",
+            "type": "boolean",
             "required": true
           },
           {
             "in": "body",
             "name": "PaymentMethodProperty",
-            "type": "array",
-            "items": {
-              "type": "string"
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "required": false
           }
@@ -2121,12 +2144,6 @@
     },
     "Product": {
       "type": "object",
-      "required": [
-        "number",
-        "active",
-        "name",
-        "version"
-      ],
       "properties": {
         "number": {
           "type": "string",
@@ -2169,12 +2186,6 @@
     },
     "ProductModule": {
       "type": "object",
-      "required": [
-        "number",
-        "active",
-        "name",
-        "licenseInfo"
-      ],
       "properties": {
         "number": {
           "type": "string",
@@ -2199,17 +2210,6 @@
     },
     "LicenseTemplate": {
       "type": "object",
-      "required": [
-        "number",
-        "active",
-        "name",
-        "licenseType",
-        "price",
-        "currency",
-        "automatic",
-        "hidden",
-        "hiddenLicense"
-      ],
       "properties": {
         "number": {
           "type": "string",
@@ -2259,10 +2259,6 @@
     },
     "Licensee": {
       "type": "object",
-      "required": [
-        "number",
-        "active"
-      ],
       "properties": {
         "number": {
           "type": "string",
@@ -2279,14 +2275,6 @@
     },
     "License": {
       "type": "object",
-      "required": [
-        "number",
-        "active",
-        "name",
-        "price",
-        "currency",
-        "hidden"
-      ],
       "properties": {
         "number": {
           "type": "string",
@@ -2320,15 +2308,6 @@
     },
     "Transaction": {
       "type": "object",
-      "required": [
-        "number",
-        "active",
-        "status",
-        "source",
-        "price",
-        "discount",
-        "currency"
-      ],
       "properties": {
         "number": {
           "type": "string",
@@ -2380,13 +2359,6 @@
     },
     "Token": {
       "type": "object",
-      "required": [
-        "number",
-        "active",
-        "tokenType",
-        "licenseNumber",
-        "vendorNumber"
-      ],
       "properties": {
         "number": {
           "type": "string"
@@ -2417,14 +2389,9 @@
     },
     "PaymentMethod": {
       "type": "object",
-      "required": [
-        "number",
-        "active"
-      ],
       "properties": {
         "number": {
           "type": "string"
-       
         },
         "active": {
           "type": "boolean"
