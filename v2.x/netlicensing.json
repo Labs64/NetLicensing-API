@@ -144,12 +144,27 @@
         "parameters": [
           {
             "in": "body",
-            "name": "body",
-            "description": "Created product object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Product"
-            }
+            "name": "productnumber",
+            "description": "Product number to create",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "active",
+            "description": "If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "name",
+            "description": "Product name. Together with the version identifies the product for the end customer.",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "version",
+            "description": "Product version. Convenience parameter, additional to the product name.",
+            "required": true
           }
         ],
         "responses": {
@@ -250,12 +265,27 @@
           },
           {
             "in": "body",
-            "name": "body",
-            "description": "Updated product object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Product"
-            }
+            "name": "number",
+            "description": "Product number to create",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "active",
+            "description": "If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "name",
+            "description": "Product name. Together with the version identifies the product for the end customer.",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "version",
+            "description": "Product version. Convenience parameter, additional to the product name.",
+            "required": true
           }
         ],
         "responses": {
@@ -383,12 +413,39 @@
         "parameters": [
           {
             "in": "body",
-            "name": "body",
-            "description": "Created product module object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/ProductModule"
-            }
+            "name": "productNumber",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "number",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "number",
+            "description": "Unique number (across all products of a vendor) that identifies the product module. ",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "active",
+            "description": "If set to false, the product module is disabled. Licensees can not obtain any new licenses for this product module.",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "name",
+            "description": "Product module name that is visible to the end customers in NetLicensing Shop.",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "licensingModel",
+            "description": "Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation.",
+            "required": true
           }
         ],
         "responses": {
@@ -489,12 +546,39 @@
           },
           {
             "in": "body",
-            "name": "body",
-            "description": "Updated product module object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/ProductModule"
-            }
+            "name": "productNumber",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "number",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "number",
+            "description": "Unique number (across all products of a vendor) that identifies the product module. ",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "active",
+            "description": "If set to false, the product module is disabled. Licensees can not obtain any new licenses for this product module.",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "name",
+            "description": "Product module name that is visible to the end customers in NetLicensing Shop.",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "licensingModel",
+            "description": "Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation.",
+            "required": true
           }
         ],
         "responses": {
@@ -619,12 +703,27 @@
         "parameters": [
           {
             "in": "body",
-            "name": "body",
-            "description": "Created license template object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/LicenseTemplate"
-            }
+            "name": "productModuleNumber",
+            "description": "productModuleNumber to сreate license template object",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "number",
+            "descrioption": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "active",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "licenseType",
+            "description": "",
+            "required": true
           }
         ],
         "responses": {
@@ -725,12 +824,21 @@
           },
           {
             "in": "body",
-            "name": "body",
-            "description": "Updated license template object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/LicenseTemplate"
-            }
+            "name": "number",
+            "descrioption": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "active",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "licenseType",
+            "description": "",
+            "required": true
           }
         ],
         "responses": {
@@ -857,13 +965,22 @@
         ],
         "parameters": [
           {
-            "in": "body",
+            "in": "productNumber",
             "name": "body",
-            "description": "Created licensee object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Licensee"
-            }
+            "description": "productNumber to create licensee object",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "number",
+            "description": "",
+            "": true
+          },
+          {
+            "in": "body",
+            "name": "active",
+            "description": "",
+            "required": true
           }
         ],
         "responses": {
@@ -964,12 +1081,24 @@
           },
           {
             "in": "body",
-            "name": "body",
-            "description": "Updated licensee object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Licensee"
-            }
+            "name": "number",
+            "description": "",
+            "": true
+          },
+          {
+            "in": "body",
+            "name": "active",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "customLicenseeProp",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": false
           }
         ],
         "responses": {
@@ -1094,12 +1223,21 @@
         "parameters": [
           {
             "in": "body",
-            "name": "body",
+            "name": "licenseNumber",
             "description": "Created license object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/License"
-            }
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "licenseTemplateNumber",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "active",
+            "description": "",
+            "required": true
           }
         ],
         "responses": {
@@ -1200,12 +1338,18 @@
           },
           {
             "in": "body",
-            "name": "body",
-            "description": "Updated license object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/License"
-            }
+            "name": "active",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "customPropForLicense",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": false
           }
         ],
         "responses": {
@@ -1339,12 +1483,47 @@
         "parameters": [
           {
             "in": "body",
-            "name": "body",
-            "description": "Created transaction object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Transaction"
-            }
+            "name": "licenseeNumber",
+            "description": "licenseeNumber to create transaction object",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "number",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "active",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "status",
+            "enum": [
+              "CANCELLED",
+              "CLOSED",
+              "PENDING"
+            ],
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "source",
+            "enum": [
+              "AUTO_LICENSE_CREATE",
+              "AUTO_LICENSE_DELETE",
+              "AUTO_LICENSE_UPDATE",
+              "AUTO_LICENSEE_CREATE",
+              "AUTO_LICENSEE_DELETE",
+              "AUTO_LICENSETEMPLATE_DELETE",
+              "AUTO_PRODUCT_DELETE",
+              "AUTO_PRODUCTMODULE_DELETE",
+              "SHOP"
+            ],
+            "": true
           }
         ],
         "responses": {
@@ -1445,12 +1624,41 @@
           },
           {
             "in": "body",
-            "name": "body",
-            "description": "Updated transaction object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Transaction"
-            }
+            "name": "number",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "active",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "status",
+            "enum": [
+              "CANCELLED",
+              "CLOSED",
+              "PENDING"
+            ],
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "source",
+            "enum": [
+              "AUTO_LICENSE_CREATE",
+              "AUTO_LICENSE_DELETE",
+              "AUTO_LICENSE_UPDATE",
+              "AUTO_LICENSEE_CREATE",
+              "AUTO_LICENSEE_DELETE",
+              "AUTO_LICENSETEMPLATE_DELETE",
+              "AUTO_PRODUCT_DELETE",
+              "AUTO_PRODUCTMODULE_DELETE",
+              "SHOP"
+            ],
+            "": true
           }
         ],
         "responses": {
@@ -1534,6 +1742,25 @@
         "produces": [
           "application/xml",
           "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "tokenType",
+            "enum": [
+              "DEFAULT",
+              "SHOP",
+              "APIKEY"
+            ],
+            "description": "DEFAULT - default one-time token (will be expired after first request).SHOP - shop token is used to redirect customer to the netlicensingShop(licenseeNumber is mandatory).APIKEY - APIKey-token",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "licenseeNumber",
+            "description": "only for tokenType=SHOP, identifies licensee that will be assigned to the shop token",
+            "required": false
+          }
         ],
         "responses": {
           "200": {
@@ -1769,12 +1996,18 @@
           },
           {
             "in": "body",
-            "name": "body",
+            "name": "active",
             "description": "Updated product module object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/ProductModule"
-            }
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "PaymentMethodProperty",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": false
           }
         ],
         "responses": {
@@ -1956,11 +2189,11 @@
           "type": "string",
           "description": "Licensing information. Optional."
         },
-        "inUse":{
-          "type":"boolean"
+        "inUse": {
+          "type": "boolean"
         },
-        "productnumber":{
-          "type":"string"
+        "productnumber": {
+          "type": "string"
         }
       },
       "xml": {
@@ -2025,9 +2258,10 @@
         },
         "licenseType": {
           "type": "string",
-          "enum":[
-             "FEATURE",
-             "TIMEVOLUME"],
+          "enum": [
+            "FEATURE",
+            "TIMEVOLUME"
+          ],
           "description": "type of licenses created from this license template"
         },
         "price": {
@@ -2138,15 +2372,16 @@
           "description": "always true for transactions"
         },
         "status": {
-          "type":"string",
-          "enum":[
+          "type": "string",
+          "enum": [
             "CANCELLED",
             "CLOSED",
-            "PENDING"]
+            "PENDING"
+          ]
         },
         "source": {
-          "type":"string",
-          "enum":[
+          "type": "string",
+          "enum": [
             "AUTO_LICENSE_CREATE",
             "AUTO_LICENSE_DELETE",
             "AUTO_LICENSE_UPDATE",
@@ -2155,7 +2390,8 @@
             "AUTO_LICENSETEMPLATE_DELETE",
             "AUTO_PRODUCT_DELETE",
             "AUTO_PRODUCTMODULE_DELETE",
-            "SHOP"]
+            "SHOP"
+          ]
         },
         "price": {
           "type": "number",
