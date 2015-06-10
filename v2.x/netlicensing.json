@@ -143,28 +143,28 @@
         ],
         "parameters": [
           {
-            "in": "body",
+            "in": "formData",
             "name": "productnumber",
             "type": "string",
             "description": "Product number to create",
             "required": true
           },
           {
-            "in": "body",
+            "in": "formData",
             "name": "active",
             "type": "boolean",
             "description": "If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.",
             "required": true
           },
           {
-            "in": "body",
+            "in": "formData",
             "name": "name",
             "type": "string",
             "description": "Product name. Together with the version identifies the product for the end customer.",
             "required": true
           },
           {
-            "in": "body",
+            "in": "formData",
             "name": "version",
             "type": "string",
             "description": "Product version. Convenience parameter, additional to the product name.",
