@@ -989,27 +989,7 @@
                     "application/xml",
                     "application/json"
                 ],
-                "parameters": [
-                    {
-                        "in": "body",
-                        "name": "productNumber",
-                        "type": "string",
-                        "description": "productNumber to create licensee object",
-                        "required": true
-                    },
-                    {
-                        "in": "body",
-                        "name": "number",
-                        "type": "string",
-                        "required": true
-                    },
-                    {
-                        "in": "body",
-                        "name": "active",
-                        "type": "boolean",
-                        "required": true
-                    }
-                ],
+                
                 "responses": {
                     "200": {
                         "description": "Successful request",
@@ -1105,30 +1085,8 @@
                         "description": "Number of licensee to update",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "in": "body",
-                        "name": "number",
-                        "type": "string",
-                        "required": true
-                    },
-                    {
-                        "in": "body",
-                        "name": "active",
-                        "type": "boolean",
-                        "required": true
-                    },
-                    {
-                        "in": "body",
-                        "name": "customLicenseeProp",
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        },
-                        "required": false
                     }
+                    
                 ],
                 "responses": {
                     "200": {
