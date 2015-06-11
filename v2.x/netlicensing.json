@@ -1119,7 +1119,7 @@
             "in": "formData",
             "name": "number",
             "type": "string",
-            "description": "Unique number (across all products of a vendor) that identifies the licensee",
+            "description": "Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee",
             "required": true
           },
           {
@@ -1131,7 +1131,7 @@
           },
           {
             "in": "formData",
-            "name": "customPropForLicense",
+            "name": "customPropForLicensee",
             "type": "array",
             "items": {
               "type": "string"
@@ -1247,7 +1247,7 @@
             "name": "number",
             "type": "string",
             "description": "Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee.",
-            "": true
+            "required": true
           },
           {
             "in": "formData",
