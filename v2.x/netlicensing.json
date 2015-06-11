@@ -1116,17 +1116,6 @@
             "type": "boolean",
             "description": "If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
             "required": true
-          },
-          {
-            "in": "formData",
-            "name": "customLicenseeProp",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "required": false
           }
         ],
         "responses": {
