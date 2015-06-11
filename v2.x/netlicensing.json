@@ -1668,31 +1668,7 @@
                     "application/xml",
                     "application/json"
                 ],
-                "parameters": [
-                    {
-                        "in": "formData",
-                        "name": "tokenType",
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "DEFAULT",
-                                "SHOP",
-                                "APIKEY"
-                            ],
-                            "default": "DEFAULT"
-                        },
-                        "collectionFormat": "multi",
-                        "description": "DEFAULT - default one-time token (will be expired after first request).SHOP - shop token is used to redirect customer to the netlicensingShop(licenseeNumber is mandatory).APIKEY - APIKey-token",
-                        "required": true
-                    },
-                    {
-                        "in": "formData",
-                        "name": "licenseeNumber",
-                        "description": "only for tokenType=SHOP, identifies licensee that will be assigned to the shop token",
-                        "required": false
-                    }
-                ],
+                
                 "responses": {
                     "200": {
                         "description": "Successful request",
