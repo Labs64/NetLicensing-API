@@ -418,48 +418,7 @@
                     "application/xml",
                     "application/json"
                 ],
-                "parameters": [
-                    {
-                        "in": "formData",
-                        "name": "productNumber",
-                        "type": "string",
-                        "required": true
-                    },
-                    {
-                        "in": "formData",
-                        "name": "number",
-                        "type": "string",
-                        "required": true
-                    },
-                    {
-                        "in": "formData",
-                        "name": "number",
-                        "type": "string",
-                        "description": "Unique number (across all products of a vendor) that identifies the product module. ",
-                        "required": true
-                    },
-                    {
-                        "in": "formData",
-                        "name": "active",
-                        "type": "boolean",
-                        "description": "If set to false, the product module is disabled. Licensees can not obtain any new licenses for this product module.",
-                        "required": true
-                    },
-                    {
-                        "in": "formData",
-                        "name": "name",
-                        "type": "string",
-                        "description": "Product module name that is visible to the end customers in NetLicensing Shop.",
-                        "required": true
-                    },
-                    {
-                        "in": "formData",
-                        "name": "licensingModel",
-                        "type": "string",
-                        "description": "Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation.",
-                        "required": true
-                    }
-                ],
+                
                 "responses": {
                     "200": {
                         "description": "Successful request",
@@ -555,46 +514,6 @@
                         "description": "Number of product module to update",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "in": "formData",
-                        "name": "productNumber",
-                        "type": "string",
-                        "required": true
-                    },
-                    {
-                        "in": "formData",
-                        "name": "number",
-                        "type": "string",
-                        "required": true
-                    },
-                    {
-                        "in": "formData",
-                        "name": "number",
-                        "type": "string",
-                        "description": "Unique number (across all products of a vendor) that identifies the product module. ",
-                        "required": true
-                    },
-                    {
-                        "in": "formData",
-                        "name": "active",
-                        "type": "boolean",
-                        "description": "If set to false, the product module is disabled. Licensees can not obtain any new licenses for this product module.",
-                        "required": true
-                    },
-                    {
-                        "in": "formData",
-                        "name": "name",
-                        "type": "string",
-                        "description": "Product module name that is visible to the end customers in NetLicensing Shop.",
-                        "required": true
-                    },
-                    {
-                        "in": "formData",
-                        "name": "licensingModel",
-                        "type": "string",
-                        "description": "Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation.",
-                        "required": true
                     }
                 ],
                 "responses": {
@@ -1034,7 +953,6 @@
                         "required": true,
                         "type": "string"
                     }
-                    
                 ],
                 "responses": {
                     "200": {
@@ -1155,7 +1073,6 @@
                     "application/xml",
                     "application/json"
                 ],
-
                 "responses": {
                     "200": {
                         "description": "Successful request",
@@ -1413,6 +1330,28 @@
                                 "PENDING"
                             ],
                             "default": "PENDING"
+                        },
+                        "collectionFormat": "multi",
+                        "required": true
+                    },
+                    {
+                        "in": "formData",
+                        "name": "source",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "AUTO_LICENSE_CREATE",
+                                "AUTO_LICENSE_DELETE",
+                                "AUTO_LICENSE_UPDATE",
+                                "AUTO_LICENSEE_CREATE",
+                                "AUTO_LICENSEE_DELETE",
+                                "AUTO_LICENSETEMPLATE_DELETE",
+                                "AUTO_PRODUCT_DELETE",
+                                "AUTO_PRODUCTMODULE_DELETE",
+                                "SHOP"
+                            ],
+                            "defaut": "AUTO_LICENSE_CREATE"
                         },
                         "collectionFormat": "multi",
                         "required": true
@@ -1879,8 +1818,24 @@
                         "description": "Number of payment method to update",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "active",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "in": "formData",
+                        "name": "PaymentMethodProperty",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "required": false
                     }
-                    
                 ],
                 "responses": {
                     "200": {
