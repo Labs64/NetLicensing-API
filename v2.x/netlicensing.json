@@ -1520,28 +1520,6 @@
             },
             "collectionFormat": "multi",
             "required": true
-          },
-          {
-            "in": "formData",
-            "name": "source",
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "AUTO_LICENSE_CREATE",
-                "AUTO_LICENSE_DELETE",
-                "AUTO_LICENSE_UPDATE",
-                "AUTO_LICENSEE_CREATE",
-                "AUTO_LICENSEE_DELETE",
-                "AUTO_LICENSETEMPLATE_DELETE",
-                "AUTO_PRODUCT_DELETE",
-                "AUTO_PRODUCTMODULE_DELETE",
-                "SHOP"
-              ],
-              "defaut": "AUTO_LICENSE_CREATE"
-            },
-            "collectionFormat": "multi",
-            "required": true
           }
         ],
         "responses": {
@@ -1664,28 +1642,6 @@
                 "PENDING"
               ],
               "default": "PENDING"
-            },
-            "collectionFormat": "multi",
-            "required": true
-          },
-          {
-            "in": "formData",
-            "name": "source",
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "AUTO_LICENSE_CREATE",
-                "AUTO_LICENSE_DELETE",
-                "AUTO_LICENSE_UPDATE",
-                "AUTO_LICENSEE_CREATE",
-                "AUTO_LICENSEE_DELETE",
-                "AUTO_LICENSETEMPLATE_DELETE",
-                "AUTO_PRODUCT_DELETE",
-                "AUTO_PRODUCTMODULE_DELETE",
-                "SHOP"
-              ],
-              "default": "AUTO_LICENSE_CREATE"
             },
             "collectionFormat": "multi",
             "required": true
