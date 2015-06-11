@@ -827,7 +827,7 @@
         ],
         "parameters": [
           {
-            "name": "licesnseTemplateNumber",
+            "name": "licenseTemplateNumber",
             "in": "path",
             "description": "Number of license template to update",
             "required": true,
@@ -1370,6 +1370,7 @@
           {
             "in": "formData",
             "name": "active",
+            "type":"boolean",
             "description": "If set to false, the license is disabled. License can be re-enabled, but as long as it is disabled, the license is excluded from the validation process",
             "required": true
           },
