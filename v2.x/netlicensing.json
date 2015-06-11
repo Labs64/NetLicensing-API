@@ -1378,6 +1378,65 @@
           "application/xml",
           "application/json"
         ],
+        "parameters":[
+          {
+            "in":"formData",
+            "name":"licenseeNumber",
+            "type":"string",
+            "required":true
+          },
+          {
+            "in":"formData",
+            "name":"licenseTemplateNumber",
+            "type":"string",
+            "required":true
+          },
+          {
+            "in":"formData",
+            "name":"active",
+            "type":"boolean",
+            "description":"",
+            "required":true
+          },
+          {
+            "in":"formData",
+            "name":"name",
+            "type":"string",
+            "description":"Name for the licensed item. Set from license template on creation, if not specified explicitly.",
+            "required":false
+          },
+          {
+            "in":"formData",
+            "name":"price",
+            "type":"number",
+            "format":"double",
+            "description":"price for the license. If >0, it must always be accompanied by the currency specification. Read-only, set from license template on creation",
+            "required":false
+          },
+          {
+            "in":"formData",
+            "name":"currency",
+            "type":"string",
+            "description":"specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation",
+            "required":false
+          },
+          {
+            "in":"formData",
+            "name":"hidden",
+            "type":"boolean",
+            "description":" If set to true, this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly",
+            "required":false
+          },
+          {
+            "in": "formData",
+            "name": "customPropForLicense",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": false
+          }
+          ],
         "responses": {
           "200": {
             "description": "Successful request",
@@ -1473,6 +1532,51 @@
             "description": "Number of license to update",
             "required": true,
             "type": "string"
+          },
+          {
+            "in":"formData",
+            "name":"active",
+            "type":"boolean",
+            "description":"",
+            "required":true
+          },
+          {
+            "in":"formData",
+            "name":"name",
+            "type":"string",
+            "description":"Name for the licensed item. Set from license template on creation, if not specified explicitly.",
+            "required":false
+          },
+          {
+            "in":"formData",
+            "name":"price",
+            "type":"number",
+            "format":"double",
+            "description":"price for the license. If >0, it must always be accompanied by the currency specification. Read-only, set from license template on creation",
+            "required":false
+          },
+          {
+            "in":"formData",
+            "name":"currency",
+            "type":"string",
+            "description":"specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation",
+            "required":false
+          },
+          {
+            "in":"formData",
+            "name":"hidden",
+            "type":"boolean",
+            "description":" If set to true, this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly",
+            "required":false
+          },
+          {
+            "in": "formData",
+            "name": "customPropForLicense",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": false
           }
         ],
         "responses": {
