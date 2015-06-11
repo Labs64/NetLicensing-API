@@ -1237,16 +1237,9 @@
           },
           {
             "in": "formData",
-            "name": "productNumber",
-            "type": "string",
-            "description": "productNumber to create licensee object",
-            "required": true
-          },
-          {
-            "in": "formData",
             "name": "number",
             "type": "string",
-            "description": "Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee.",
+            "description": "Unique number (across all products of a vendor) that identifies the licensee",
             "required": true
           },
           {
