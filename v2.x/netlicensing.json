@@ -1383,26 +1383,26 @@
                 ],
                 "parameters": [
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "licenseeNumber",
                         "type": "string",
                         "description": "licenseeNumber to create transaction object",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "number",
                         "type": "string",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "active",
                         "type": "boolean",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "status",
                         "type": "array",
                         "items": {
@@ -1414,11 +1414,11 @@
                             ],
                             "default": "PENDING"
                         },
-                        "collectionFormat": "csv",
+                        "collectionFormat": "multi",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "source",
                         "type": "array",
                         "items": {
@@ -1436,7 +1436,7 @@
                             ],
                             "defaut": "AUTO_LICENSE_CREATE"
                         },
-                        "collectionFormat": "csv",
+                        "collectionFormat": "multi",
                         "required": true
                     }
                 ],
@@ -1537,19 +1537,19 @@
                         "type": "string"
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "number",
                         "type": "string",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "active",
                         "type": "boolean",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "status",
                         "type": "array",
                         "items": {
@@ -1564,7 +1564,7 @@
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "source",
                         "type": "array",
                         "items": {
@@ -1582,7 +1582,7 @@
                             ],
                             "default": "AUTO_LICENSE_CREATE"
                         },
-                        "collectionFormat": "csv",
+                        "collectionFormat": "multi",
                         "required": true
                     }
                 ],
