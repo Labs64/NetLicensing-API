@@ -268,28 +268,28 @@
                         "type": "string"
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "number",
                         "type": "string",
                         "description": "Product number to create",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "active",
                         "type": "boolean",
                         "description": "If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "name",
                         "type": "string",
                         "description": "Product name. Together with the version identifies the product for the end customer.",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "version",
                         "type": "string",
                         "description": "Product version. Convenience parameter, additional to the product name.",
@@ -420,40 +420,40 @@
                 ],
                 "parameters": [
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "productNumber",
                         "type": "string",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "number",
                         "type": "string",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "number",
                         "type": "string",
                         "description": "Unique number (across all products of a vendor) that identifies the product module. ",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "active",
                         "type": "boolean",
                         "description": "If set to false, the product module is disabled. Licensees can not obtain any new licenses for this product module.",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "name",
                         "type": "string",
                         "description": "Product module name that is visible to the end customers in NetLicensing Shop.",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "licensingModel",
                         "type": "string",
                         "description": "Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation.",
@@ -557,40 +557,40 @@
                         "type": "string"
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "productNumber",
                         "type": "string",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "number",
                         "type": "string",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "number",
                         "type": "string",
                         "description": "Unique number (across all products of a vendor) that identifies the product module. ",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "active",
                         "type": "boolean",
                         "description": "If set to false, the product module is disabled. Licensees can not obtain any new licenses for this product module.",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "name",
                         "type": "string",
                         "description": "Product module name that is visible to the end customers in NetLicensing Shop.",
                         "required": true
                     },
                     {
-                        "in": "body",
+                        "in": "formData",
                         "name": "licensingModel",
                         "type": "string",
                         "description": "Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation.",
