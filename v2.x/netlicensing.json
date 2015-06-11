@@ -2030,23 +2030,6 @@
             "description": "Number of payment method to update",
             "required": true,
             "type": "string"
-          },
-          {
-            "in": "formData",
-            "name": "active",
-            "type": "boolean",
-            "required": true
-          },
-          {
-            "in": "formData",
-            "name": "PaymentMethodProperty",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "required": false
           }
         ],
         "responses": {
