@@ -1925,24 +1925,8 @@
                         "description": "Number of payment method to update",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "in": "body",
-                        "name": "active",
-                        "type": "boolean",
-                        "required": true
-                    },
-                    {
-                        "in": "body",
-                        "name": "PaymentMethodProperty",
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        },
-                        "required": false
                     }
+                    
                 ],
                 "responses": {
                     "200": {
