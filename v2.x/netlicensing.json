@@ -2034,6 +2034,27 @@
           "application/xml",
           "application/json"
         ],
+        "parameters":[
+          {
+            "in":"formData",
+            "name":"tokenType",
+            "type": "string",
+            "enum": [
+            "DEFAULT",
+            "SHOP",
+            "APIKey"
+          ],
+          "collectionFormat":"multi",
+          "required":true
+          },
+          {
+            "in":"formData",
+            "name":"licenseeNumber",
+            "type":"string",
+            "description":"only for tokenType=SHOP, identifies licensee that will be assigned to the shop token",
+            "required":false
+          }
+          ],
         "responses": {
           "200": {
             "description": "Successful request",
@@ -2217,6 +2238,21 @@
             "description": "Number of peyment method",
             "required": true,
             "type": "string"
+          },
+          {
+            "in":"formData",
+            "name":"active",
+            "type":"boolean",
+            "required":true
+          },
+          {
+            "in": "formData",
+            "name": "customPropForPaymentMethod",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": false
           }
         ],
         "responses": {
