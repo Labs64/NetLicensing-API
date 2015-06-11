@@ -716,42 +716,7 @@
                     "application/xml",
                     "application/json"
                 ],
-                "parameters": [
-                    {
-                        "in": "body",
-                        "name": "productModuleNumber",
-                        "type": "string",
-                        "description": "productModuleNumber to сreate license template object",
-                        "required": true
-                    },
-                    {
-                        "in": "body",
-                        "name": "number",
-                        "type": "string",
-                        "required": true
-                    },
-                    {
-                        "in": "body",
-                        "name": "active",
-                        "type": "boolean",
-                        "required": true
-                    },
-                    {
-                        "in": "body",
-                        "name": "licenseType",
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "FEATURE",
-                                "TIMEVOLUME"
-                            ],
-                            "default": "FEATURE"
-                        },
-                        "collectionFormat": "csv",
-                        "required": true
-                    }
-                ],
+                
                 "responses": {
                     "200": {
                         "description": "Successful request",
@@ -847,25 +812,8 @@
                         "description": "Number of license template to update",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "in": "body",
-                        "name": "number",
-                        "type": "string",
-                        "required": true
-                    },
-                    {
-                        "in": "body",
-                        "name": "active",
-                        "type": "boolean",
-                        "required": true
-                    },
-                    {
-                        "in": "body",
-                        "name": "licenseType",
-                        "type": "string",
-                        "required": true
                     }
+                    
                 ],
                 "responses": {
                     "200": {
