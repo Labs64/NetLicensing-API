@@ -171,25 +171,25 @@
             "required": true
           },
           {
-            "in":"formData",
-            "name":"licenseAutoCreate",
-            "type":"boolean",
-            "description":"If set to 'true', non-existing licensees will be created at first validation attempt.",
-            "required":false
+            "in": "formData",
+            "name": "licenseAutoCreate",
+            "type": "boolean",
+            "description": "If set to 'true', non-existing licensees will be created at first validation attempt.",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"description",
-            "type":"string",
-            "description":"Product description. Optional",
-            "required":false
+            "in": "formData",
+            "name": "description",
+            "type": "string",
+            "description": "Product description. Optional",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"licensingInfo",
-            "type":"string",
-            "description":"licensingInfo",
-            "required":false
+            "in": "formData",
+            "name": "licensingInfo",
+            "type": "string",
+            "description": "licensingInfo",
+            "required": false
           }
         ],
         "responses": {
@@ -317,25 +317,25 @@
             "required": true
           },
           {
-            "in":"formData",
-            "name":"licenseAutoCreate",
-            "type":"boolean",
-            "description":"If set to 'true', non-existing licensees will be created at first validation attempt.",
-            "required":false
+            "in": "formData",
+            "name": "licenseAutoCreate",
+            "type": "boolean",
+            "description": "If set to 'true', non-existing licensees will be created at first validation attempt.",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"description",
-            "type":"string",
-            "description":"Product description. Optional",
-            "required":false
+            "in": "formData",
+            "name": "description",
+            "type": "string",
+            "description": "Product description. Optional",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"licensingInfo",
-            "type":"string",
-            "description":"licensingInfo",
-            "required":false
+            "in": "formData",
+            "name": "licensingInfo",
+            "type": "string",
+            "description": "licensingInfo",
+            "required": false
           }
         ],
         "responses": {
@@ -779,40 +779,40 @@
             "required": true
           },
           {
-            "in":"formData",
-            "name":"price",
+            "in": "formData",
+            "name": "price",
             "type": "number",
             "format": "double",
-            "description":"price for the license. If >0, it must always be accompanied by the currency specification.",
-            "required":false
+            "description": "price for the license. If >0, it must always be accompanied by the currency specification.",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"currency",
-            "type":"string",
-            "description":"specifies currency for the license price. Check data types to discover which currencies are supported.",
-            "required":false
+            "in": "formData",
+            "name": "currency",
+            "type": "string",
+            "description": "specifies currency for the license price. Check data types to discover which currencies are supported.",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"automatic",
-            "type":"boolean",
-            "description":"If set to true, every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0.",
-            "required":false
+            "in": "formData",
+            "name": "automatic",
+            "type": "boolean",
+            "description": "If set to true, every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0.",
+            "required": false
           },
           {
-            "in":"formData",
-           "name":"hidden",
-            "type":"boolean",
-            "description":"If set to true, this license template is not shown in NetLicensing Shop as offered for purchase.",
-            "required":false
+            "in": "formData",
+            "name": "hidden",
+            "type": "boolean",
+            "description": "If set to true, this license template is not shown in NetLicensing Shop as offered for purchase.",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"hideLicenses",
-            "type":"boolean",
-            "description":"If set to true, licenses from this license template are not visible to the end customer, but participate in validation.",
-            "required":false
+            "in": "formData",
+            "name": "hideLicenses",
+            "type": "boolean",
+            "description": "If set to true, licenses from this license template are not visible to the end customer, but participate in validation.",
+            "required": false
           }
         ],
         "responses": {
@@ -935,45 +935,54 @@
           {
             "in": "formData",
             "name": "licenseType",
-            "type": "string",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "FEATURE",
+                "TIMEVOLUME"
+              ],
+              "default": "FEATURE"
+            },
+            "collectionFormat": "multi",
             "description": "type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME",
             "required": true
           },
           {
-            "in":"formData",
-            "name":"price",
+            "in": "formData",
+            "name": "price",
             "type": "number",
             "format": "double",
-            "description":"price for the license. If >0, it must always be accompanied by the currency specification.",
-            "required":false
+            "description": "price for the license. If >0, it must always be accompanied by the currency specification.",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"currency",
-            "type":"string",
-            "description":"specifies currency for the license price. Check data types to discover which currencies are supported.",
-            "required":false
+            "in": "formData",
+            "name": "currency",
+            "type": "string",
+            "description": "specifies currency for the license price. Check data types to discover which currencies are supported.",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"automatic",
-            "type":"boolean",
-            "description":"If set to true, every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0.",
-            "required":false
+            "in": "formData",
+            "name": "automatic",
+            "type": "boolean",
+            "description": "If set to true, every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0.",
+            "required": false
           },
           {
-            "in":"formData",
-           "name":"hidden",
-            "type":"boolean",
-            "description":"If set to true, this license template is not shown in NetLicensing Shop as offered for purchase.",
-            "required":false
+            "in": "formData",
+            "name": "hidden",
+            "type": "boolean",
+            "description": "If set to true, this license template is not shown in NetLicensing Shop as offered for purchase.",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"hideLicenses",
-            "type":"boolean",
-            "description":"If set to true, licenses from this license template are not visible to the end customer, but participate in validation.",
-            "required":false
+            "in": "formData",
+            "name": "hideLicenses",
+            "type": "boolean",
+            "description": "If set to true, licenses from this license template are not visible to the end customer, but participate in validation.",
+            "required": false
           }
         ],
         "responses": {
@@ -1098,7 +1107,38 @@
           "application/xml",
           "application/json"
         ],
-
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "productNumber",
+            "type": "string",
+            "description": "productNumber to create licensee object",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "number",
+            "type": "string",
+            "description": "Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee.",
+            "": true
+          },
+          {
+            "in": "formData",
+            "name": "active",
+            "type": "boolean",
+            "description": " If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "customPropForLicense",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
         "responses": {
           "200": {
             "description": "Successful request",
@@ -1194,6 +1234,36 @@
             "description": "Number of licensee to update",
             "required": true,
             "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "productNumber",
+            "type": "string",
+            "description": "productNumber to create licensee object",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "number",
+            "type": "string",
+            "description": "Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee.",
+            "": true
+          },
+          {
+            "in": "formData",
+            "name": "active",
+            "type": "boolean",
+            "description": " If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "customPropForLicense",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": false
           }
         ],
         "responses": {
@@ -1315,7 +1385,6 @@
           "application/xml",
           "application/json"
         ],
-
         "responses": {
           "200": {
             "description": "Successful request",
