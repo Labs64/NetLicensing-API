@@ -1485,43 +1485,6 @@
           "application/xml",
           "application/json"
         ],
-        "parameters": [
-          {
-            "in": "formData",
-            "name": "licenseeNumber",
-            "type": "string",
-            "description": "licenseeNumber to create transaction object",
-            "required": true
-          },
-          {
-            "in": "formData",
-            "name": "number",
-            "type": "string",
-            "required": true
-          },
-          {
-            "in": "formData",
-            "name": "active",
-            "type": "boolean",
-            "required": true
-          },
-          {
-            "in": "formData",
-            "name": "status",
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "CANCELLED",
-                "CLOSED",
-                "PENDING"
-              ],
-              "default": "PENDING"
-            },
-            "collectionFormat": "multi",
-            "required": true
-          }
-        ],
         "responses": {
           "200": {
             "description": "Successful request",
@@ -1617,34 +1580,6 @@
             "description": "Number of transaction to update",
             "required": true,
             "type": "string"
-          },
-          {
-            "in": "formData",
-            "name": "number",
-            "type": "string",
-            "required": true
-          },
-          {
-            "in": "formData",
-            "name": "active",
-            "type": "boolean",
-            "required": true
-          },
-          {
-            "in": "formData",
-            "name": "status",
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "CANCELLED",
-                "CLOSED",
-                "PENDING"
-              ],
-              "default": "PENDING"
-            },
-            "collectionFormat": "multi",
-            "required": true
           }
         ],
         "responses": {
