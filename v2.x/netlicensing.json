@@ -1707,6 +1707,82 @@
           "application/xml",
           "application/json"
         ],
+        "parameters":[
+          {
+            "in":"formData",
+            "name":"licenseeNumber",
+            "type":"string",
+            "required":true
+          },
+          {
+            "in":"formData",
+            "name":"number",
+            "type":"string",
+            "description":"Unique number (across all products of a vendor) that identifies the transaction",
+            "required":true
+          },
+          {
+            "in":"formData",
+            "name":"active",
+            "type":"boolean",
+            "description":"always true for transactions",
+            "required":true
+            
+          },
+          {
+            "in":"formData",
+            "name":"status",
+            "type": "string",
+            "enum": [
+            "CANCELLED",
+            "CLOSED",
+            "PENDING"
+          ],
+            "required":true
+          },
+          {
+            "in":"formData",
+            "name":"source",
+            "type": "string",
+          "enum": [
+            "AUTO_LICENSE_CREATE",
+            "AUTO_LICENSE_DELETE",
+            "AUTO_LICENSE_UPDATE",
+            "AUTO_LICENSEE_CREATE",
+            "AUTO_LICENSEE_DELETE",
+            "AUTO_LICENSETEMPLATE_DELETE",
+            "AUTO_PRODUCT_DELETE",
+            "AUTO_PRODUCTMODULE_DELETE",
+            "SHOP"
+          ],
+            "required":true
+          },
+          {
+            "in":"formData",
+            "name":"price",
+            "type":"number",
+            "format":"double",
+            "description":"price for the transaction",
+            "required":false
+            
+          },
+          {
+            "in":"formData",
+            "name":"discount",
+            "type":"integer",
+            "format":"int32",
+            "description":"discount for the transaction.",
+            "required":false
+          },
+            {
+              "in":"formData",
+              "name":"currency",
+              "type":"string",
+              "description":"specifies currency for the transaction price. Check data types to discover which currencies are supported",
+              "required":false
+              
+            }
+            ],
         "responses": {
           "200": {
             "description": "Successful request",
