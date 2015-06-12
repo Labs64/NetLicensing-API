@@ -1046,7 +1046,7 @@
         "consumes": [
           "application/x-www-form-urlencoded"
         ],
-        "":[
+        "parameters":[
         {
             "name": "licenseTemplateNumber",
             "in": "path",
@@ -1436,7 +1436,6 @@
             "in": "formData",
             "name": "active",
             "type": "boolean",
-            "description": "",
             "required": true
           },
           {
@@ -1578,7 +1577,6 @@
             "in": "formData",
             "name": "active",
             "type": "boolean",
-            "description": "",
             "required": true
           },
           {
