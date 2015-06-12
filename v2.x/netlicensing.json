@@ -385,7 +385,13 @@
             "description": "Number of product to delete",
             "required": true,
             "type": "string"
-          }
+          },
+          {
+            "in":"path",
+            "name":"forceCascade",
+            "type":"boolean",
+            "":false
+            }
         ],
         "responses": {
           "200": {
@@ -686,7 +692,13 @@
             "description": "Number of product module to delete",
             "required": true,
             "type": "string"
-          }
+          },
+          {
+            "in":"path",
+            "name":"forceCascade",
+            "type":"boolean",
+            "":false
+            }
         ],
         "responses": {
           "200": {
@@ -998,7 +1010,7 @@
               "default": "FEATURE"
             },
             "collectionFormat": "multi",
-            "description": "type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME,FLOATING",
+            "description": "type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME, FLOATING",
             "required": false
           },
           {
@@ -1095,7 +1107,13 @@
             "description": "Number of license template to delete",
             "required": true,
             "type": "string"
-          }],
+          },
+          {
+            "in":"path",
+            "name":"forceCascade",
+            "type":"boolean",
+            "":false
+            }],
         "produces": [
           "application/xml",
           "application/json"
@@ -1378,7 +1396,13 @@
             "description": "Number of licensee to delete",
             "required": true,
             "type": "string"
-          }],
+          },
+          {
+            "in":"path",
+            "name":"forceCascade",
+            "type":"boolean",
+            "":false
+            }],
         "responses": {
           "200": {
             "description": "Successful request",
