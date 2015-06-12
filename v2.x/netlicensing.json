@@ -820,8 +820,16 @@
             "in":"formData",
             "name":"timeVolume",
             "type":"string",
+            "description":"for TIMEVOLUME licenseType",
             "required":false
             },
+           {
+            "in":"formData",
+            "name":"maxSessions",
+            "type":"string",
+            "description":"for FLOATING licenseType",
+            "required":false
+           }, 
           {
             "in": "formData",
             "name": "price",
@@ -990,9 +998,23 @@
               "default": "FEATURE"
             },
             "collectionFormat": "multi",
-            "description": "type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME",
+            "description": "type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME,FLOATING",
             "required": false
           },
+          {
+            "in":"formData",
+            "name":"timeVolume",
+            "type":"string",
+            "description":"for TIMEVOLUME licenseType",
+            "required":false
+            },
+           {
+            "in":"formData",
+            "name":"maxSessions",
+            "type":"string",
+            "description":"for FLOATING licenseType",
+            "required":false
+           }, 
           {
             "in": "formData",
             "name": "price",
