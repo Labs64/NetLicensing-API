@@ -387,7 +387,7 @@
             "type": "string"
           },
           {
-            "in": "path",
+            "in": "query",
             "name": "forceCascade",
             "type": "boolean",
             "required": false
@@ -694,7 +694,7 @@
             "type": "string"
           },
           {
-            "in": "path",
+            "in": "query",
             "name": "forceCascade",
             "type": "boolean",
             "required": false
@@ -1109,7 +1109,7 @@
             "type": "string"
           },
           {
-            "in": "path",
+            "in": "query",
             "name": "forceCascade",
             "type": "boolean",
             "required": false
@@ -1399,7 +1399,7 @@
             "type": "string"
           },
           {
-            "in": "path",
+            "in": "query",
             "name": "forceCascade",
             "type": "boolean",
             "required": false
