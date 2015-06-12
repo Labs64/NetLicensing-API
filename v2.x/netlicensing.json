@@ -503,6 +503,12 @@
             "type": "string",
             "description": "Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation.",
             "required": true
+          },
+          {
+            "in":"formData",
+            "name":"maxCheckoutValidity",
+            "type":"string",
+            "required":false
           }
         ],
         "responses": {
@@ -628,6 +634,12 @@
             "type": "string",
             "description": "Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation.",
             "required": false
+          },
+          {
+            "in":"formData",
+            "name":"maxCheckoutValidity",
+            "type":"string",
+            "required":false
           }
         ],
         "responses": {
@@ -795,7 +807,8 @@
               "type": "string",
               "enum": [
                 "FEATURE",
-                "TIMEVOLUME"
+                "TIMEVOLUME",
+                "FLOATING"
               ],
               "default": "FEATURE"
             },
@@ -803,6 +816,12 @@
             "description": "type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME",
             "required": true
           },
+          {
+            "in":"formData",
+            "name":"timeVolume",
+            "type":"string",
+            "required":false
+            },
           {
             "in": "formData",
             "name": "price",
