@@ -293,14 +293,14 @@
             "name": "number",
             "type": "string",
             "description": "Unique number that identifies the product. Vendor can assign this number when creating a product or let NetLicensing generate one. Read-only after creation of the first licensee for the product.",
-            "required": true
+            "required": false
           },
           {
             "in": "formData",
             "name": "active",
             "type": "boolean",
             "description": "If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.",
-            "required": true
+            "required": false
           },
           {
             "in": "formData",
@@ -606,7 +606,7 @@
             "name": "number",
             "type": "string",
             "description": "Unique number (across all products of a vendor) that identifies the product module. ",
-            "required": true
+            "required": false
           },
           {
             "in": "formData",
@@ -771,7 +771,7 @@
             "name": "number",
             "type": "string",
             "description": "Unique number (across all products of a vendor) that identifies the license template. Vendor can assign this number when creating a license template or let NetLicensing generate one. Read-only after creation of the first license from this license template.",
-            "required": true
+            "required": false
           },
           {
             "in": "formData",
@@ -941,7 +941,7 @@
             "name": "number",
             "type": "string",
             "description": "Unique number (across all products of a vendor) that identifies the license template. Vendor can assign this number when creating a license template or let NetLicensing generate one. Read-only after creation of the first license from this license template.",
-            "required": true
+            "required": false
           },
           {
             "in": "formData",
@@ -965,13 +965,14 @@
               "type": "string",
               "enum": [
                 "FEATURE",
-                "TIMEVOLUME"
+                "TIMEVOLUME",
+                "FLOATING"
               ],
               "default": "FEATURE"
             },
             "collectionFormat": "multi",
             "description": "type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME",
-            "required": true
+            "required": false
           },
           {
             "in": "formData",
@@ -1273,14 +1274,14 @@
             "name": "number",
             "type": "string",
             "description": "Unique number (across all products of a vendor) that identifies the licensee",
-            "required": true
+            "required": false
           },
           {
             "in": "formData",
             "name": "active",
             "type": "boolean",
             "description": " If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
-            "required": true
+            "required": false
           },
           {
             "in": "formData",
@@ -1577,7 +1578,7 @@
             "in": "formData",
             "name": "active",
             "type": "boolean",
-            "required": true
+            "required": false
           },
           {
             "in": "formData",
@@ -1922,14 +1923,14 @@
             "name": "number",
             "type": "string",
             "description": "Unique number (across all products of a vendor) that identifies the transaction",
-            "required": true
+            "required": false
           },
           {
             "in": "formData",
             "name": "active",
             "type": "boolean",
             "description": "always true for transactions",
-            "required": true
+            "required": false
           },
           {
             "in": "formData",
@@ -2252,7 +2253,7 @@
         ]
       }
     },
-    "/peymentmethod/{paymentMethodNumber}": {
+    "/paymentmethod/{paymentMethodNumber}": {
       "get": {
         "tags": [
           "Payment Method"
@@ -2325,7 +2326,7 @@
             "in": "formData",
             "name": "active",
             "type": "boolean",
-            "required": true
+            "required": false
           },
           {
             "in": "formData",
