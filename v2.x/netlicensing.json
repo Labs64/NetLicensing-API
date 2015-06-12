@@ -378,6 +378,15 @@
           "application/xml",
           "application/json"
         ],
+        "parameters": [
+          {
+            "name": "productNumber",
+            "in": "path",
+            "description": "Number of product to delete",
+            "required": true,
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "Successful request",
@@ -658,6 +667,15 @@
           "application/xml",
           "application/json"
         ],
+        "parameters": [
+          {
+            "name": "productModuleNumber",
+            "in": "path",
+            "description": "Number of product module to delete",
+            "required": true,
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "Successful request",
@@ -760,6 +778,13 @@
             "name": "active",
             "type": "boolean",
             "description": "If set to false, the license template is disabled. Licensee can not obtain any new licenses off this license template.",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "name",
+            "type": "string",
+            "description": "license template name to сreate license template object",
             "required": true
           },
           {
@@ -1021,6 +1046,14 @@
         "consumes": [
           "application/x-www-form-urlencoded"
         ],
+        "":[
+        {
+            "name": "licenseTemplateNumber",
+            "in": "path",
+            "description": "Number of license template to delete",
+            "required": true,
+            "type": "string"
+          }],
         "produces": [
           "application/xml",
           "application/json"
@@ -1251,7 +1284,7 @@
           },
           {
             "in": "formData",
-            "name": "customPropForLicense",
+            "name": "customPropForLicensee",
             "type": "array",
             "items": {
               "type": "string"
@@ -1296,6 +1329,14 @@
           "application/xml",
           "application/json"
         ],
+        "parameters": [
+          {
+            "name": "licenseeNumber",
+            "in": "path",
+            "description": "Number of licensee to delete",
+            "required": true,
+            "type": "string"
+          }],
         "responses": {
           "200": {
             "description": "Successful request",
@@ -1378,54 +1419,54 @@
           "application/xml",
           "application/json"
         ],
-        "parameters":[
+        "parameters": [
           {
-            "in":"formData",
-            "name":"licenseeNumber",
-            "type":"string",
-            "required":true
+            "in": "formData",
+            "name": "licenseeNumber",
+            "type": "string",
+            "required": true
           },
           {
-            "in":"formData",
-            "name":"licenseTemplateNumber",
-            "type":"string",
-            "required":true
+            "in": "formData",
+            "name": "licenseTemplateNumber",
+            "type": "string",
+            "required": true
           },
           {
-            "in":"formData",
-            "name":"active",
-            "type":"boolean",
-            "description":"",
-            "required":true
+            "in": "formData",
+            "name": "active",
+            "type": "boolean",
+            "description": "",
+            "required": true
           },
           {
-            "in":"formData",
-            "name":"name",
-            "type":"string",
-            "description":"Name for the licensed item. Set from license template on creation, if not specified explicitly.",
-            "required":false
+            "in": "formData",
+            "name": "name",
+            "type": "string",
+            "description": "Name for the licensed item. Set from license template on creation, if not specified explicitly.",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"price",
-            "type":"number",
-            "format":"double",
-            "description":"price for the license. If >0, it must always be accompanied by the currency specification. Read-only, set from license template on creation",
-            "required":false
+            "in": "formData",
+            "name": "price",
+            "type": "number",
+            "format": "double",
+            "description": "price for the license. If >0, it must always be accompanied by the currency specification. Read-only, set from license template on creation",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"currency",
-            "type":"string",
-            "description":"specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation",
-            "required":false
+            "in": "formData",
+            "name": "currency",
+            "type": "string",
+            "description": "specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"hidden",
-            "type":"boolean",
-            "description":" If set to true, this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly",
-            "required":false
+            "in": "formData",
+            "name": "hidden",
+            "type": "boolean",
+            "description": " If set to true, this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly",
+            "required": false
           },
           {
             "in": "formData",
@@ -1436,7 +1477,7 @@
             },
             "required": false
           }
-          ],
+        ],
         "responses": {
           "200": {
             "description": "Successful request",
@@ -1478,7 +1519,7 @@
         ],
         "parameters": [
           {
-            "name": "licenseModuleNumber",
+            "name": "licenseNumber",
             "in": "path",
             "description": "Number of license",
             "required": true,
@@ -1489,7 +1530,7 @@
           "200": {
             "description": "Successful request",
             "schema": {
-              "$ref": "#/definitions/License"
+              "$ref": "#/definitions/netlicensing"
             }
           },
           "400": {
@@ -1534,40 +1575,40 @@
             "type": "string"
           },
           {
-            "in":"formData",
-            "name":"active",
-            "type":"boolean",
-            "description":"",
-            "required":true
+            "in": "formData",
+            "name": "active",
+            "type": "boolean",
+            "description": "",
+            "required": true
           },
           {
-            "in":"formData",
-            "name":"name",
-            "type":"string",
-            "description":"Name for the licensed item. Set from license template on creation, if not specified explicitly.",
-            "required":false
+            "in": "formData",
+            "name": "name",
+            "type": "string",
+            "description": "Name for the licensed item. Set from license template on creation, if not specified explicitly.",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"price",
-            "type":"number",
-            "format":"double",
-            "description":"price for the license. If >0, it must always be accompanied by the currency specification. Read-only, set from license template on creation",
-            "required":false
+            "in": "formData",
+            "name": "price",
+            "type": "number",
+            "format": "double",
+            "description": "price for the license. If >0, it must always be accompanied by the currency specification. Read-only, set from license template on creation",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"currency",
-            "type":"string",
-            "description":"specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation",
-            "required":false
+            "in": "formData",
+            "name": "currency",
+            "type": "string",
+            "description": "specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"hidden",
-            "type":"boolean",
-            "description":" If set to true, this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly",
-            "required":false
+            "in": "formData",
+            "name": "hidden",
+            "type": "boolean",
+            "description": " If set to true, this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly",
+            "required": false
           },
           {
             "in": "formData",
@@ -1620,7 +1661,7 @@
           {
             "name": "licenseNumber",
             "in": "path",
-            "description": "Number of license",
+            "description": "Number of license to delete",
             "required": true,
             "type": "string"
           }
@@ -1707,84 +1748,81 @@
           "application/xml",
           "application/json"
         ],
-        "parameters":[
+        "parameters": [
           {
-            "in":"formData",
-            "name":"licenseeNumber",
-            "type":"string",
-            "required":true
+            "in": "formData",
+            "name": "licenseeNumber",
+            "type": "string",
+            "required": true
           },
           {
-            "in":"formData",
-            "name":"number",
-            "type":"string",
-            "description":"Unique number (across all products of a vendor) that identifies the transaction",
-            "required":true
+            "in": "formData",
+            "name": "number",
+            "type": "string",
+            "description": "Unique number (across all products of a vendor) that identifies the transaction",
+            "required": true
           },
           {
-            "in":"formData",
-            "name":"active",
-            "type":"boolean",
-            "description":"always true for transactions",
-            "required":true
-            
+            "in": "formData",
+            "name": "active",
+            "type": "boolean",
+            "description": "always true for transactions",
+            "required": true
           },
           {
-            "in":"formData",
-            "name":"status",
+            "in": "formData",
+            "name": "status",
             "type": "string",
             "enum": [
-            "CANCELLED",
-            "CLOSED",
-            "PENDING"
-          ],
-          "collectionFormat":"multi",
-            "required":true
-          },
-          {
-            "in":"formData",
-            "name":"source",
-            "type": "string",
-          "enum": [
-            "AUTO_LICENSE_CREATE",
-            "AUTO_LICENSE_DELETE",
-            "AUTO_LICENSE_UPDATE",
-            "AUTO_LICENSEE_CREATE",
-            "AUTO_LICENSEE_DELETE",
-            "AUTO_LICENSETEMPLATE_DELETE",
-            "AUTO_PRODUCT_DELETE",
-            "AUTO_PRODUCTMODULE_DELETE",
-            "SHOP"
-          ],
-          "collectionFormat":"multi",
-            "required":true
-          },
-          {
-            "in":"formData",
-            "name":"price",
-            "type":"number",
-            "format":"double",
-            "description":"price for the transaction",
-            "required":false
-            
-          },
-          {
-            "in":"formData",
-            "name":"discount",
-            "type":"integer",
-            "format":"int32",
-            "description":"discount for the transaction.",
-            "required":false
-          },
-            {
-              "in":"formData",
-              "name":"currency",
-              "type":"string",
-              "description":"specifies currency for the transaction price. Check data types to discover which currencies are supported",
-              "required":false
-              
-            }
+              "CANCELLED",
+              "CLOSED",
+              "PENDING"
             ],
+            "collectionFormat": "multi",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "source",
+            "type": "string",
+            "enum": [
+              "AUTO_LICENSE_CREATE",
+              "AUTO_LICENSE_DELETE",
+              "AUTO_LICENSE_UPDATE",
+              "AUTO_LICENSEE_CREATE",
+              "AUTO_LICENSEE_DELETE",
+              "AUTO_LICENSETEMPLATE_DELETE",
+              "AUTO_PRODUCT_DELETE",
+              "AUTO_PRODUCTMODULE_DELETE",
+              "SHOP"
+            ],
+            "collectionFormat": "multi",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "price",
+            "type": "number",
+            "format": "double",
+            "description": "price for the transaction",
+            "required": false
+          },
+          {
+            "in": "formData",
+            "name": "discount",
+            "type": "integer",
+            "format": "int32",
+            "description": "discount for the transaction.",
+            "required": false
+          },
+          {
+            "in": "formData",
+            "name": "currency",
+            "type": "string",
+            "description": "specifies currency for the transaction price. Check data types to discover which currencies are supported",
+            "required": false
+          }
+        ],
         "responses": {
           "200": {
             "description": "Successful request",
@@ -1882,75 +1920,72 @@
             "type": "string"
           },
           {
-            "in":"formData",
-            "name":"number",
-            "type":"string",
-            "description":"Unique number (across all products of a vendor) that identifies the transaction",
-            "required":true
+            "in": "formData",
+            "name": "number",
+            "type": "string",
+            "description": "Unique number (across all products of a vendor) that identifies the transaction",
+            "required": true
           },
           {
-            "in":"formData",
-            "name":"active",
-            "type":"boolean",
-            "description":"always true for transactions",
-            "required":true
-            
+            "in": "formData",
+            "name": "active",
+            "type": "boolean",
+            "description": "always true for transactions",
+            "required": true
           },
           {
-            "in":"formData",
-            "name":"status",
+            "in": "formData",
+            "name": "status",
             "type": "string",
             "enum": [
-            "CANCELLED",
-            "CLOSED",
-            "PENDING"
-          ],
-          "collectionFormat":"multi",
-            "required":true
+              "CANCELLED",
+              "CLOSED",
+              "PENDING"
+            ],
+            "collectionFormat": "multi",
+            "required": true
           },
           {
-            "in":"formData",
-            "name":"source",
+            "in": "formData",
+            "name": "source",
             "type": "string",
-          "enum": [
-            "AUTO_LICENSE_CREATE",
-            "AUTO_LICENSE_DELETE",
-            "AUTO_LICENSE_UPDATE",
-            "AUTO_LICENSEE_CREATE",
-            "AUTO_LICENSEE_DELETE",
-            "AUTO_LICENSETEMPLATE_DELETE",
-            "AUTO_PRODUCT_DELETE",
-            "AUTO_PRODUCTMODULE_DELETE",
-            "SHOP"
-          ],
-          "collectionFormat":"multi",
-            "required":true
+            "enum": [
+              "AUTO_LICENSE_CREATE",
+              "AUTO_LICENSE_DELETE",
+              "AUTO_LICENSE_UPDATE",
+              "AUTO_LICENSEE_CREATE",
+              "AUTO_LICENSEE_DELETE",
+              "AUTO_LICENSETEMPLATE_DELETE",
+              "AUTO_PRODUCT_DELETE",
+              "AUTO_PRODUCTMODULE_DELETE",
+              "SHOP"
+            ],
+            "collectionFormat": "multi",
+            "required": true
           },
           {
-            "in":"formData",
-            "name":"price",
-            "type":"number",
-            "format":"double",
-            "description":"price for the transaction",
-            "required":false
-            
+            "in": "formData",
+            "name": "price",
+            "type": "number",
+            "format": "double",
+            "description": "price for the transaction",
+            "required": false
           },
           {
-            "in":"formData",
-            "name":"discount",
-            "type":"integer",
-            "format":"int32",
-            "description":"discount for the transaction.",
-            "required":false
+            "in": "formData",
+            "name": "discount",
+            "type": "integer",
+            "format": "int32",
+            "description": "discount for the transaction.",
+            "required": false
           },
-            {
-              "in":"formData",
-              "name":"currency",
-              "type":"string",
-              "description":"specifies currency for the transaction price. Check data types to discover which currencies are supported",
-              "required":false
-              
-            }
+          {
+            "in": "formData",
+            "name": "currency",
+            "type": "string",
+            "description": "specifies currency for the transaction price. Check data types to discover which currencies are supported",
+            "required": false
+          }
         ],
         "responses": {
           "200": {
@@ -2034,27 +2069,27 @@
           "application/xml",
           "application/json"
         ],
-        "parameters":[
+        "parameters": [
           {
-            "in":"formData",
-            "name":"tokenType",
+            "in": "formData",
+            "name": "tokenType",
             "type": "string",
             "enum": [
-            "DEFAULT",
-            "SHOP",
-            "APIKey"
-          ],
-          "collectionFormat":"multi",
-          "required":true
+              "DEFAULT",
+              "SHOP",
+              "APIKey"
+            ],
+            "collectionFormat": "multi",
+            "required": true
           },
           {
-            "in":"formData",
-            "name":"licenseeNumber",
-            "type":"string",
-            "description":"only for tokenType=SHOP, identifies licensee that will be assigned to the shop token",
-            "required":false
+            "in": "formData",
+            "name": "licenseeNumber",
+            "type": "string",
+            "description": "only for tokenType=SHOP, identifies licensee that will be assigned to the shop token",
+            "required": false
           }
-          ],
+        ],
         "responses": {
           "200": {
             "description": "Successful request",
@@ -2238,21 +2273,6 @@
             "description": "Number of peyment method",
             "required": true,
             "type": "string"
-          },
-          {
-            "in":"formData",
-            "name":"active",
-            "type":"boolean",
-            "required":true
-          },
-          {
-            "in": "formData",
-            "name": "customPropForPaymentMethod",
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "required": false
           }
         ],
         "responses": {
@@ -2302,6 +2322,21 @@
             "description": "Number of payment method to update",
             "required": true,
             "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "active",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "customPropForPaymentMethod",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "required": false
           }
         ],
         "responses": {
