@@ -390,7 +390,7 @@
             "in":"path",
             "name":"forceCascade",
             "type":"boolean",
-            "":false
+            "required":false
             }
         ],
         "responses": {
@@ -697,7 +697,7 @@
             "in":"path",
             "name":"forceCascade",
             "type":"boolean",
-            "":false
+            "required":false
             }
         ],
         "responses": {
@@ -1112,7 +1112,7 @@
             "in":"path",
             "name":"forceCascade",
             "type":"boolean",
-            "":false
+            "required":false
             }],
         "produces": [
           "application/xml",
@@ -1401,7 +1401,7 @@
             "in":"path",
             "name":"forceCascade",
             "type":"boolean",
-            "":false
+            "required":false
             }],
         "responses": {
           "200": {
