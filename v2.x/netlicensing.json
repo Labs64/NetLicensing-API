@@ -387,11 +387,11 @@
             "type": "string"
           },
           {
-            "in":"path",
-            "name":"forceCascade",
-            "type":"boolean",
-            "required":false
-            }
+            "in": "path",
+            "name": "forceCascade",
+            "type": "boolean",
+            "required": false
+          }
         ],
         "responses": {
           "200": {
@@ -511,10 +511,10 @@
             "required": true
           },
           {
-            "in":"formData",
-            "name":"maxCheckoutValidity",
-            "type":"string",
-            "required":false
+            "in": "formData",
+            "name": "maxCheckoutValidity",
+            "type": "string",
+            "required": false
           }
         ],
         "responses": {
@@ -642,10 +642,10 @@
             "required": false
           },
           {
-            "in":"formData",
-            "name":"maxCheckoutValidity",
-            "type":"string",
-            "required":false
+            "in": "formData",
+            "name": "maxCheckoutValidity",
+            "type": "string",
+            "required": false
           }
         ],
         "responses": {
@@ -694,11 +694,11 @@
             "type": "string"
           },
           {
-            "in":"path",
-            "name":"forceCascade",
-            "type":"boolean",
-            "required":false
-            }
+            "in": "path",
+            "name": "forceCascade",
+            "type": "boolean",
+            "required": false
+          }
         ],
         "responses": {
           "200": {
@@ -829,19 +829,19 @@
             "required": true
           },
           {
-            "in":"formData",
-            "name":"timeVolume",
-            "type":"string",
-            "description":"for TIMEVOLUME licenseType",
-            "required":false
-            },
-           {
-            "in":"formData",
-            "name":"maxSessions",
-            "type":"string",
-            "description":"for FLOATING licenseType",
-            "required":false
-           }, 
+            "in": "formData",
+            "name": "timeVolume",
+            "type": "string",
+            "description": "for TIMEVOLUME licenseType",
+            "required": false
+          },
+          {
+            "in": "formData",
+            "name": "maxSessions",
+            "type": "string",
+            "description": "for FLOATING licenseType",
+            "required": false
+          },
           {
             "in": "formData",
             "name": "price",
@@ -1014,19 +1014,19 @@
             "required": false
           },
           {
-            "in":"formData",
-            "name":"timeVolume",
-            "type":"string",
-            "description":"for TIMEVOLUME licenseType",
-            "required":false
-            },
-           {
-            "in":"formData",
-            "name":"maxSessions",
-            "type":"string",
-            "description":"for FLOATING licenseType",
-            "required":false
-           }, 
+            "in": "formData",
+            "name": "timeVolume",
+            "type": "string",
+            "description": "for TIMEVOLUME licenseType",
+            "required": false
+          },
+          {
+            "in": "formData",
+            "name": "maxSessions",
+            "type": "string",
+            "description": "for FLOATING licenseType",
+            "required": false
+          },
           {
             "in": "formData",
             "name": "price",
@@ -1100,8 +1100,8 @@
         "consumes": [
           "application/x-www-form-urlencoded"
         ],
-        "parameters":[
-        {
+        "parameters": [
+          {
             "name": "licenseTemplateNumber",
             "in": "path",
             "description": "Number of license template to delete",
@@ -1109,11 +1109,12 @@
             "type": "string"
           },
           {
-            "in":"path",
-            "name":"forceCascade",
-            "type":"boolean",
-            "required":false
-            }],
+            "in": "path",
+            "name": "forceCascade",
+            "type": "boolean",
+            "required": false
+          }
+        ],
         "produces": [
           "application/xml",
           "application/json"
@@ -1398,11 +1399,12 @@
             "type": "string"
           },
           {
-            "in":"path",
-            "name":"forceCascade",
-            "type":"boolean",
-            "required":false
-            }],
+            "in": "path",
+            "name": "forceCascade",
+            "type": "boolean",
+            "required": false
+          }
+        ],
         "responses": {
           "200": {
             "description": "Successful request",
