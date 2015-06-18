@@ -144,7 +144,7 @@
                 "parameters": [
                     {
                         "in": "formData",
-                        "name": "productnumber",
+                        "name": "Number",
                         "type": "string",
                         "description": "Product number to create",
                         "required": true
@@ -188,7 +188,7 @@
                         "in": "formData",
                         "name": "licensingInfo",
                         "type": "string",
-                        "description": "licensingInfo",
+                        "description": " Licensing information. Optional.",
                         "required": false
                     }
                 ],
@@ -233,9 +233,9 @@
                 ],
                 "parameters": [
                     {
-                        "name": "productNumber",
+                        "name": "Number",
                         "in": "path",
-                        "description": "Number of product",
+                        "description": "Number of product to get",
                         "required": true,
                         "type": "string"
                     }
@@ -282,7 +282,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "productNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of product to update",
                         "required": true,
@@ -334,7 +334,7 @@
                         "in": "formData",
                         "name": "licensingInfo",
                         "type": "string",
-                        "description": "licensingInfo",
+                        "description": "Licensing information. Optional.",
                         "required": false
                     }
                 ],
@@ -380,7 +380,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "productNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of product to delete",
                         "required": true,
@@ -478,8 +478,9 @@
                 "parameters": [
                     {
                         "in": "formData",
-                        "name": "productNumber",
+                        "name": "Number of product",
                         "type": "string",
+                        "description":"Unique number that identifies the product. Vendor can assign this number when creating a product or let NetLicensing generate one. Read-only after creation of the first licensee for the product.",
                         "required": true
                     },
                     {
@@ -558,7 +559,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "productModuleNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of product module",
                         "required": true,
@@ -607,7 +608,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "productModuleNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of product module to update",
                         "required": true,
@@ -687,7 +688,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "productModuleNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of product module to delete",
                         "required": true,
@@ -920,7 +921,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "licenseTemplateNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of license template",
                         "required": true,
@@ -969,7 +970,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "licenseTemplateNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of license template to update",
                         "required": true,
@@ -1102,7 +1103,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "licenseTemplateNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of license template to delete",
                         "required": true,
@@ -1274,7 +1275,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "licenseeNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of licensee",
                         "required": true,
@@ -1323,7 +1324,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "licenseeNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of licensee to update",
                         "required": true,
@@ -1392,7 +1393,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "licenseeNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of licensee to delete",
                         "required": true,
@@ -1586,7 +1587,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "licenseNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of license",
                         "required": true,
@@ -1635,7 +1636,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "licenseNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of license to update",
                         "required": true,
@@ -1725,7 +1726,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "licenseNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of license to delete",
                         "required": true,
@@ -1930,7 +1931,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "transactionNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of transaction",
                         "required": true,
@@ -1979,7 +1980,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "transactionNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of transaction to update",
                         "required": true,
@@ -2198,7 +2199,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "tokenNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of token",
                         "required": true,
@@ -2244,7 +2245,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "tokenNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of token",
                         "required": true,
@@ -2334,7 +2335,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "paymentMethodNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of peyment method",
                         "required": true,
@@ -2383,7 +2384,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "paymentMethodNumber",
+                        "name": "Number",
                         "in": "path",
                         "description": "Number of payment method to update",
                         "required": true,
