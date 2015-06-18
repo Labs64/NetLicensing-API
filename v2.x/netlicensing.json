@@ -794,14 +794,14 @@
                 "parameters": [
                     {
                         "in": "formData",
-                        "name": "product module number",
+                        "name": "productModuleNumber",
                         "type": "string",
                         "description": "Number of product module to сreate license template object",
                         "required": true
                     },
                     {
                         "in": "formData",
-                        "name": "license template name",
+                        "name": "name",
                         "type": "string",
                         "description": "license template name to сreate license template object",
                         "required": true
