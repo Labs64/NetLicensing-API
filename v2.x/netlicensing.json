@@ -471,7 +471,7 @@
                 "parameters": [
                     {
                         "in": "formData",
-                        "name": "Number of product",
+                        "name": "productNumber",
                         "type": "string",
                         "description":"Unique number (across all products of a vendor) that identifies the product module. Vendor can assign this number when creating a product module or let NetLicensing generate one. Read-only after creation of the first licensee for the product.",
                         "required": true
