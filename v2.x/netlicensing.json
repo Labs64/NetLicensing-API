@@ -1506,9 +1506,8 @@
                         "name":"startDate",
                         "type":"string",
                         "format":"date-time",
-                        "description":"for TIMEVOLUME",
+                        "description":"for TIMEVOLUME licenseType",
                         "required":false
-
                     },
                     {
                         "in": "formData",
@@ -1650,6 +1649,14 @@
                         "type": "string",
                         "description": "Name for the licensed item. Set from license template on creation, if not specified explicitly.",
                         "required": false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"startDate",
+                        "type":"string",
+                        "format":"date-time",
+                        "description":"for TIMEVOLUME licenseType",
+                        "required":false
                     },
                     {
                         "in": "formData",
