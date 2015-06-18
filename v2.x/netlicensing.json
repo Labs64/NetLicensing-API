@@ -144,10 +144,10 @@
                 "parameters": [
                     {
                         "in": "formData",
-                        "name": "Number",
+                        "name": "number",
                         "type": "string",
-                        "description": "Product number to create",
-                        "required": true
+                        "description": "Product number to create.",
+                        "required": false
                     },
                     {
                         "in": "formData",
@@ -235,7 +235,7 @@
                     {
                         "name": "productNumber",
                         "in": "path",
-                        "description": "Unique number that identifies the product. Vendor can assign this number when creating a product or let NetLicensing generate one. Read-only after creation of the first licensee for the product.",
+                        "description": "Unique number that identifies the product.",
                         "required": true,
                         "type": "string"
                     }
@@ -284,7 +284,7 @@
                     {
                         "name": "productNumber",
                         "in": "path",
-                        "description": "Unique number that identifies the product. Vendor can assign this number when creating a product or let NetLicensing generate one. Read-only after creation of the first licensee for the product.",
+                        "description": "Unique number that identifies the product.",
                         "required": true,
                         "type": "string"
                     },
@@ -382,7 +382,7 @@
                     {
                         "name": "productNumber",
                         "in": "path",
-                        "description": "Unique number that identifies the product. Vendor can assign this number when creating a product or let NetLicensing generate one. Read-only after creation of the first licensee for the product.",
+                        "description": "Unique number that identifies the product.",
                         "required": true,
                         "type": "string"
                     },
@@ -480,7 +480,7 @@
                         "in": "formData",
                         "name": "Number of product",
                         "type": "string",
-                        "description":"Unique number that identifies the product. Vendor can assign this number when creating a product or let NetLicensing generate one. Read-only after creation of the first licensee for the product.",
+                        "description":"Unique number that identifies the product.",
                         "required": true
                     },
                     {
