@@ -171,13 +171,6 @@
                         "required": true
                     },
                     {
-                        "in": "formData",
-                        "name": "licenseAutoCreate",
-                        "type": "boolean",
-                        "description": "If set to 'true', non-existing licensees will be created at first validation attempt.",
-                        "required": false
-                    },
-                    {
                         "in":"formData",
                         "name":"inUse",
                         "type":"boolean",
@@ -300,13 +293,6 @@
                         "type": "string",
                         "description": "Product version. Convenience parameter, additional to the product name.",
                         "required": true
-                    },
-                    {
-                        "in": "formData",
-                        "name": "licenseAutoCreate",
-                        "type": "boolean",
-                        "description": "If set to 'true', non-existing licensees will be created at first validation attempt.",
-                        "required": false
                     },
                     {
                         "in":"formData",
