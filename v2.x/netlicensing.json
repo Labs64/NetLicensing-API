@@ -500,25 +500,9 @@
                     {
                         "in": "formData",
                         "name": "licensingModel",
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "enum": [
-                                "Subscription",
-                                "TryAndBuy",
-                                "Rental",
-                                "Floating"
-                            ],
-                            "default": "Subscription"
-                        },
-                        "collectionFormat": "multi",
+                        "type": "string",
                         "description": "Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation.",
                         "required": true
-                    },
-                    {
-                        "in": "formData",
-                        "name": "licenseType",
-                        
                     },
                     {
                         "in": "formData",
