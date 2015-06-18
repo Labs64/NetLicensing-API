@@ -178,18 +178,10 @@
                         "required": false
                     },
                     {
-                        "in": "formData",
-                        "name": "description",
-                        "type": "string",
-                        "description": "Product description. Optional",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "licensingInfo",
-                        "type": "string",
-                        "description": " Licensing information. Optional.",
-                        "required": false
+                        "in":"formData",
+                        "name":"inUse",
+                        "type":"boolean",
+                        "required":false
                     }
                 ],
                 "responses": {
@@ -317,18 +309,10 @@
                         "required": false
                     },
                     {
-                        "in": "formData",
-                        "name": "description",
-                        "type": "string",
-                        "description": "Product description. Optional",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "licensingInfo",
-                        "type": "string",
-                        "description": "Licensing information. Optional.",
-                        "required": false
+                        "in":"formData",
+                        "name":"inUse",
+                        "type":"boolean",
+                        "required":false
                     }
                 ],
                 "responses": {
@@ -520,6 +504,18 @@
                         "name": "maxCheckoutValidity",
                         "type": "string",
                         "required": false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"licenseTemplateNumber",
+                        "type":"string",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"inUse",
+                        "type":"boolean",
+                        "required":false
                     }
                 ],
                 "responses": {
@@ -655,6 +651,18 @@
                         "name": "maxCheckoutValidity",
                         "type": "string",
                         "required": false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"licenseTemplateNumber",
+                        "type":"string",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"inUse",
+                        "type":"boolean",
+                        "required":false
                     }
                 ],
                 "responses": {
@@ -867,6 +875,12 @@
                         "required": false
                     },
                     {
+                        "in":"formData",
+                        "name":"licenseNumber",
+                        "type":"string",
+                        "required":false
+                    },
+                    {
                         "in": "formData",
                         "name": "hidden",
                         "type": "boolean",
@@ -878,6 +892,15 @@
                         "name": "hideLicenses",
                         "type": "boolean",
                         "description": "If set to true, licenses from this license template are not visible to the end customer, but participate in validation.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "customPropForLicenseTemplate",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
                         "required": false
                     }
                 ],
@@ -1043,6 +1066,12 @@
                         "type": "boolean",
                         "description": "If set to true, every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0.",
                         "required": false
+                    },                    
+                    {
+                        "in":"formData",
+                        "name":"licenseNumber",
+                        "type":"string",
+                        "required":false
                     },
                     {
                         "in": "formData",
@@ -1056,6 +1085,15 @@
                         "name": "hideLicenses",
                         "type": "boolean",
                         "description": "If set to true, licenses from this license template are not visible to the end customer, but participate in validation.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "customPropForLicenseTemplate",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
                         "required": false
                     }
                 ],
@@ -1218,6 +1256,13 @@
                         "description": " If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
                         "required": true
                     },
+
+                    {
+                        "in":"formData",
+                        "name":"licenseNumber",
+                        "type":"string",
+                        "required":false
+                    },
                     {
                         "in": "formData",
                         "name": "customPropForLicensee",
@@ -1226,6 +1271,13 @@
                             "type": "string"
                         },
                         "required": false
+                    },
+
+                    {
+                        "in":"formData",
+                        "name":"inUse",
+                        "type":"boolean",
+                        "required":false
                     }
                 ],
                 "responses": {
@@ -1331,6 +1383,13 @@
                         "description": " If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
                         "required": false
                     },
+
+                    {
+                        "in":"formData",
+                        "name":"licenseNumber",
+                        "type":"string",
+                        "required":false
+                    },
                     {
                         "in": "formData",
                         "name": "customPropForLicensee",
@@ -1339,6 +1398,12 @@
                             "type": "string"
                         },
                         "required": false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"inUse",
+                        "type":"boolean",
+                        "required":false
                     }
                 ],
                 "responses": {
@@ -1891,6 +1956,29 @@
                         "type": "string",
                         "description": "specifies currency for the transaction price. Check data types to discover which currencies are supported",
                         "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "customPropForTransaction",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "required": false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"dateCreated",
+                        "type":"string",
+                        "format":"date-time",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"dateClosed",
+                        "type":"string",
+                        "format":"date-time",
+                        "required":false
                     }
                 ],
                 "responses": {
@@ -2048,6 +2136,29 @@
                         "type": "string",
                         "description": "specifies currency for the transaction price. Check data types to discover which currencies are supported",
                         "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "customPropForTransaction",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "required": false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"dateCreated",
+                        "type":"string",
+                        "format":"date-time",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"dateClosed",
+                        "type":"string",
+                        "format":"date-time",
+                        "required":false
                     }
                 ],
                 "responses": {
@@ -2150,6 +2261,22 @@
                         "name": "licenseeNumber",
                         "type": "string",
                         "description": "only for tokenType=SHOP, identifies licensee that will be assigned to the shop token",
+                        "required": false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"expirationDate",
+                        "type":"string",
+                        "format":"date-time",
+                        "required":false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "customPropForToken",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
                         "required": false
                     }
                 ],
