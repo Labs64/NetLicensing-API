@@ -1097,7 +1097,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "licenseNumber",
+                        "name": "licenseTemplateNumber",
                         "in": "path",
                         "description": "Unique number (across all products of a vendor) that identifies the license template. Vendor can assign this number when creating a license template or let NetLicensing generate one. Read-only after creation of the first license from this license template.",
                         "required": true,
