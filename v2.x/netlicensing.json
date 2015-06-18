@@ -233,7 +233,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "Number",
+                        "name": "productNumber",
                         "in": "path",
                         "description": "Number of product to get",
                         "required": true,
