@@ -2694,19 +2694,8 @@
                     "type": "boolean",
                     "description": "If set to 'true', non-existing licensees will be created at first validation attempt."
                 },
-                "description": {
-                    "type": "string",
-                    "description": "Product description. Optional"
-                },
-                "licenseInfo": {
-                    "type": "string",
-                    "description": "Licensing information. Optional."
-                },
                 "inUse": {
                     "type": "boolean"
-                },
-                "productnumber": {
-                    "type": "string"
                 }
             },
             "xml": {
