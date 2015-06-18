@@ -146,9 +146,7 @@
                         "in": "formData",
                         "name": "number",
                         "type": "string",
-                        "description": "Unique number that identifies the product. Vendor can assign this number when creating a product or let NetLicensing generate one. Read-only after creation of the first licensee for the product.
-
-",
+                        "description": "Unique number that identifies the product. Vendor can assign this number when creating a product or let NetLicensing generate one.",
                         "required": false
                     },
                     {
