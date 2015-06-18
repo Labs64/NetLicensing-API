@@ -219,7 +219,7 @@
                 ]
             }
         },
-        "/product/{productNumber}": {
+        "/product/{number}": {
             "get": {
                 "tags": [
                     "Product"
@@ -233,7 +233,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "productNumber",
+                        "name": "number",
                         "in": "path",
                         "description": "Number of product to get",
                         "required": true,
