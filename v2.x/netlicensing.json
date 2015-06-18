@@ -1502,6 +1502,15 @@
                         "required": false
                     },
                     {
+                        "in":"formData",
+                        "name":"startDate",
+                        "type":"string",
+                        "format":"date-time",
+                        "description":"for TIMEVOLUME",
+                        "required":false
+
+                    },
+                    {
                         "in": "formData",
                         "name": "price",
                         "type": "number",
