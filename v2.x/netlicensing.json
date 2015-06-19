@@ -176,7 +176,48 @@
                         "type":"boolean",
                         "description":"If set to 'true', non-existing licensees will be created at first validation attempt.",
                         "required":false
-
+                    },
+                    {
+                        "in":"formData",
+                        "name":"description",
+                        "type":"string",
+                        "description":"Product description. Optional.",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"licensingInfo",
+                        "type":"string",
+                        "description":"Licensing information. Optional.",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"price",
+                        "type":"number",
+                        "format":"double",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"currency",
+                        "type":"string",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"discount",
+                        "type":"string",
+                        "required":false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "customPropForProduct",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "required": false
                     }
                 ],
                 "responses": {
@@ -287,14 +328,14 @@
                         "name": "name",
                         "type": "string",
                         "description": "Product name. Together with the version identifies the product for the end customer.",
-                        "required": true
+                        "required": false
                     },
                     {
                         "in": "formData",
                         "name": "version",
                         "type": "string",
                         "description": "Product version. Convenience parameter, additional to the product name.",
-                        "required": true
+                        "required": false
                     },
                     {
                         "in":"formData",
@@ -302,7 +343,40 @@
                         "type":"boolean",
                         "description":"If set to 'true', non-existing licensees will be created at first validation attempt.",
                         "required":false
-                    }
+                    },
+                    {
+                        "in":"formData",
+                        "name":"description",
+                        "type":"string",
+                        "description":"Product description. Optional.",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"licensingInfo",
+                        "type":"string",
+                        "description":"Licensing information. Optional.",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"price",
+                        "type":"number",
+                        "format":"double",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"currency",
+                        "type":"string",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"discount",
+                        "type":"string",
+                        "required":false
+                    },
                 ],
                 "responses": {
                     "200": {
@@ -492,12 +566,23 @@
                         "in": "formData",
                         "name": "maxCheckoutValidity",
                         "type": "string",
+                        "description":"for Floating licenseModel",
                         "required": false
                     },
                     {
                         "in":"formData",
-                        "name":"licenseTemplateNumber",
-                        "type":"string",
+                        "name":"yellowThreshold",
+                        "type":"integer",
+                        "format":"int32",
+                        "description":"for Rental licensingModel",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"redThreshold",
+                        "type":"integer",
+                        "format":"int32",
+                        "description":"for Rental licensingModel",
                         "required":false
                     }
                 ],
@@ -636,9 +721,25 @@
                         "required": false
                     },
                     {
+                        "in": "formData",
+                        "name": "maxCheckoutValidity",
+                        "type": "string",
+                        "description":"for Floating licenseModel",
+                        "required": false
+                    },
+                    {
                         "in":"formData",
-                        "name":"licenseTemplateNumber",
-                        "type":"string",
+                        "name":"licenseTemplate",
+                        "type":"array",
+                        "items":{
+                            "type":"string",
+                            "enum":[
+                            "TIMEVOLUME",
+                            "FEATURE"
+                            ],
+                            "default":"TIMEVOLUME"
+                            },
+                        "description":"for TryAndBuy licensingModel only",    
                         "required":false
                     }
                 ],
@@ -852,12 +953,6 @@
                         "required": false
                     },
                     {
-                        "in":"formData",
-                        "name":"licenseNumber",
-                        "type":"string",
-                        "required":false
-                    },
-                    {
                         "in": "formData",
                         "name": "hidden",
                         "type": "boolean",
@@ -1043,12 +1138,6 @@
                         "type": "boolean",
                         "description": "If set to true, every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0.",
                         "required": false
-                    },                    
-                    {
-                        "in":"formData",
-                        "name":"licenseNumber",
-                        "type":"string",
-                        "required":false
                     },
                     {
                         "in": "formData",
@@ -1227,18 +1316,17 @@
                         "required": false
                     },
                     {
+                        "in":"formData",
+                        "name":"name",
+                        "type":"string",
+                        "required":false
+                    },
+                    {
                         "in": "formData",
                         "name": "active",
                         "type": "boolean",
                         "description": " If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
                         "required": true
-                    },
-
-                    {
-                        "in":"formData",
-                        "name":"licenseNumber",
-                        "type":"string",
-                        "required":false
                     },
                     {
                         "in": "formData",
@@ -1350,13 +1438,12 @@
                         "in": "formData",
                         "name": "active",
                         "type": "boolean",
-                        "description": " If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
+                        "description": "If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
                         "required": false
                     },
-
                     {
                         "in":"formData",
-                        "name":"licenseNumber",
+                        "name":"name",
                         "type":"string",
                         "required":false
                     },
@@ -1525,10 +1612,30 @@
                     },
                     {
                         "in": "formData",
+                        "name": "price",
+                        "type": "number",
+                        "format": "double",
+                        "description": "Price for the license. If >0, it must always be accompanied by the currency specification. Read-only, set from license template on creation",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
                         "name": "name",
                         "type": "string",
                         "description": "Name for the licensed item. Set from license template on creation, if not specified explicitly.",
                         "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "Parent feature",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"timeVolume",
+                        "type":"string",
+                        "required":false
                     },
                     {
                         "in":"formData",
@@ -1537,14 +1644,6 @@
                         "format":"date-time",
                         "description":"for TIMEVOLUME licenseType",
                         "required":false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "price",
-                        "type": "number",
-                        "format": "double",
-                        "description": "Price for the license. If >0, it must always be accompanied by the currency specification. Read-only, set from license template on creation",
-                        "required": false
                     },
                     {
                         "in": "formData",
@@ -1685,6 +1784,18 @@
                         "type":"string",
                         "format":"date-time",
                         "description":"for TIMEVOLUME licenseType",
+                        "required":false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "Parent feature",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"timeVolume",
+                        "type":"string",
                         "required":false
                     },
                     {
@@ -1922,15 +2033,6 @@
                         "required": false
                     },
                     {
-                        "in": "formData",
-                        "name": "customPropForTransaction",
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "required": false
-                    },
-                    {
                         "in":"formData",
                         "name":"dateCreated",
                         "type":"string",
@@ -1942,6 +2044,12 @@
                         "name":"dateClosed",
                         "type":"string",
                         "format":"date-time",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"paymentMethod",
+                        "type":"string",
                         "required":false
                     }
                 ],
@@ -2102,15 +2210,6 @@
                         "required": false
                     },
                     {
-                        "in": "formData",
-                        "name": "customPropForTransaction",
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "required": false
-                    },
-                    {
                         "in":"formData",
                         "name":"dateCreated",
                         "type":"string",
@@ -2122,6 +2221,12 @@
                         "name":"dateClosed",
                         "type":"string",
                         "format":"date-time",
+                        "required":false
+                    },
+                    {
+                        "in":"formData",
+                        "name":"paymentMethod",
+                        "type":"string",
                         "required":false
                     }
                 ],
