@@ -566,7 +566,7 @@
                         "in": "formData",
                         "name": "maxCheckoutValidity",
                         "type": "string",
-                        "description":"for Floating licenseModel",
+                        "description":"Mandatory for Floating licenseModel",
                         "required": false
                     },
                     {
@@ -574,7 +574,7 @@
                         "name":"yellowThreshold",
                         "type":"integer",
                         "format":"int32",
-                        "description":"for Rental licensingModel",
+                        "description":"Mandatory for Rental licensingModel",
                         "required":false
                     },
                     {
@@ -582,7 +582,7 @@
                         "name":"redThreshold",
                         "type":"integer",
                         "format":"int32",
-                        "description":"for Rental licensingModel",
+                        "description":"Mandatory for Rental licensingModel",
                         "required":false
                     }
                 ],
@@ -724,7 +724,7 @@
                         "in": "formData",
                         "name": "maxCheckoutValidity",
                         "type": "string",
-                        "description":"for Floating licenseModel",
+                        "description":"Mandatory for Floating licenseModel",
                         "required": false
                     },
                     {
@@ -739,7 +739,7 @@
                             ],
                             "default":"TIMEVOLUME"
                             },
-                        "description":"for TryAndBuy licensingModel only",    
+                        "description":"Mandatory for TryAndBuy licensingModel",    
                         "required":false
                     }
                 ],
@@ -920,14 +920,14 @@
                         "in": "formData",
                         "name": "timeVolume",
                         "type": "string",
-                        "description": "for TIMEVOLUME licenseType",
+                        "description": "Mandatory for TIMEVOLUME licenseType",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "maxSessions",
                         "type": "string",
-                        "description": "for FLOATING licenseType",
+                        "description": "Mandatory for FLOATING licenseType",
                         "required": false
                     },
                     {
@@ -1107,14 +1107,14 @@
                         "in": "formData",
                         "name": "timeVolume",
                         "type": "string",
-                        "description": "for TIMEVOLUME licenseType",
+                        "description": "Mandatory for TIMEVOLUME licenseType",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "maxSessions",
                         "type": "string",
-                        "description": "for FLOATING licenseType",
+                        "description": "Mandatory for FLOATING licenseType",
                         "required": false
                     },
                     {
