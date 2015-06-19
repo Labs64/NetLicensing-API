@@ -718,12 +718,6 @@
                         "in": "formData",
                         "name": "maxCheckoutValidity",
                         "type": "string",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "maxCheckoutValidity",
-                        "type": "string",
                         "description": "Mandatory for Floating licenseModel",
                         "required": false
                     },
@@ -1627,7 +1621,7 @@
                     },
                     {
                         "in": "formData",
-                        "name": "Parent feature",
+                        "name": "parentfeature",
                         "type": "string",
                         "required": false
                     },
@@ -1788,7 +1782,7 @@
                     },
                     {
                         "in": "formData",
-                        "name": "Parent feature",
+                        "name": "parentfeature",
                         "type": "string",
                         "required": false
                     },
