@@ -192,6 +192,15 @@
                         "required": false
                     },
                     {
+                        "in":"formData",
+                        "name":"discount",
+                        "type":"array",
+                        "items":{
+                            "$ref":"#/definitions/discount"
+                        },
+                        "required":false
+                    },
+                    {
                         "in": "formData",
                         "name": "totalPrice",
                         "type": "number",
@@ -2788,6 +2797,16 @@
                     "type": "string",
                     "description": "Product version. Convenience parameter, additional to the product name."
                 },
+                "discount":{
+                    "allowableValues":{
+                        "valueType":"List",
+                        "":[
+                        ],
+                        "type":"string"
+
+                    }
+
+                },
                 "licenseeAutoCreate": {
                     "type": "boolean",
                     "description": "If set to 'true', non-existing licensees will be created at first validation attempt."
@@ -3024,6 +3043,27 @@
             "xml": {
                 "name": "licensingModel"
             }
+        },
+        "discount":{
+            "type":"object",
+            "properties":{
+                "totalPrice":{
+                    "type":"number",
+                    "format":"double"
+                },
+                "curreency":{
+                    "type":"string"
+                },
+                "amountPercent":{
+                    "type":"string"
+                }
+            },
+            "xml":{
+                "name":"discount"
+
+            }
+
+
         }
     }
 }
