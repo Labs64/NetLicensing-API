@@ -2143,6 +2143,13 @@
                         "type": "string"
                     },
                     {
+                        "name": "number",
+                        "in": "formData",
+                        "description": "Unique number (across all products of a vendor) that identifies the transaction",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
                         "in": "formData",
                         "name": "active",
                         "type": "boolean",
