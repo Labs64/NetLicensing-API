@@ -200,7 +200,7 @@
                         },
                         "collectionFormat":"csv",
                         "required": false
-                    }
+                    },
                     {
                         "in": "formData",
                         "name": "customPropForProduct",
