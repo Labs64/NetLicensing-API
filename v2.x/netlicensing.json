@@ -198,6 +198,7 @@
                         "items": {
                             "type": "string"
                         },
+                        "collectionFormat":"csv",
                         "required": false
                     }
                 ],
