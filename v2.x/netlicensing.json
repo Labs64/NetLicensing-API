@@ -192,6 +192,16 @@
                         "required": false
                     },
                     {
+                        "in": "query",
+                        "name": "customPropForProduct",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/discount"
+                        },
+                        "collectionFormat":"csv",
+                        "required": false
+                    }
+                    {
                         "in": "formData",
                         "name": "customPropForProduct",
                         "type": "array",
