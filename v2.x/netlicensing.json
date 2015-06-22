@@ -1996,17 +1996,10 @@
                         "name": "source",
                         "type": "string",
                         "enum": [
-                            "AUTO_LICENSE_CREATE",
-                            "AUTO_LICENSE_DELETE",
-                            "AUTO_LICENSE_UPDATE",
-                            "AUTO_LICENSEE_CREATE",
-                            "AUTO_LICENSEE_DELETE",
-                            "AUTO_LICENSETEMPLATE_DELETE",
-                            "AUTO_PRODUCT_DELETE",
-                            "AUTO_PRODUCTMODULE_DELETE",
                             "SHOP"
                         ],
                         "collectionFormat": "multi",
+                        "description":"AUTO transaction for internal use only",
                         "required": true
                     },
                     {
@@ -2173,17 +2166,10 @@
                         "name": "source",
                         "type": "string",
                         "enum": [
-                            "AUTO_LICENSE_CREATE",
-                            "AUTO_LICENSE_DELETE",
-                            "AUTO_LICENSE_UPDATE",
-                            "AUTO_LICENSEE_CREATE",
-                            "AUTO_LICENSEE_DELETE",
-                            "AUTO_LICENSETEMPLATE_DELETE",
-                            "AUTO_PRODUCT_DELETE",
-                            "AUTO_PRODUCTMODULE_DELETE",
                             "SHOP"
                         ],
                         "collectionFormat": "multi",
+                        "description":"AUTO transaction for internal use only",
                         "required": false
                     },
                     {
