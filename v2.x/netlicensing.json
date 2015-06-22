@@ -104,7 +104,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/Product"
+                                "$ref": "#/definitions/netlicensing"
                             }
                         }
                     },
@@ -202,25 +202,6 @@
                     },
                     {
                         "in": "formData",
-                        "name": "totalPrice",
-                        "type": "number",
-                        "format": "double",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "currency",
-                        "type": "string",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "amount[%]",
-                        "type": "string",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
                         "name": "customPropForProduct",
                         "type": "array",
                         "items": {
@@ -233,7 +214,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema": {
-                            "$ref": "#/definitions/Product"
+                            "$ref": "#/definitions/netlicensing"
                         }
                     },
                     "400": {
@@ -281,7 +262,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema": {
-                            "$ref": "#/definitions/Product"
+                            "$ref": "#/definitions/netlicensing"
                         }
                     },
                     "400": {
@@ -372,32 +353,13 @@
                         "type": "string",
                         "description": "Licensing information. Optional.",
                         "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "totalPrice",
-                        "type": "number",
-                        "format": "double",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "currency",
-                        "type": "string",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "amount[%]",
-                        "type": "string",
-                        "required": false
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "Successful request",
                         "schema": {
-                            "$ref": "#/definitions/Product"
+                            "$ref": "#/definitions/netlicensing"
                         }
                     },
                     "400": {
@@ -493,7 +455,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/ProductModule"
+                                "$ref": "#/definitions/netlicensing"
                             }
                         }
                     },
@@ -653,7 +615,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema": {
-                            "$ref": "#/definitions/ProductModule"
+                            "$ref": "#/definitions/netlicensing"
                         }
                     },
                     "400": {
@@ -856,7 +818,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/LicenseTemplate"
+                                "$ref": "#/definitions/netlicensing"
                             }
                         }
                     },
@@ -1044,7 +1006,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema": {
-                            "$ref": "#/definitions/LicenseTemplate"
+                            "$ref": "#/definitions/netlicensing"
                         }
                     },
                     "400": {
@@ -1286,7 +1248,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/Licensee"
+                                "$ref": "#/definitions/netlicensing"
                             }
                         }
                     },
@@ -1413,7 +1375,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema": {
-                            "$ref": "#/definitions/Licensee"
+                            "$ref": "#/definitions/netlicensing"
                         }
                     },
                     "400": {
@@ -1492,7 +1454,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema": {
-                            "$ref": "#/definitions/Licensee"
+                            "$ref": "#/definitions/netlicensing"
                         }
                     },
                     "400": {
@@ -1585,7 +1547,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/License"
+                                "$ref": "#/definitions/netlicensing"
                             }
                         }
                     },
@@ -1704,7 +1666,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema": {
-                            "$ref": "#/definitions/License"
+                            "$ref": "#/definitions/netlicensing"
                         }
                     },
                     "400": {
@@ -1959,7 +1921,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/Transaction"
+                                "$ref": "#/definitions/netlicensing"
                             }
                         }
                     },
@@ -2042,29 +2004,6 @@
                     },
                     {
                         "in": "formData",
-                        "name": "price",
-                        "type": "number",
-                        "format": "double",
-                        "description": "price for the transaction",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "discount",
-                        "type": "integer",
-                        "format": "int32",
-                        "description": "discount for the transaction.",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "currency",
-                        "type": "string",
-                        "description": "specifies currency for the transaction price. Check data types to discover which currencies are supported",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
                         "name": "dateCreated",
                         "type": "string",
                         "format": "date-time",
@@ -2136,7 +2075,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema": {
-                            "$ref": "#/definitions/Transaction"
+                            "$ref": "#/definitions/netlicensing"
                         }
                     },
                     "400": {
@@ -2219,29 +2158,6 @@
                     },
                     {
                         "in": "formData",
-                        "name": "price",
-                        "type": "number",
-                        "format": "double",
-                        "description": "price for the transaction",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "discount",
-                        "type": "integer",
-                        "format": "int32",
-                        "description": "discount for the transaction.",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "currency",
-                        "type": "string",
-                        "description": "specifies currency for the transaction price. Check data types to discover which currencies are supported",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
                         "name": "dateCreated",
                         "type": "string",
                         "format": "date-time",
@@ -2306,7 +2222,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/Token"
+                                "$ref": "#/definitions/netlicensing"
                             }
                         }
                     },
@@ -2433,7 +2349,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema": {
-                            "$ref": "#/definitions/Token"
+                            "$ref": "#/definitions/netlicensing"
                         }
                     },
                     "400": {
@@ -2520,7 +2436,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/PaymentMethod"
+                                "$ref": "#/definitions/netlicensing"
                             }
                         }
                     },
@@ -2569,7 +2485,7 @@
                     "200": {
                         "description": "Successful request",
                         "schema": {
-                            "$ref": "#/definitions/PaymentMethod"
+                            "$ref": "#/definitions/netlicensing"
                         }
                     },
                     "400": {
@@ -2950,29 +2866,8 @@
                 "source": {
                     "type": "string",
                     "enum": [
-                        "AUTO_LICENSE_CREATE",
-                        "AUTO_LICENSE_DELETE",
-                        "AUTO_LICENSE_UPDATE",
-                        "AUTO_LICENSEE_CREATE",
-                        "AUTO_LICENSEE_DELETE",
-                        "AUTO_LICENSETEMPLATE_DELETE",
-                        "AUTO_PRODUCT_DELETE",
-                        "AUTO_PRODUCTMODULE_DELETE",
                         "SHOP"
                     ]
-                },
-                "price": {
-                    "type": "number",
-                    "format": "double",
-                    "description": "price for the transaction."
-                },
-                "discount": {
-                    "type": "string",
-                    "description": "discount for the transaction."
-                },
-                "currency": {
-                    "type": "string",
-                    "description": "specifies currency for the transaction price. Check data types to discover which currencies are supported."
                 }
             },
             "xml": {
