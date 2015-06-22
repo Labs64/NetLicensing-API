@@ -689,6 +689,13 @@
                         "type": "string"
                     },
                     {
+                        "name": "number",
+                        "in": "formData",
+                        "description": "Unique number (across all products of a vendor) that identifies the product module. Vendor can assign this number when creating a product module or let NetLicensing generate one. Read-only after creation of the first licensee for the product.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
                         "in": "formData",
                         "name": "active",
                         "type": "boolean",
@@ -1068,6 +1075,13 @@
                     {
                         "name": "licenseTemplateNumber",
                         "in": "path",
+                        "description": "Unique number (across all products of a vendor) that identifies the license template. Vendor can assign this number when creating a license template or let NetLicensing generate one. Read-only after creation of the first license from this license template.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "number",
+                        "in": "formData",
                         "description": "Unique number (across all products of a vendor) that identifies the license template. Vendor can assign this number when creating a license template or let NetLicensing generate one. Read-only after creation of the first license from this license template.",
                         "required": true,
                         "type": "string"
@@ -2571,6 +2585,13 @@
                     {
                         "name": "paymentMethodNumber",
                         "in": "path",
+                        "description": "Number of payment method to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "number",
+                        "in": "formData",
                         "description": "Number of payment method to update",
                         "required": true,
                         "type": "string"
