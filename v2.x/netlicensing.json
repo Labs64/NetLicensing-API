@@ -196,10 +196,10 @@
                         "name":"discount",
                         "type":"array",
                         "items":{
-                            "type":"string"
+                            "$ref":"#/definitions/discount"
                         },
-                        "collectionFormat":"csv",
-                        "":false
+                        "collectionFormat":"csv", 
+                        "required":false
                     },
                     {
                         "in": "formData",
@@ -2947,7 +2947,6 @@
             },
             "xml":{
                 "name":"discount"
-
             }
         }
     }
