@@ -198,6 +198,7 @@
                         "items":{
                             "$ref":"#/definitions/discount"
                         },
+                        "collectionFormat":"csv",
                         "required":false
                     },
                     {
