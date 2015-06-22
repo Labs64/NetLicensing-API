@@ -193,7 +193,7 @@
                     },
                     {
                         "in": "query",
-                        "name": "customPropForProduct",
+                        "name": "discount",
                         "type": "array",
                         "items": {
                             "$ref": "#/definitions/discount"
