@@ -193,7 +193,7 @@
                     },
                     {
                         "in": "formData",
-                        "name": "price",
+                        "name": "totalPrice",
                         "type": "number",
                         "format": "double",
                         "required": false
@@ -206,7 +206,7 @@
                     },
                     {
                         "in": "formData",
-                        "name": "discount",
+                        "name": "amount[%]",
                         "type": "string",
                         "required": false
                     },
@@ -317,6 +317,12 @@
                         "type": "string"
                     },
                     {
+                        "name": "number",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
                         "in": "formData",
                         "name": "active",
                         "type": "boolean",
@@ -360,7 +366,7 @@
                     },
                     {
                         "in": "formData",
-                        "name": "price",
+                        "name": "totalPrice",
                         "type": "number",
                         "format": "double",
                         "required": false
@@ -373,7 +379,7 @@
                     },
                     {
                         "in": "formData",
-                        "name": "discount",
+                        "name": "amount[%]",
                         "type": "string",
                         "required": false
                     }
