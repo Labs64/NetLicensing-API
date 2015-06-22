@@ -2797,16 +2797,6 @@
                     "type": "string",
                     "description": "Product version. Convenience parameter, additional to the product name."
                 },
-                "discount":{
-                    "allowableValues":{
-                        "valueType":"List",
-                        "":[
-                        ],
-                        "type":"string"
-
-                    }
-
-                },
                 "licenseeAutoCreate": {
                     "type": "boolean",
                     "description": "If set to 'true', non-existing licensees will be created at first validation attempt."
