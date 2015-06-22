@@ -2146,7 +2146,7 @@
                         "name": "number",
                         "in": "formData",
                         "description": "Unique number (across all products of a vendor) that identifies the transaction",
-                        "required": true,
+                        "required": false,
                         "type": "string"
                     },
                     {
