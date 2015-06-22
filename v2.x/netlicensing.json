@@ -2936,7 +2936,7 @@
                     "type":"number",
                     "format":"double"
                 },
-                "curreency":{
+                "currency":{
                     "type":"string"
                 },
                 "amountPercent":{
