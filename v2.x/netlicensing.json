@@ -192,16 +192,6 @@
                         "required": false
                     },
                     {
-                        "in":"formData",
-                        "name":"discount",
-                        "type":"array",
-                        "items":{
-                            "$ref":"#/definitions/discount"
-                        },
-                        "collectionFormat":"csv",
-                        "required":false
-                    },
-                    {
                         "in": "formData",
                         "name": "customPropForProduct",
                         "type": "array",
@@ -2948,8 +2938,6 @@
                 "name":"discount"
 
             }
-
-
         }
     }
 }
