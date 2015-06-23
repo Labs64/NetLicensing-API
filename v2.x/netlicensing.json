@@ -196,9 +196,7 @@
                         "name": "discount",
                         "type": "array",
                         "items": {
-                            "schema": {
-                                "$ref": "#/definitions/discount"
-                            }
+                            "type":"string"
                         },
                         "collectionFormat":"csv",
                         "required": false
