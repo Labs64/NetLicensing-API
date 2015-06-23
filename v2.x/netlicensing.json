@@ -192,11 +192,11 @@
                         "required": false
                     },
                     {
-                        "in": "query",
+                        "in": "formData",
                         "name": "discount",
                         "type": "array",
                         "items": {
-                            "$ref": "#/definitions/discount"
+                            "type": "string"
                         },
                         "collectionFormat":"csv",
                         "required": false
@@ -1290,17 +1290,17 @@
                 "parameters": [
                     {
                         "in": "formData",
-                        "name": "productNumber",
-                        "type": "string",
-                        "description": "productNumber to create licensee object",
-                        "required": true
-                    },
-                    {
-                        "in": "formData",
                         "name": "number",
                         "type": "string",
                         "description": "Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee",
                         "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "productNumber",
+                        "type": "string",
+                        "description": "productNumber to create licensee object",
+                        "required": true
                     },
                     {
                         "in": "formData",
@@ -1624,12 +1624,14 @@
                         "in": "formData",
                         "name": "parentfeature",
                         "type": "string",
+                        "description": "Mandatory for TIMEVOLUME licenseType and RENTAL licensingModel",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "timeVolume",
                         "type": "string",
+                        "description": "Mandatory for TIMEVOLUME licenseType",
                         "required": false
                     },
                     {
@@ -1637,7 +1639,7 @@
                         "name": "startDate",
                         "type": "string",
                         "format": "date-time",
-                        "description": "for TIMEVOLUME licenseType",
+                        "description": "Mandatory for TIMEVOLUME licenseType",
                         "required": false
                     },
                     {
