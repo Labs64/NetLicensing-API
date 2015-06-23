@@ -192,16 +192,6 @@
                         "required": false
                     },
                     {
-                        "in": "body",
-                        "name": "discount",
-                        "type": "array",
-                        "items": {
-                            "type":"string"
-                        },
-                        "collectionFormat":"csv",
-                        "required": false
-                    },
-                    {
                         "in": "formData",
                         "name": "customPropForProduct",
                         "type": "array",
@@ -304,13 +294,14 @@
                     {
                         "name": "productNumber",
                         "in": "path",
-                        "description": "Unique number that identifies the product.",
+                        "description": "Number of product that identifies the product.",
                         "required": true,
                         "type": "string"
                     },
                     {
                         "name": "number",
                         "in": "formData",
+                        "description":"Number to change the product.",
                         "required": false,
                         "type": "string"
                     },
@@ -664,7 +655,7 @@
                     {
                         "name": "number",
                         "in": "formData",
-                        "description": "Unique number (across all products of a vendor) that identifies the product module. Vendor can assign this number when creating a product module or let NetLicensing generate one. Read-only after creation of the first licensee for the product.",
+                        "description": "Number to change the product module.",
                         "required": false,
                         "type": "string"
                     },
@@ -764,7 +755,7 @@
                     {
                         "name": "productModuleNumber",
                         "in": "path",
-                        "description": "Unique number (across all products of a vendor) that identifies the product module. Vendor can assign this number when creating a product module or let NetLicensing generate one. Read-only after creation of the first licensee for the product.",
+                        "description": "Unique number (across all products of a vendor) that identifies the product module.",
                         "required": true,
                         "type": "string"
                     },
@@ -863,6 +854,13 @@
                         "name": "productModuleNumber",
                         "type": "string",
                         "description": "Number of product module to сreate license template object",
+                        "required": true
+                    },
+                    {
+                        "in": "formData",
+                        "name": "number",
+                        "type": "string",
+                        "description": "lUnique number (across all products of a vendor) that identifies the license template. Vendor can assign this number when creating a license template or let NetLicensing generate one. Read-only after creation of the first license from this license template.",
                         "required": true
                     },
                     {
@@ -1055,7 +1053,7 @@
                     {
                         "name": "number",
                         "in": "formData",
-                        "description": "Unique number (across all products of a vendor) that identifies the license template. Vendor can assign this number when creating a license template or let NetLicensing generate one. Read-only after creation of the first license from this license template.",
+                        "description": "License template number to change.",
                         "required": false,
                         "type": "string"
                     },
@@ -1109,14 +1107,14 @@
                         "name": "price",
                         "type": "number",
                         "format": "double",
-                        "description": "price for the license. If >0, it must always be accompanied by the currency specification.",
+                        "description": "Price for the license. If >0, it must always be accompanied by the currency specification.",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "currency",
                         "type": "string",
-                        "description": "specifies currency for the license price. Check data types to discover which currencies are supported.",
+                        "description": "Specifies currency for the license price. Check data types to discover which currencies are supported.",
                         "required": false
                     },
                     {
@@ -1190,7 +1188,7 @@
                     {
                         "name": "licenseTemplateNumber",
                         "in": "path",
-                        "description": "Unique number (across all products of a vendor) that identifies the license template. Vendor can assign this number when creating a license template or let NetLicensing generate one. Read-only after creation of the first license from this license template.",
+                        "description": "Unique number (across all products of a vendor) that identifies the license template.",
                         "required": true,
                         "type": "string"
                     },
@@ -1425,7 +1423,7 @@
                         "in":"formData",
                         "name":"number",
                         "type":"string",
-                        "description":"Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee.",
+                        "description":"Number to change the licensee.",
                         "required":false
 
                     },
@@ -1493,7 +1491,7 @@
                     {
                         "name": "licenseeNumber",
                         "in": "path",
-                        "description": "Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee.",
+                        "description": "Unique number (across all products of a vendor) that identifies the licensee.",
                         "required": true,
                         "type": "string"
                     },
@@ -1603,6 +1601,18 @@
                         "in": "formData",
                         "name": "active",
                         "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "in": "formData",
+                        "name": "numberNumber",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "formData",
+                        "name": "name",
+                        "type": "string",
                         "required": true
                     },
                     {
