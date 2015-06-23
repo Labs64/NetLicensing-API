@@ -192,11 +192,13 @@
                         "required": false
                     },
                     {
-                        "in": "formData",
+                        "in": "body",
                         "name": "discount",
                         "type": "array",
                         "items": {
-                            "type": "string"
+                            "schema": {
+                                "$ref": "#/definitions/discount"
+                            }
                         },
                         "collectionFormat":"csv",
                         "required": false
