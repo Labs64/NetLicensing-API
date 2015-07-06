@@ -2555,7 +2555,7 @@
                         "description": "Payment method Number of payment method to to find",
                         "required": true,
                         "type": "string"
-                    },
+                    }, 
                     {
                         "in": "formData",
                         "name": "active",
