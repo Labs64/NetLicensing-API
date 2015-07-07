@@ -196,7 +196,9 @@
                         "name": "customProperties",
                         "type": "array",
                         "items": {
-                            "type": "string"
+                            "type":{
+                                "$ref":"#/definitions/property"
+                            }
                         },
                         "description":"Format to input: 'property'='value'. Input each property in new string",
                         "collectionFormat":"multi",
