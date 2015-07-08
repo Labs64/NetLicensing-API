@@ -190,17 +190,6 @@
                         "type": "string",
                         "description": "Licensing information. Optional.",
                         "required": false
-                    },
-                    {
-                        "in":"formData",
-                        "name":"customProperties",
-                        "type":"array",
-                        "items":{
-                            "type":"string"
-                        },
-                        "description":"Format to input: 'property'='value'. Input each property in new string",
-                        "collectionFormat":"multi",
-                        "required":false
                     }
                 ],
                 "responses": {
@@ -347,17 +336,6 @@
                         "type": "string",
                         "description": "Licensing information. Optional.",
                         "required": false
-                    },
-                    {
-                        "in":"formData",
-                        "name":"customProperties",
-                        "type":"array",
-                        "items":{
-                            "type":"string"
-                        },
-                        "description":"Format to input: 'property'='value'. Input each property in new string",
-                        "collectionFormat":"multi",
-                        "required":false
                     }
                 ],
                 "responses": {
@@ -955,17 +933,6 @@
                         "type": "boolean",
                         "description": "If set to true, licenses from this license template are not visible to the end customer, but participate in validation.",
                         "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "customProperties",
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "collectionFormat":"multi",
-                        "description":"Format to input: 'property'='value'. Input each property in the new lines",
-                        "required": false
                     }
                 ],
                 "responses": {
@@ -1151,17 +1118,6 @@
                         "type": "boolean",
                         "description": "If set to true, licenses from this license template are not visible to the end customer, but participate in validation.",
                         "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "customProperties",
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "collectionFormat":"multi",
-                        "description":"Format to input: 'property'='value'. Input each property in the new lines",
-                        "required": false
                     }
                 ],
                 "responses": {
@@ -1328,17 +1284,6 @@
                         "type": "boolean",
                         "description": " If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
                         "required": true
-                    },
-                    {
-                        "in": "formData",
-                        "name": "customProperties",
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "collectionFormat":"multi",
-                        "description":"Format to input: 'property'='value'. Input each property in the new lines",
-                        "required": false
                     }
                 ],
                 "responses": {
@@ -1456,17 +1401,6 @@
                         "in": "formData",
                         "name": "name",
                         "type": "string",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "customProperties",
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "collectionFormat":"multi",
-                        "description":"Format to input: 'property'='value'. Input each property in the new lines",
                         "required": false
                     }
                 ],
@@ -1679,17 +1613,6 @@
                         "type": "boolean",
                         "description": "If set to true, this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly",
                         "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "customProperties",
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "collectionFormat":"multi",
-                        "description":"Format to input: 'property'='value'. Input each property in the new lines",
-                        "required": false
                     }
                 ],
                 "responses": {
@@ -1848,17 +1771,6 @@
                         "name": "hidden",
                         "type": "boolean",
                         "description": " If set to true, this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "customProperties",
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "collectionFormat":"multi",
-                        "description":"Format to input: 'property'='value'. Input each property in the new lines",
                         "required": false
                     }
                 ],
@@ -2309,17 +2221,6 @@
                         "name": "licenseeNumber",
                         "type": "string",
                         "description": "Mandatory for tokenType=SHOP only, identifies licensee that will be assigned to the shop token",
-                        "required": false
-                    }, 
-                    {
-                        "in": "formData",
-                        "name": "customProperties",
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "collectionFormat":"multi",
-                        "description":"Format to input: 'property'='value'. Input each property in the new lines",
                         "required": false
                     }
                 ],
