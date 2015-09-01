@@ -1483,6 +1483,54 @@
                 ]
             }
         },
+        "/licensee/{licenseeNumber}/validate": {
+            "get": {
+                "tags": [
+                    "Licensee"
+                ],
+                "summary": "Validate licensee",
+                "description": "Validate a licensee by licenseeNumber",
+                "operationId": "validateLicensee",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "licenseeNumber",
+                        "in": "path",
+                        "description": "Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
         "/license": {
             "get": {
                 "tags": [
