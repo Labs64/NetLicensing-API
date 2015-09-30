@@ -2255,11 +2255,12 @@
                     {
                         "in": "formData",
                         "name": "tokenType",
+                        "description": "Token type to be generated",
                         "type": "string",
                         "enum": [
                             "DEFAULT",
                             "SHOP",
-                            "APIKey"
+                            "APIKEY"
                         ],
                         "collectionFormat": "multi",
                         "required": true
@@ -2268,7 +2269,7 @@
                         "in": "formData",
                         "name": "licenseeNumber",
                         "type": "string",
-                        "description": "Mandatory for tokenType=SHOP only, identifies licensee that will be assigned to the shop token",
+                        "description": "Mandatory for <i>tokenType=SHOP</i> only, identifies licensee that will be assigned to the shop token",
                         "required": false
                     }
                 ],
@@ -2314,9 +2315,9 @@
                 ],
                 "parameters": [
                     {
-                        "name": "tokenNumber",
                         "in": "path",
-                        "description": "Number of token",
+                        "name": "tokenNumber",
+                        "description": "Token number",
                         "required": true,
                         "type": "string"
                     }
@@ -2360,9 +2361,9 @@
                 ],
                 "parameters": [
                     {
-                        "name": "tokenNumber",
                         "in": "path",
-                        "description": "Number of token",
+                        "name": "tokenNumber",
+                        "description": "Token number",
                         "required": true,
                         "type": "string"
                     }
