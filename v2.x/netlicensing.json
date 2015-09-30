@@ -3,7 +3,7 @@
     "info": {
         "version": "2.2.0",
         "title": "Labs64 NetLicensing RESTful API",
-        "description": "The Labs64 NetLicensing API is a RESTful API and gives you access to NetLicensing’s core features.<br/><br/><strong>Authentication</strong><br/>You authenticate to the NetLicensing API by providing your account credentials or simply use our demo account - <code>demo:demo<\/code><br/><br/>Find out more about Labs64 NetLicensing at <a href='http://netlicensing.io' target='_blank'>netlicensing.io<\/a>",
+        "description": "The Labs64 <a href='https://www.labs64.de/confluence/x/pwCo' target='_blank'>NetLicensing API<\/a> is a RESTful API and gives you access to NetLicensing’s core features.<br/><br/><strong>Authentication</strong><br/>You authenticate to the NetLicensing API by providing your account credentials or simply use our demo account - <code>demo:demo<\/code><br/><br/>Find out more about Labs64 NetLicensing at <a href='http://netlicensing.io' target='_blank'>netlicensing.io<\/a>",
         "termsOfService": "https://www.labs64.com/legal/terms-of-service/netlicensing"
     },
     "host": "netlicensing.labs64.com",
@@ -291,7 +291,7 @@
                     {
                         "name": "number",
                         "in": "formData",
-                        "description":"Number to update the product.",
+                        "description": "Number to update the product.",
                         "required": false,
                         "type": "string"
                     },
@@ -1383,11 +1383,11 @@
                         "type": "string"
                     },
                     {
-                        "in":"formData",
-                        "name":"number",
-                        "type":"string",
-                        "description":"Number to change the licensee.",
-                        "required":false
+                        "in": "formData",
+                        "name": "number",
+                        "type": "string",
+                        "description": "Number to change the licensee.",
+                        "required": false
 
                     },
                     {
@@ -1991,7 +1991,7 @@
                             "SHOP"
                         ],
                         "collectionFormat": "multi",
-                        "description":"AUTO transaction for internal use only",
+                        "description": "AUTO transaction for internal use only",
                         "required": true
                     },
                     {
@@ -2145,7 +2145,7 @@
                             "SHOP"
                         ],
                         "collectionFormat": "multi",
-                        "description":"AUTO transaction for internal use only",
+                        "description": "AUTO transaction for internal use only",
                         "required": false
                     },
                     {
@@ -2452,7 +2452,7 @@
                     {
                         "name": "paymentMethodNumber",
                         "in": "path",
-                        "description": "Number of peyment method",
+                        "description": "Payment method number",
                         "required": true,
                         "type": "string"
                     }
@@ -2499,16 +2499,24 @@
                 ],
                 "parameters": [
                     {
-                        "name": "paymentMethodNumber",
                         "in": "path",
-                        "description": "Payment method Number of payment method to to find",
-                        "required": true,
-                        "type": "string"
+                        "name": "paymentMethodNumber",
+                        "description": "Payment method number",
+                        "type": "string",
+                        "required": true
                     },
                     {
                         "in": "formData",
                         "name": "active",
+                        "description": "If set to false, the payment method is disabled.",
                         "type": "boolean",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "paypal.subject",
+                        "description": "The e-mail address of the PayPal account for which you are making the API calls.",
+                        "type": "string",
                         "required": false
                     }
                 ],
@@ -2813,7 +2821,7 @@
                 },
                 "active": {
                     "type": "string",
-                    "description": "always true for transactions"
+                    "description": "Always true for the transactions"
                 },
                 "status": {
                     "type": "string",
@@ -2889,22 +2897,22 @@
                 "name": "licensingModel"
             }
         },
-        "discount":{
-            "type":"object",
-            "properties":{
-                "totalPrice":{
-                    "type":"number",
-                    "format":"double"
+        "discount": {
+            "type": "object",
+            "properties": {
+                "totalPrice": {
+                    "type": "number",
+                    "format": "double"
                 },
-                "currency":{
-                    "type":"string"
+                "currency": {
+                    "type": "string"
                 },
-                "amountPercent":{
-                    "type":"string"
+                "amountPercent": {
+                    "type": "string"
                 }
             },
-            "xml":{
-                "name":"discount"
+            "xml": {
+                "name": "discount"
             }
         }
     }
