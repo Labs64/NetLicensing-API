@@ -526,8 +526,9 @@
                     {
                         "in": "formData",
                         "name": "maxCheckoutValidity",
-                        "type": "string",
-                        "description": "Mandatory for Floating licenseModel",
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "Maximum checkout validity (days). Mandatory for 'Floating' licensing model.",
                         "required": false
                     },
                     {
@@ -535,7 +536,7 @@
                         "name": "yellowThreshold",
                         "type": "integer",
                         "format": "int32",
-                        "description": "Mandatory for Rental licensingModel",
+                        "description": "Remaining time volume for yellow level. Mandatory for 'Rental' licensing model.",
                         "required": false
                     },
                     {
@@ -543,7 +544,22 @@
                         "name": "redThreshold",
                         "type": "integer",
                         "format": "int32",
-                        "description": "Mandatory for Rental licensingModel",
+                        "description": "Remaining time volume for red level. Mandatory for 'Rental' licensing model.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "licenseTemplate",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "TIMEVOLUME",
+                                "FEATURE"
+                            ],
+                            "default": "TIMEVOLUME"
+                        },
+                        "description": "License template. Mandatory for 'Try &amp; Buy' licensing model.",
                         "required": false
                     }
                 ],
@@ -646,7 +662,7 @@
                     {
                         "name": "number",
                         "in": "formData",
-                        "description": "Number to change the product module.",
+                        "description": "New product module number (update).",
                         "required": false,
                         "type": "string"
                     },
@@ -685,8 +701,25 @@
                     {
                         "in": "formData",
                         "name": "maxCheckoutValidity",
-                        "type": "string",
-                        "description": "Mandatory for Floating licenseModel",
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "Maximum checkout validity (days). Mandatory for 'Floating' licensing model.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "yellowThreshold",
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "Remaining time volume for yellow level. Mandatory for 'Rental' licensing model.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "redThreshold",
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "Remaining time volume for red level. Mandatory for 'Rental' licensing model.",
                         "required": false
                     },
                     {
@@ -701,7 +734,7 @@
                             ],
                             "default": "TIMEVOLUME"
                         },
-                        "description": "Mandatory for TryAndBuy licensingModel",
+                        "description": "License template. Mandatory for 'Try &amp; Buy' licensing model.",
                         "required": false
                     }
                 ],
@@ -890,14 +923,14 @@
                         "in": "formData",
                         "name": "timeVolume",
                         "type": "string",
-                        "description": "Mandatory for TIMEVOLUME licenseType",
+                        "description": "Mandatory for 'TIMEVOLUME' license type.",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "maxSessions",
                         "type": "string",
-                        "description": "Mandatory for FLOATING licenseType",
+                        "description": "Mandatory for 'FLOATING' license type.",
                         "required": false
                     },
                     {
@@ -1036,7 +1069,7 @@
                     {
                         "name": "number",
                         "in": "formData",
-                        "description": "License template number to change.",
+                        "description": "New license template number (update).",
                         "required": false,
                         "type": "string"
                     },
@@ -1075,14 +1108,14 @@
                         "in": "formData",
                         "name": "timeVolume",
                         "type": "string",
-                        "description": "Mandatory for TIMEVOLUME licenseType",
+                        "description": "Mandatory for 'TIMEVOLUME' license type.",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "maxSessions",
                         "type": "string",
-                        "description": "Mandatory for FLOATING licenseType",
+                        "description": "Mandatory for 'FLOATING' license type.",
                         "required": false
                     },
                     {
@@ -1389,7 +1422,7 @@
                         "in": "formData",
                         "name": "number",
                         "type": "string",
-                        "description": "Number to change the licensee.",
+                        "description": "New licensee number (update).",
                         "required": false
 
                     },
@@ -1626,14 +1659,14 @@
                         "in": "formData",
                         "name": "parentfeature",
                         "type": "string",
-                        "description": "Mandatory for TIMEVOLUME licenseType and RENTAL licensingModel",
+                        "description": "Mandatory for 'TIMEVOLUME' license type and 'RENTAL' licensing model",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "timeVolume",
                         "type": "string",
-                        "description": "Mandatory for TIMEVOLUME licenseType",
+                        "description": "Mandatory for 'TIMEVOLUME' license type.",
                         "required": false
                     },
                     {
@@ -1641,7 +1674,7 @@
                         "name": "startDate",
                         "type": "string",
                         "format": "date-time",
-                        "description": "Mandatory for TIMEVOLUME licenseType",
+                        "description": "Mandatory for 'TIMEVOLUME' license type.",
                         "required": false
                     },
                     {
