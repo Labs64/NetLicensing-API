@@ -153,7 +153,7 @@
                         "in": "formData",
                         "name": "active",
                         "type": "boolean",
-                        "description": "If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.",
+                        "description": "If set to 'false', the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.",
                         "required": true
                     },
                     {
@@ -181,14 +181,14 @@
                         "in": "formData",
                         "name": "description",
                         "type": "string",
-                        "description": "Product description. Optional.",
+                        "description": "Product description.",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "licensingInfo",
                         "type": "string",
-                        "description": "Licensing information. Optional.",
+                        "description": "Licensing information.",
                         "required": false
                     }
                 ],
@@ -284,14 +284,14 @@
                     {
                         "name": "productNumber",
                         "in": "path",
-                        "description": "Number of product that identifies the product.",
+                        "description": "Unique number that identifies the product.",
                         "required": true,
                         "type": "string"
                     },
                     {
                         "name": "number",
                         "in": "formData",
-                        "description": "Number to update the product.",
+                        "description": "New product number (update)",
                         "required": false,
                         "type": "string"
                     },
@@ -299,7 +299,7 @@
                         "in": "formData",
                         "name": "active",
                         "type": "boolean",
-                        "description": "If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.",
+                        "description": "If set to 'false', the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.",
                         "required": false
                     },
                     {
@@ -327,14 +327,14 @@
                         "in": "formData",
                         "name": "description",
                         "type": "string",
-                        "description": "Product description. Optional.",
+                        "description": "Product description.",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "licensingInfo",
                         "type": "string",
-                        "description": "Licensing information. Optional.",
+                        "description": "Licensing information.",
                         "required": false
                     }
                 ],
@@ -380,15 +380,16 @@
                 ],
                 "parameters": [
                     {
-                        "name": "productNumber",
                         "in": "path",
+                        "name": "productNumber",
                         "description": "Unique number that identifies the product.",
-                        "required": true,
-                        "type": "string"
+                        "type": "string",
+                        "required": true
                     },
                     {
                         "in": "query",
                         "name": "forceCascade",
+                        "description": "Force object deletion and all descendants.",
                         "type": "boolean",
                         "required": false
                     }
@@ -494,7 +495,7 @@
                         "in": "formData",
                         "name": "active",
                         "type": "boolean",
-                        "description": "If set to false, the product module is disabled. Licensees can not obtain any new licenses for this product module.",
+                        "description": "If set to 'false', the product module is disabled. Licensees can not obtain any new licenses for this product module.",
                         "required": true
                     },
                     {
@@ -653,7 +654,7 @@
                         "in": "formData",
                         "name": "active",
                         "type": "boolean",
-                        "description": "If set to false, the product module is disabled. Licensees can not obtain any new licenses for this product module.",
+                        "description": "If set to 'false', the product module is disabled. Licensees can not obtain any new licenses for this product module.",
                         "required": false
                     },
                     {
@@ -743,15 +744,16 @@
                 ],
                 "parameters": [
                     {
-                        "name": "productModuleNumber",
                         "in": "path",
+                        "name": "productModuleNumber",
                         "description": "Unique number (across all products of a vendor) that identifies the product module.",
-                        "required": true,
-                        "type": "string"
+                        "type": "string",
+                        "required": true
                     },
                     {
                         "in": "query",
                         "name": "forceCascade",
+                        "description": "Force object deletion and all descendants.",
                         "type": "boolean",
                         "required": false
                     }
@@ -864,7 +866,7 @@
                         "in": "formData",
                         "name": "active",
                         "type": "boolean",
-                        "description": "If set to false, the license template is disabled. Licensee can not obtain any new licenses off this license template.",
+                        "description": "If set to 'false', the license template is disabled. Licensee can not obtain any new licenses off this license template.",
                         "required": true
                     },
                     {
@@ -917,21 +919,21 @@
                         "in": "formData",
                         "name": "automatic",
                         "type": "boolean",
-                        "description": "If set to true, every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0.",
+                        "description": "If set to 'true', every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0.",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "hidden",
                         "type": "boolean",
-                        "description": "If set to true, this license template is not shown in NetLicensing Shop as offered for purchase.",
+                        "description": "If set to 'true', this license template is not shown in NetLicensing Shop as offered for purchase.",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "hideLicenses",
                         "type": "boolean",
-                        "description": "If set to true, licenses from this license template are not visible to the end customer, but participate in validation.",
+                        "description": "If set to 'true', licenses from this license template are not visible to the end customer, but participate in validation.",
                         "required": false
                     }
                 ],
@@ -1049,7 +1051,7 @@
                         "in": "formData",
                         "name": "active",
                         "type": "boolean",
-                        "description": "If set to false, the license template is disabled. Licensee can not obtain any new licenses off this license template.",
+                        "description": "If set to 'false', the license template is disabled. Licensee can not obtain any new licenses off this license template.",
                         "required": false
                     },
                     {
@@ -1102,21 +1104,21 @@
                         "in": "formData",
                         "name": "automatic",
                         "type": "boolean",
-                        "description": "If set to true, every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0.",
+                        "description": "If set to 'true', every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0.",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "hidden",
                         "type": "boolean",
-                        "description": "If set to true, this license template is not shown in NetLicensing Shop as offered for purchase.",
+                        "description": "If set to 'true', this license template is not shown in NetLicensing Shop as offered for purchase.",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "hideLicenses",
                         "type": "boolean",
-                        "description": "If set to true, licenses from this license template are not visible to the end customer, but participate in validation.",
+                        "description": "If set to 'true', licenses from this license template are not visible to the end customer, but participate in validation.",
                         "required": false
                     }
                 ],
@@ -1158,15 +1160,16 @@
                 ],
                 "parameters": [
                     {
-                        "name": "licenseTemplateNumber",
                         "in": "path",
+                        "name": "licenseTemplateNumber",
                         "description": "Unique number (across all products of a vendor) that identifies the license template.",
-                        "required": true,
-                        "type": "string"
+                        "type": "string",
+                        "required": true
                     },
                     {
                         "in": "query",
                         "name": "forceCascade",
+                        "description": "Force object deletion and all descendants.",
                         "type": "boolean",
                         "required": false
                     }
@@ -1282,7 +1285,7 @@
                         "in": "formData",
                         "name": "active",
                         "type": "boolean",
-                        "description": " If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
+                        "description": "If set to 'false', the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
                         "required": true
                     }
                 ],
@@ -1394,7 +1397,7 @@
                         "in": "formData",
                         "name": "active",
                         "type": "boolean",
-                        "description": "If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
+                        "description": "If set to 'false', the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
                         "required": false
                     },
                     {
@@ -1443,15 +1446,16 @@
                 ],
                 "parameters": [
                     {
-                        "name": "licenseeNumber",
                         "in": "path",
+                        "name": "licenseeNumber",
                         "description": "Unique number (across all products of a vendor) that identifies the licensee.",
-                        "required": true,
-                        "type": "string"
+                        "type": "string",
+                        "required": true
                     },
                     {
                         "in": "query",
                         "name": "forceCascade",
+                        "description": "Force object deletion and all descendants.",
                         "type": "boolean",
                         "required": false
                     }
@@ -1659,7 +1663,7 @@
                         "in": "formData",
                         "name": "hidden",
                         "type": "boolean",
-                        "description": "If set to true, this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly",
+                        "description": "If set to 'true', this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly",
                         "required": false
                     }
                 ],
@@ -1804,21 +1808,21 @@
                         "name": "price",
                         "type": "number",
                         "format": "double",
-                        "description": "price for the license. If >0, it must always be accompanied by the currency specification. Read-only, set from license template on creation",
+                        "description": "Price for the license. If > 0, it must always be accompanied by the currency specification. Read-only, set from license template on creation",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "currency",
                         "type": "string",
-                        "description": "specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation",
+                        "description": "Specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation",
                         "required": false
                     },
                     {
                         "in": "formData",
                         "name": "hidden",
                         "type": "boolean",
-                        "description": " If set to true, this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly",
+                        "description": "If set to 'true', this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly",
                         "required": false
                     }
                 ],
@@ -2509,7 +2513,7 @@
                     {
                         "in": "formData",
                         "name": "active",
-                        "description": "If set to false, the payment method is disabled.",
+                        "description": "If set to 'false', the payment method is disabled.",
                         "type": "boolean",
                         "required": false
                     },
@@ -2672,7 +2676,7 @@
                 },
                 "active": {
                     "type": "boolean",
-                    "description": "If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses"
+                    "description": "If set to 'false', the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses"
                 },
                 "name": {
                     "type": "string",
@@ -2700,7 +2704,7 @@
                 },
                 "active": {
                     "type": "boolean",
-                    "description": "If set to false, the product module is disabled. Licensees can not obtain any new licenses for this product module."
+                    "description": "If set to 'false', the product module is disabled. Licensees can not obtain any new licenses for this product module."
                 },
                 "name": {
                     "type": "string",
@@ -2724,7 +2728,7 @@
                 },
                 "active": {
                     "type": "boolean",
-                    "description": "If set to false, the license template is disabled. Licensee can not obtain any new licenses off this license template."
+                    "description": "If set to 'false', the license template is disabled. Licensee can not obtain any new licenses off this license template."
                 },
                 "name": {
                     "type": "string",
@@ -2749,15 +2753,15 @@
                 },
                 "automatic": {
                     "type": "boolean",
-                    "description": "If set to true, every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0."
+                    "description": "If set to 'true', every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0."
                 },
                 "hidden": {
                     "type": "boolean",
-                    "description": "If set to true, this license template is not shown in NetLicensing Shop as offered for purchase."
+                    "description": "If set to 'true', this license template is not shown in NetLicensing Shop as offered for purchase."
                 },
                 "hiddenLicenses": {
                     "type": "boolean",
-                    "description": "If set to true, licenses from this license template are not visible to the end customer, but participate in validation."
+                    "description": "If set to 'true', licenses from this license template are not visible to the end customer, but participate in validation."
                 }
             },
             "xml": {
@@ -2773,7 +2777,7 @@
                 },
                 "active": {
                     "type": "boolean",
-                    "description": "If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled."
+                    "description": "If set to 'false', the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled."
                 }
             },
             "xml": {
@@ -2789,7 +2793,7 @@
                 },
                 "active": {
                     "type": "boolean",
-                    "description": "If set to false, the license is disabled. License can be re-enabled, but as long as it is disabled, the license is excluded from the validation process."
+                    "description": "If set to 'false', the license is disabled. License can be re-enabled, but as long as it is disabled, the license is excluded from the validation process."
                 },
                 "name": {
                     "type": "string",
@@ -2806,7 +2810,7 @@
                 },
                 "hidden": {
                     "type": "boolean",
-                    "description": "If set to true, this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly."
+                    "description": "If set to 'true', this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly."
                 }
             },
             "xml": {
