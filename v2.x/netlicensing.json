@@ -2320,7 +2320,35 @@
                         "in": "formData",
                         "name": "licenseeNumber",
                         "type": "string",
-                        "description": "Mandatory for <i>tokenType=SHOP</i> only, identifies licensee that will be assigned to the shop token",
+                        "description": "for <i>tokenType=SHOP</i> only (mandatory); identifies licensee that will be assigned to the shop token",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "successURL",
+                        "type": "string",
+                        "description": "for <i>tokenType=SHOP</i> only; take customers to this URL when they finish checkout",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "successURLTitle",
+                        "type": "string",
+                        "description": "for <i>tokenType=SHOP</i> only; shop link title for successful checkout process",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "cancelURL",
+                        "type": "string",
+                        "description": "for <i>tokenType=SHOP</i> only; take customers to this URL when they cancel their checkout",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "cancelURLTitle",
+                        "type": "string",
+                        "description": "for <i>tokenType=SHOP</i> only; shop link title for cancel checkout process",
                         "required": false
                     }
                 ],
