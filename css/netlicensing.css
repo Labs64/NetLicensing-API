@@ -1,0 +1,17 @@
+.netlicensing #header #logo {
+    background: transparent url(../images/labs64-logo.png) no-repeat left center !important;
+    padding: 20px 0 20px 40px !important;
+}
+
+.netlicensing #header {
+    background-color: #E14817 !important;
+    padding: 10px 14px 14px !important;
+}
+
+.netlicensing #explore {
+    background-color: #7B2A10 !important;
+}
+
+.netlicensing .info_description a {
+    color: #7B2A10 !important;
+}
