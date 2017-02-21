@@ -1582,6 +1582,64 @@
                 ]
             }
         },
+        "/licensee/{licenseeNumber}/transfer": {
+            "post": {
+                "tags": [
+                    "Licensee"
+                ],
+                "summary": "Transfer licensee",
+                "description": "Licenses transfer between licensees",
+                "operationId": "transferLicensee",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "licenseeNumber",
+                        "description": "Licensee number with a maximum length of 1000 characters",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "in": "formData",
+                        "name": "transfer",
+                        "description": "Licensee number which licenses will be transferred",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
         "/license": {
             "get": {
                 "tags": [
