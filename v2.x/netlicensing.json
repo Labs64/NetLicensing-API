@@ -190,6 +190,29 @@
                         "type": "string",
                         "description": "Licensing information.",
                         "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "licenseeSecretMode",
+                        "type": "string",
+                        "enum": [
+                            "DISABLED",
+                            "PREDEFINED",
+                            "CLIENT"
+                        ],
+                        "description": "Licensee secret mode for product. Supported types: DISABLED, PREDEFINED, CLIENT",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "vatMode",
+                        "type": "string",
+                        "enum": [
+                            "GROSS",
+                            "NET"
+                        ],
+                        "description": "Vat mode for product. Supported types: GROSS, NET",
+                        "required": false
                     }
                 ],
                 "responses": {
@@ -335,6 +358,29 @@
                         "name": "licensingInfo",
                         "type": "string",
                         "description": "Licensing information.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "licenseeSecretMode",
+                        "type": "string",
+                        "enum": [
+                            "DISABLED",
+                            "PREDEFINED",
+                            "CLIENT"
+                        ],
+                        "description": "Licensee secret mode for product. Supported types: DISABLED, PREDEFINED, CLIENT",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "vatMode",
+                        "type": "string",
+                        "enum": [
+                            "GROSS",
+                            "NET"
+                        ],
+                        "description": "Vat mode for product. Supported types: GROSS, NET",
                         "required": false
                     }
                 ],
@@ -1320,6 +1366,20 @@
                         "type": "boolean",
                         "description": "If set to 'false', the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled",
                         "required": true
+                    },
+                    {
+                        "in": "formData",
+                        "name": "licenseeSecret",
+                        "type": "string",
+                        "description": "Licensee Secret for licensee.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "markedForTransfer",
+                        "type": "boolean",
+                        "description": "Mark licensee for transfer.",
+                        "required": false
                     }
                 ],
                 "responses": {
@@ -1437,6 +1497,20 @@
                         "in": "formData",
                         "name": "name",
                         "type": "string",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "licenseeSecret",
+                        "type": "string",
+                        "description": "Licensee Secret for licensee.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "markedForTransfer",
+                        "type": "boolean",
+                        "description": "Mark licensee for transfer.",
                         "required": false
                     }
                 ],
