@@ -1630,6 +1630,13 @@
                         "description": "Human-readable name for the auto-created licensee (will be set as custom Licensee property)",
                         "type": "string",
                         "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "licenseeSecret",
+                        "description": "Licensee Secret key for licensee",
+                        "type": "string",
+                        "required": false
                     }
                 ],
                 "responses": {
