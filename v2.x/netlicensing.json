@@ -1691,7 +1691,7 @@
                     },
                     {
                         "in": "formData",
-                        "name": "transfer",
+                        "name": "sourceLicenseeNumber",
                         "description": "Licensee number which licenses will be transferred",
                         "type": "string",
                         "required": true
