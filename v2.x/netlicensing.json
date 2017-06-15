@@ -1671,9 +1671,9 @@
                 "tags": [
                     "Licensee"
                 ],
-                "summary": "Transfer licensee",
+                "summary": "Transfer licenses",
                 "description": "Licenses transfer between licensees",
-                "operationId": "transferLicensee",
+                "operationId": "transferLicenses",
                 "consumes": [
                     "application/x-www-form-urlencoded"
                 ],
@@ -1692,7 +1692,7 @@
                     {
                         "in": "formData",
                         "name": "sourceLicenseeNumber",
-                        "description": "Licensee number which licenses will be transferred",
+                        "description": "Licensee number which licenses to be transferred",
                         "type": "string",
                         "required": true
                     }
