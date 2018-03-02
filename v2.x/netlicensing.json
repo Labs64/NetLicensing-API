@@ -561,7 +561,10 @@
                                 "Subscription",
                                 "TryAndBuy",
                                 "Rental",
-                                "Floating"
+                                "Floating",
+                                "MultiFeature",
+                                "PayPerUse",
+                                "Quota"
                             ],
                             "default": "Subscription"
                         },
@@ -957,12 +960,13 @@
                             "enum": [
                                 "FEATURE",
                                 "TIMEVOLUME",
-                                "FLOATING"
+                                "FLOATING",
+                                "QUANTITY"
                             ],
                             "default": "FEATURE"
                         },
                         "collectionFormat": "multi",
-                        "description": "type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME",
+                        "description": "type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME, FLOATING, QUANTITY",
                         "required": true
                     },
                     {
@@ -1030,6 +1034,13 @@
                         "name": "hideLicenses",
                         "type": "boolean",
                         "description": "If set to 'true', licenses from this license template are not visible to the end customer, but participate in validation.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "quantity",
+                        "description": "Mandatory for 'Pay-per-Use' license model.",
+                        "type": "string",
                         "required": false
                     }
                 ],
@@ -1159,12 +1170,13 @@
                             "enum": [
                                 "FEATURE",
                                 "TIMEVOLUME",
-                                "FLOATING"
+                                "FLOATING",
+                                "QUANTITY"
                             ],
                             "default": "FEATURE"
                         },
                         "collectionFormat": "multi",
-                        "description": "type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME, FLOATING",
+                        "description": "type of licenses created from this license template. Supported types: FEATURE, TIMEVOLUME, FLOATING, QUANTITY",
                         "required": false
                     },
                     {
@@ -1232,6 +1244,13 @@
                         "name": "hideLicenses",
                         "type": "boolean",
                         "description": "If set to 'true', licenses from this license template are not visible to the end customer, but participate in validation.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "quantity",
+                        "description": "Mandatory for 'Pay-per-Use' license model.",
+                        "type": "string",
                         "required": false
                     }
                 ],
@@ -1905,6 +1924,20 @@
                         "type": "boolean",
                         "description": "If set to 'true', this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly",
                         "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "quantity",
+                        "description": "Mandatory for 'Pay-per-Use' license model.",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "usedQuantity",
+                        "description": "Mandatory for 'Pay-per-Use' license model.",
+                        "type": "string",
+                        "required": false
                     }
                 ],
                 "responses": {
@@ -2081,6 +2114,20 @@
                         "name": "hidden",
                         "type": "boolean",
                         "description": "If set to 'true', this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "quantity",
+                        "description": "Mandatory for 'Pay-per-Use' license model.",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "usedQuantity",
+                        "description": "Mandatory for 'Pay-per-Use' license model.",
+                        "type": "string",
                         "required": false
                     }
                 ],
