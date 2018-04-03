@@ -554,7 +554,7 @@
                     {
                         "in": "formData",
                         "name": "licensingModel",
-                        "type": "array",
+                        "type": "string",
                         "items": {
                             "type": "string",
                             "enum": [
@@ -729,7 +729,7 @@
                     {
                         "in": "formData",
                         "name": "licensingModel",
-                        "type": "array",
+                        "type": "string",
                         "items": {
                             "type": "string",
                             "enum": [
@@ -951,7 +951,7 @@
                     {
                         "in": "formData",
                         "name": "licenseType",
-                        "type": "array",
+                        "type": "string",
                         "items": {
                             "type": "string",
                             "enum": [
@@ -971,6 +971,23 @@
                         "type": "string",
                         "description": "Mandatory for 'TIMEVOLUME' license type.",
                         "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "timeVolumePeriod",
+                        "type": "string",
+                        "description": "For 'TIMEVOLUME' license type.",
+                        "required": false,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "DAY",
+                                "WEEK",
+                                "MONTH",
+                                "YEAR"
+                            ],
+                            "default": "DAY"
+                        }
                     },
                     {
                         "in": "formData",
@@ -1136,7 +1153,7 @@
                     {
                         "in": "formData",
                         "name": "licenseType",
-                        "type": "array",
+                        "type": "string",
                         "items": {
                             "type": "string",
                             "enum": [
@@ -1156,6 +1173,23 @@
                         "type": "string",
                         "description": "Mandatory for 'TIMEVOLUME' license type.",
                         "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "timeVolumePeriod",
+                        "type": "string",
+                        "description": "For 'TIMEVOLUME' license type.",
+                        "required": false,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "DAY",
+                                "WEEK",
+                                "MONTH",
+                                "YEAR"
+                            ],
+                            "default": "DAY"
+                        }
                     },
                     {
                         "in": "formData",
@@ -1827,6 +1861,23 @@
                     },
                     {
                         "in": "formData",
+                        "name": "timeVolumePeriod",
+                        "type": "string",
+                        "description": "For 'TIMEVOLUME' license type.",
+                        "required": false,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "DAY",
+                                "WEEK",
+                                "MONTH",
+                                "YEAR"
+                            ],
+                            "default": "DAY"
+                        }
+                    },
+                    {
+                        "in": "formData",
                         "name": "startDate",
                         "type": "string",
                         "format": "date-time",
@@ -1989,8 +2040,26 @@
                     {
                         "in": "formData",
                         "name": "timeVolume",
+                        "description": "Mandatory for 'TIMEVOLUME' license type.",
                         "type": "string",
                         "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "timeVolumePeriod",
+                        "type": "string",
+                        "description": "For 'TIMEVOLUME' license type.",
+                        "required": false,
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "DAY",
+                                "WEEK",
+                                "MONTH",
+                                "YEAR"
+                            ],
+                            "default": "DAY"
+                        }
                     },
                     {
                         "in": "formData",
