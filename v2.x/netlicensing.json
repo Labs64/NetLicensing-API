@@ -91,7 +91,7 @@
                 "tags": [
                     "Product"
                 ],
-                "summary": "Products list",
+                "summary": "List Products",
                 "description": "Return a list of all configured Products for the current Vendor",
                 "operationId": "listProducts",
                 "produces": [
@@ -478,7 +478,7 @@
                 "tags": [
                     "Product Module"
                 ],
-                "summary": "Product Modules list",
+                "summary": "List Product Modules",
                 "description": "Return a list of all Product Modules for the current Vendor",
                 "operationId": "listProductModules",
                 "produces": [
@@ -884,7 +884,7 @@
                 "tags": [
                     "License Template"
                 ],
-                "summary": "License Templates list",
+                "summary": "List License Templates",
                 "description": "Return a list of all License Templates for the current Vendor",
                 "operationId": "listLicenseTemplates",
                 "produces": [
@@ -1354,7 +1354,7 @@
                 "tags": [
                     "Licensee"
                 ],
-                "summary": "Licensees list",
+                "summary": "List Licensees",
                 "description": "Return a list of all Licensees for the current Vendor",
                 "operationId": "listLicensees",
                 "produces": [
@@ -1800,7 +1800,7 @@
                 "tags": [
                     "License"
                 ],
-                "summary": "Licenses list",
+                "summary": "List Licenses",
                 "description": "Return a list of all Licenses for the current Vendor",
                 "operationId": "listLicenses",
                 "produces": [
@@ -2227,7 +2227,7 @@
                 "tags": [
                     "Transaction"
                 ],
-                "summary": "Transactions list",
+                "summary": "List Transactions",
                 "description": "Return a list of all Transactions for the current Vendor",
                 "operationId": "listTransactions",
                 "produces": [
@@ -2528,7 +2528,7 @@
                 "tags": [
                     "Token"
                 ],
-                "summary": "Tokens list",
+                "summary": "List Tokens",
                 "description": "Return a list of all tokens for the current Vendor",
                 "operationId": "listTokens",
                 "produces": [
@@ -2755,7 +2755,7 @@
                 "tags": [
                     "Payment Method"
                 ],
-                "summary": "Payment Methods list",
+                "summary": "List Payment Methods",
                 "description": "Return a list of all Payment Methods for the current Vendor",
                 "operationId": "listPaymentMethods",
                 "produces": [
@@ -2908,7 +2908,7 @@
                 "tags": [
                     "Utility"
                 ],
-                "summary": "Licensing Models list",
+                "summary": "List Licensing Models",
                 "description": "Return a list of all licensing models supported by the service",
                 "operationId": "licensingModels",
                 "produces": [
@@ -2947,7 +2947,7 @@
                 "tags": [
                     "Utility"
                 ],
-                "summary": "License Types list",
+                "summary": "List License Types",
                 "description": "Return a list of all License Types supported by the service",
                 "operationId": "licenseTypes",
                 "produces": [
