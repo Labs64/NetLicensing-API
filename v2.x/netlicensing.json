@@ -1481,7 +1481,7 @@
                         "in": "formData",
                         "name": "licenseeSecret",
                         "type": "string",
-                        "description": "Licensee Secret for Licensee.",
+                        "description": "(Deprecated. Use 'Node-Locked' licensing model instead) Licensee Secret for Licensee.",
                         "required": false
                     },
                     {
@@ -1616,7 +1616,7 @@
                         "in": "formData",
                         "name": "licenseeSecret",
                         "type": "string",
-                        "description": "Licensee Secret for Licensee.",
+                        "description": "(Deprecated. Use 'Node-Locked' licensing model instead) Licensee Secret for Licensee.",
                         "required": false
                     },
                     {
@@ -1749,8 +1749,22 @@
                     },
                     {
                         "in": "formData",
+                        "name": "productModuleNumber",
+                        "description": "'Node-Locked' licensing model: product module number",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "nodeSecret",
+                        "description": "'Node-Locked' licensing model: specifies unique secret",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
                         "name": "licenseeSecret",
-                        "description": "Licensee Secret key for Licensee",
+                        "description": "(Deprecated. Use 'Node-Locked' licensing model instead) Licensee Secret key for Licensee",
                         "type": "string",
                         "required": false
                     }
