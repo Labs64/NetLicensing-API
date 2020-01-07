@@ -2653,6 +2653,21 @@
                     },
                     {
                         "in": "formData",
+                        "name": "apiKeyRole",
+                        "description": "For <i>tokenType=APIKEY</i> only (default: ROLE_APIKEY_LICENSEE); defines token RoleID",
+                        "type": "string",
+                        "enum": [
+                            "ROLE_APIKEY_LICENSEE",
+                            "ROLE_APIKEY_ANALYTICS",
+                            "ROLE_APIKEY_OPERATION",
+                            "ROLE_APIKEY_MAINTENANCE",
+                            "ROLE_APIKEY_ADMIN"
+                        ],
+                        "collectionFormat": "multi",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
                         "name": "licenseeNumber",
                         "type": "string",
                         "description": "For <i>tokenType=SHOP</i> only (mandatory); identifies Licensee that will be assigned to the shop token",
