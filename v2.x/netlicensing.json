@@ -2668,6 +2668,14 @@
                     },
                     {
                         "in": "formData",
+                        "name": "privateKey",
+                        "type": "string",
+                        "description": "For <i>tokenType=APIKEY</i> only (optional); defines PrivateKey to be used with the validate method",
+                        "required": false,
+                        "multiLine": true
+                    },
+                    {
+                        "in": "formData",
                         "name": "licenseeNumber",
                         "type": "string",
                         "description": "For <i>tokenType=SHOP</i> only (mandatory); identifies Licensee that will be assigned to the shop token",
