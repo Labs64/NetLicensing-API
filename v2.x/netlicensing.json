@@ -2671,8 +2671,7 @@
                         "name": "privateKey",
                         "type": "string",
                         "description": "For <i>tokenType=APIKEY</i> only (optional); defines PrivateKey to be used with the validate method",
-                        "required": false,
-                        "multiLine": true
+                        "required": false
                     },
                     {
                         "in": "formData",
