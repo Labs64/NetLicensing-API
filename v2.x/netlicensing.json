@@ -123,8 +123,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -241,8 +240,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -290,8 +288,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -415,8 +412,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -472,8 +468,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -515,8 +510,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -665,8 +659,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -714,8 +707,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -860,8 +852,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -914,8 +905,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -957,8 +947,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -1127,8 +1116,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -1176,8 +1164,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -1346,8 +1333,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -1403,8 +1389,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -1446,8 +1431,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -1533,8 +1517,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -1582,8 +1565,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -1670,8 +1652,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -1724,8 +1705,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -1811,8 +1791,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -1870,8 +1849,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -1913,8 +1891,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -2062,8 +2039,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -2111,8 +2087,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -2255,8 +2230,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -2302,8 +2276,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -2345,8 +2318,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -2451,8 +2423,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -2500,8 +2471,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -2607,8 +2577,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -2650,8 +2619,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -2763,8 +2731,7 @@
                 },
                 "security": [
                     {
-                        "basicAuth": [],
-                        "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -2812,8 +2779,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -2859,8 +2825,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -2902,8 +2867,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -2951,8 +2915,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             },
@@ -3015,8 +2978,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -3055,8 +3017,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -3095,8 +3056,7 @@
                 },
                 "security": [
                     {
-                      "basicAuth": [],
-                      "api_key": []
+                        "basicAuth": []
                     }
                 ]
             }
@@ -3105,12 +3065,7 @@
     "securityDefinitions": {
         "basicAuth": {
             "type": "basic",
-            "description": "HTTP Basic Authentication. Works over `HTTP` and `HTTPS`"
-        },
-        "api_key": {
-            "type": "apiKey",
-            "name": "api_key",
-            "in": "header"
+            "description": "HTTP Basic Authentication. Use either `username:password` or `apiKey:token` to authenticate."
         }
     },
     "definitions": {
