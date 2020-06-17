@@ -92,7 +92,8 @@
             });
 
             function addAuthorization() {
-                var username = encodeURIComponent($('#input_username').val());
+                // var username = encodeURIComponent($('#input_username').val());
+                var username = $('#input_username').val();
                 var password = encodeURIComponent($('#input_password').val());
                 if (username && username.trim() != "" && password && password.trim() != "") {
                     var basicAuth = new SwaggerClient.PasswordAuthorization('basic', username, password);
