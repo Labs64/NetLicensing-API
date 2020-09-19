@@ -1726,8 +1726,20 @@
                     {
                         "in": "formData",
                         "name": "sessionId",
-                        "description": "'Floating' licensing model: specifies session idendifier",
+                        "description": "'Floating' licensing model: specifies unique session identifier",
                         "type": "string",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "action",
+                        "description": "'Floating' licensing model: check-out or check-in session action, to allocate or return it from/to the pool of available sessions",
+                        "type": "string",
+                        "enum": [
+                            "checkOut",
+                            "checkIn"
+                        ],
+                        "collectionFormat": "multi",
                         "required": false
                     }
                 ],
