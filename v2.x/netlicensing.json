@@ -193,18 +193,6 @@
                     },
                     {
                         "in": "formData",
-                        "name": "licenseeSecretMode",
-                        "type": "string",
-                        "enum": [
-                            "DISABLED",
-                            "PREDEFINED",
-                            "CLIENT"
-                        ],
-                        "description": "(Deprecated. Use 'Node-Locked' licensing model instead) Licensee secret mode for Product. Supported types: DISABLED, PREDEFINED, CLIENT",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
                         "name": "vatMode",
                         "type": "string",
                         "enum": [
@@ -361,18 +349,6 @@
                         "name": "licensingInfo",
                         "type": "string",
                         "description": "Licensing information.",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "licenseeSecretMode",
-                        "type": "string",
-                        "enum": [
-                            "DISABLED",
-                            "PREDEFINED",
-                            "CLIENT"
-                        ],
-                        "description": "(Deprecated. Use 'Node-Locked' licensing model instead) Licensee secret mode for Product. Supported types: DISABLED, PREDEFINED, CLIENT",
                         "required": false
                     },
                     {
@@ -1479,13 +1455,6 @@
                     },
                     {
                         "in": "formData",
-                        "name": "licenseeSecret",
-                        "type": "string",
-                        "description": "(Deprecated. Use 'Node-Locked' licensing model instead) Licensee Secret for Licensee.",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
                         "name": "markedForTransfer",
                         "type": "boolean",
                         "description": "Mark Licensee for transfer.",
@@ -1610,13 +1579,6 @@
                         "in": "formData",
                         "name": "name",
                         "type": "string",
-                        "required": false
-                    },
-                    {
-                        "in": "formData",
-                        "name": "licenseeSecret",
-                        "type": "string",
-                        "description": "(Deprecated. Use 'Node-Locked' licensing model instead) Licensee Secret for Licensee.",
                         "required": false
                     },
                     {
@@ -1763,8 +1725,8 @@
                     },
                     {
                         "in": "formData",
-                        "name": "licenseeSecret",
-                        "description": "(Deprecated. Use 'Node-Locked' licensing model instead) Licensee Secret key for Licensee",
+                        "name": "sessionId",
+                        "description": "'Floating' licensing model: specifies session idendifier",
                         "type": "string",
                         "required": false
                     }
