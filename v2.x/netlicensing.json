@@ -2620,8 +2620,7 @@
                         "enum": [
                             "DEFAULT",
                             "SHOP",
-                            "APIKEY",
-                            "ACTION"
+                            "APIKEY"
                         ],
                         "collectionFormat": "multi",
                         "required": true
@@ -2643,8 +2642,19 @@
                     },
                     {
                         "in": "formData",
+                        "name": "type",
+                        "description": "For <i>tokenType=DEFAULT</i> only; token type to be generated",
+                        "type": "string",
+                        "enum": [
+                            "ACTION"
+                        ],
+                        "collectionFormat": "multi",
+                        "required": true
+                    },
+                    {
+                        "in": "formData",
                         "name": "action",
-                        "description": "For <i>tokenType=ACTION</i> only; defines token action to be perfromed",
+                        "description": "For <i>type=ACTION</i> only; defines token action to be perfromed",
                         "type": "string",
                         "enum": [
                             "licenseeLogin"
@@ -2663,7 +2673,7 @@
                         "in": "formData",
                         "name": "licenseeNumber",
                         "type": "string",
-                        "description": "For <i>tokenType=SHOP</i> only (mandatory); identifies Licensee that will be assigned to the shop token",
+                        "description": "For <i>tokenType=SHOP</i> or <i>type=ACTION</i> only (mandatory); identifies Licensee that will be assigned to the shop token",
                         "required": false
                     },
                     {
