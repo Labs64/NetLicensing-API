@@ -1697,15 +1697,15 @@
                     },
                     {
                         "in": "formData",
-                        "name": "productNumber",
-                        "description": "Product number, must be provided when 'Licensee auto-create' is enabled (see also Product JavaDoc). Identifies the Product to which new Licensee should be added",
+                        "name": "licenseeName",
+                        "description": "Human-readable name for the auto-created Licensee (will be set as custom Licensee property)",
                         "type": "string",
                         "required": false
                     },
                     {
                         "in": "formData",
-                        "name": "licenseeName",
-                        "description": "Human-readable name for the auto-created Licensee (will be set as custom Licensee property)",
+                        "name": "productNumber",
+                        "description": "Product number, must be provided when 'Licensee auto-create' is enabled (see also Product JavaDoc). Identifies the Product to which new Licensee should be added",
                         "type": "string",
                         "required": false
                     },
@@ -2643,13 +2643,13 @@
                     {
                         "in": "formData",
                         "name": "type",
-                        "description": "For <i>tokenType=DEFAULT</i> only; token type to be generated",
+                        "description": "For <i>tokenType=DEFAULT</i> only; action type to be set",
                         "type": "string",
                         "enum": [
                             "ACTION"
                         ],
                         "collectionFormat": "multi",
-                        "required": true
+                        "required": false
                     },
                     {
                         "in": "formData",
@@ -2664,16 +2664,16 @@
                     },
                     {
                         "in": "formData",
-                        "name": "privateKey",
+                        "name": "licenseeNumber",
                         "type": "string",
-                        "description": "For <i>tokenType=APIKEY</i> only (optional); defines PrivateKey to be used with the validate method<br/><strong>Please Note:</strong> PrivateKey need to be provided as one line without spaces",
+                        "description": "For <i>tokenType=SHOP</i> or <i>type=ACTION</i> only (mandatory); identifies Licensee that will be assigned to the shop token",
                         "required": false
                     },
                     {
                         "in": "formData",
-                        "name": "licenseeNumber",
+                        "name": "privateKey",
                         "type": "string",
-                        "description": "For <i>tokenType=SHOP</i> or <i>type=ACTION</i> only (mandatory); identifies Licensee that will be assigned to the shop token",
+                        "description": "For <i>tokenType=APIKEY</i> only (optional); defines PrivateKey to be used with the validate method<br/><strong>Please Note:</strong> PrivateKey need to be provided as one line without spaces",
                         "required": false
                     },
                     {
