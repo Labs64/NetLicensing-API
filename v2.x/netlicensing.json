@@ -2620,7 +2620,8 @@
                         "enum": [
                             "DEFAULT",
                             "SHOP",
-                            "APIKEY"
+                            "APIKEY",
+                            "ACTION"
                         ],
                         "collectionFormat": "multi",
                         "required": true
@@ -2636,6 +2637,17 @@
                             "ROLE_APIKEY_OPERATION",
                             "ROLE_APIKEY_MAINTENANCE",
                             "ROLE_APIKEY_ADMIN"
+                        ],
+                        "collectionFormat": "multi",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "action",
+                        "description": "For <i>tokenType=ACTION</i> only; defines token action to be perfromed",
+                        "type": "string",
+                        "enum": [
+                            "licenseeLogin"
                         ],
                         "collectionFormat": "multi",
                         "required": false
