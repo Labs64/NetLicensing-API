@@ -2685,6 +2685,13 @@
                     },
                     {
                         "in": "formData",
+                        "name": "licenseTemplateNumber",
+                        "type": "string",
+                        "description": "For <i>tokenType=SHOP</i> only (mandatory); identifies LicenseTemplate that will be assigned to the shop token",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
                         "name": "successURL",
                         "type": "string",
                         "description": "For <i>tokenType=SHOP</i> only; take customers to this URL when they finish checkout",
