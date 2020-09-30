@@ -2687,7 +2687,14 @@
                         "in": "formData",
                         "name": "licenseTemplateNumber",
                         "type": "string",
-                        "description": "For <i>tokenType=SHOP</i> only (mandatory); identifies LicenseTemplate that will be assigned to the shop token",
+                        "description": "For <i>tokenType=SHOP</i> only; identifies LicenseTemplate that will be assigned to the shop token",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "predefinedShoppingItem",
+                        "type": "string",
+                        "description": "For <i>tokenType=SHOP</i> only; identifies Shopping Item name that will be shown to the customer",
                         "required": false
                     },
                     {
