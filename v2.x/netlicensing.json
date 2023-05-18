@@ -80,6 +80,14 @@
                 "description": "Utility Services",
                 "url": "https://netlicensing.io/wiki/utility-services"
             }
+        },
+        {
+            "name": "Bundle",
+            "description": "Bundle operations",
+            "externalDocs": {
+                "description": "Bundle Services",
+                "url": "https://netlicensing.io/wiki/bundle-services"
+            }
         }
     ],
     "schemes": [
@@ -3077,6 +3085,403 @@
                     }
                 ]
             }
+        },
+        "/bundle": {
+            "get": {
+                "tags": [
+                    "Bundle"
+                ],
+                "summary": "List Bundles",
+                "description": "Return a list of all configured Bundles for the current Vendor",
+                "operationId": "listBundles",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/netlicensing"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Bundle"
+                ],
+                "summary": "Create Bundle",
+                "description": "Creates a new Bundle",
+                "operationId": "createBundle",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "formData",
+                        "name": "number",
+                        "type": "string",
+                        "description": "Unique number that identifies the Bundle. Vendor can assign this number when creating a Bundle or let NetLicensing generate one.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "active",
+                        "type": "boolean",
+                        "description": "If set to 'false', the bundle is disabled. Licensees can not obtain new licenses.",
+                        "required": true
+                    },
+                    {
+                        "in": "formData",
+                        "name": "name",
+                        "type": "string",
+                        "description": "Bundle name. Identifies the bundle for the end customer.",
+                        "required": true
+                    },
+                    {
+                        "in": "formData",
+                        "name": "description",
+                        "type": "string",
+                        "description": "Bundle description.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "price",
+                        "type": "number",
+                        "format": "double",
+                        "description": "Price for the bundle. If &gt;0, it must always be accompanied by the currency specification.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "currency",
+                        "type": "string",
+                        "description": "Specifies currency for the bundle price.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "licenseTemplateNumbers",
+                        "type": "string",
+                        "description": "Comma-separated license templates numbers.",
+                        "required": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "402": {
+                        "description": "Quota exceeded"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/bundle/{bundleNumber}": {
+            "get": {
+                "tags": [
+                    "Bundle"
+                ],
+                "summary": "Get Bundle",
+                "description": "Return a Bundle by 'bundleNumber'",
+                "operationId": "bundleNumber",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "bundleNumber",
+                        "in": "path",
+                        "description": "Unique number that identifies the bundle.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Bundle"
+                ],
+                "summary": "Update Bundle",
+                "description": "Sets the provided properties to a Bundle. Return an updated Bundle",
+                "operationId": "updateBundle",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "bundleNumber",
+                        "in": "path",
+                        "description": "Unique number that identifies the Bundle.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "number",
+                        "in": "formData",
+                        "description": "New Bundle number (update)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "active",
+                        "type": "boolean",
+                        "description": "If set to 'false', the bundle is disabled. Licensees can not obtain new licenses.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "name",
+                        "type": "string",
+                        "description": "Bundle name. Identifies the bundle for the end customer.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "description",
+                        "type": "string",
+                        "description": "Bundle description.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "price",
+                        "type": "number",
+                        "format": "double",
+                        "description": "Price for the bundle. If &gt;0, it must always be accompanied by the currency specification.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "currency",
+                        "type": "string",
+                        "description": "Specifies currency for the bundle price.",
+                        "required": false
+                    },
+                    {
+                        "in": "formData",
+                        "name": "licenseTemplateNumbers",
+                        "type": "string",
+                        "description": "Comma-separated license templates numbers.",
+                        "required": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "402": {
+                        "description": "Quota exceeded"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Bundle"
+                ],
+                "summary": "Delete Bundle",
+                "description": "Delete a Bundle by 'number'",
+                "operationId": "deleteBundle",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "bundleNumber",
+                        "description": "Unique number that identifies the Bundle.",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/bundle/{bundleNumber}/obtain": {
+            "post": {
+                "tags": [
+                    "Bundle"
+                ],
+                "summary": "Obtain Bundle",
+                "description": "Obtain bundle - create licenses based on license templates. Return an array of created Licenses",
+                "operationId": "obtainBundle",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "bundleNumber",
+                        "in": "path",
+                        "description": "Unique number that identifies the Bundle.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "licenseeNumber",
+                        "in": "formData",
+                        "description": "Licensee number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/netlicensing"
+                        }
+                    },
+                    "400": {
+                        "description": "Malformed or illegal request"
+                    },
+                    "402": {
+                        "description": "Quota exceeded"
+                    },
+                    "403": {
+                        "description": "Access is denied"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal service error"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
         }
     },
     "securityDefinitions": {
@@ -3362,6 +3767,43 @@
             },
             "xml": {
                 "name": "discount"
+            }
+        },
+        "Bundle": {
+            "type": "object",
+            "properties": {
+                "number": {
+                    "type": "string",
+                    "description": "Unique number that identifies the Bundle. Vendor can assign this number when creating a Bundle or let NetLicensing generate one."
+                },
+                "active": {
+                    "type": "boolean",
+                    "description": "If set to 'false', the bundle is disabled. Licensees can not obtain new licenses."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Bundle name. Identifies the bundle for the end customer."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Bundle description"
+                },
+                "price": {
+                    "type": "number",
+                    "format": "double",
+                    "description": "Price for the bundle. If &gt;0, it must always be accompanied by the currency specification."
+                },
+                "currency": {
+                    "type": "string",
+                    "description": "specifies currency for the bundle price. Check data types to discover which currencies are supported."
+                },
+                "licenseTemplateNumbers": {
+                    "type": "string",
+                    "description": "Comma-separated license templates numbers."
+                }
+            },
+            "xml": {
+                "name": "product"
             }
         }
     }
